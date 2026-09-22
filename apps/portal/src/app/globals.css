@@ -1,0 +1,239 @@
+/* Токены и ui-kit подключаются из app/layout.tsx, до этого файла. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: var(--bst-bg);
+}
+
+body {
+  background: var(--bst-bg);
+  color: var(--bst-text);
+  font-family: var(--bst-font-body);
+  font-size: 15px;
+  font-variant-numeric: tabular-nums;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--bst-font-heading);
+  text-transform: uppercase;
+  letter-spacing: 0.015em;
+  margin: 0;
+}
+
+a {
+  color: var(--bst-accent-ink);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--bst-accent);
+  text-decoration: underline;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--bst-accent) 28%, transparent);
+}
+
+/* Каркас: сайдбар + рабочая область */
+.app {
+  display: grid;
+  grid-template-columns: var(--bst-sidebar) minmax(0, 1fr);
+  min-height: 100vh;
+}
+
+.app__aside {
+  border-right: 1px solid var(--bst-line);
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.app__main {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.app__header {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: var(--bst-space-4);
+  border-bottom: 1px solid var(--bst-line);
+  position: sticky;
+  top: 0;
+  background: var(--bst-bg);
+  z-index: 3;
+}
+
+.app__footer {
+  margin-top: auto;
+  display: grid;
+  grid-template-columns: 1.6fr repeat(4, 1fr);
+  border-top: 1.5px solid var(--bst-line-strong);
+  font-family: var(--bst-font-mono);
+  font-size: 11px;
+}
+
+.app__footer > div {
+  padding: 12px 16px;
+  border-right: 1px solid var(--bst-line);
+}
+
+.app__footer > div:last-child {
+  border-right: 0;
+}
+
+.app__footer-k {
+  color: var(--bst-text-mute);
+  font-size: 10px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 10px;
+  border-left: 2px solid transparent;
+  color: var(--bst-text);
+  font-size: 13.5px;
+}
+
+.nav-link:hover {
+  background: var(--bst-accent-tint);
+  text-decoration: none;
+}
+
+.nav-link[aria-current='page'] {
+  background: var(--bst-accent-tint);
+  border-left-color: var(--bst-accent);
+  color: var(--bst-accent-ink);
+}
+
+.nav-link__count {
+  margin-left: auto;
+  font-family: var(--bst-font-mono);
+  font-size: 11px;
+}
+
+/* Вкладки листа объекта */
+.tabs {
+  display: flex;
+  overflow-x: auto;
+  padding: 0 var(--bst-space-6);
+  border-top: 1px solid var(--bst-line);
+}
+
+.tabs__tab {
+  padding: 11px 16px;
+  border-bottom: 2px solid transparent;
+  font-family: var(--bst-font-heading);
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: color-mix(in srgb, var(--bst-text) 62%, transparent);
+  white-space: nowrap;
+}
+
+.tabs__tab:hover {
+  text-decoration: none;
+  color: var(--bst-text);
+}
+
+.tabs__tab[aria-current='page'] {
+  border-bottom-color: var(--bst-accent);
+  color: var(--bst-text);
+}
+
+.tabs__tab[aria-disabled='true'] {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.page {
+  padding: var(--bst-space-6);
+  display: grid;
+  gap: var(--bst-space-6);
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--bst-space-5);
+}
+
+.split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 400px;
+  gap: var(--bst-space-6);
+  align-items: start;
+}
+
+@media (max-width: 1280px) {
+  .grid-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .split {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .app {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .app__aside {
+    position: static;
+    height: auto;
+    border-right: 0;
+    border-bottom: 1px solid var(--bst-line);
+  }
+  .app__footer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Живой режим двойника: пульс индикатора потока и появление аварии */
+@keyframes bst-live-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.25; }
+}
+
+.live-dot {
+  animation: bst-live-pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes bst-alarm-in {
+  from { background: color-mix(in srgb, var(--bst-alarm) 38%, transparent); }
+  to { background: var(--bst-alarm-tint); }
+}
+
+.alarm-banner {
+  animation: bst-alarm-in 1.2s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .live-dot,
+  .alarm-banner {
+    animation: none;
+  }
+}

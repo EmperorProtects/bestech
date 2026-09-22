@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/industry-a458f529-fc3f-4d39-8047-7968176c36b5/styles.css">
+<script src="_ds/industry-a458f529-fc3f-4d39-8047-7968176c36b5/_ds_bundle.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap&subset=cyrillic,cyrillic-ext,latin" rel="stylesheet">
+<style>
+  :root{
+    --font-heading:"Fira Sans Condensed","Barlow Condensed",system-ui,sans-serif;
+    --font-body:"IBM Plex Sans",system-ui,sans-serif;
+    --font-mono:"IBM Plex Mono",ui-monospace,monospace;
+    --sem-ok:#3E7A55; --sem-ok-bg:#E7EFE9;
+    --sem-warn:#8F6511; --sem-warn-bg:#F4EEE0;
+    --sem-alarm:#A03A2E; --sem-alarm-bg:#F5E7E4;
+    --ink-56:color-mix(in srgb, var(--color-text) 56%, transparent);
+    --ink-72:color-mix(in srgb, var(--color-text) 72%, transparent);
+  }
+  body{margin:0;font-variant-numeric:tabular-nums;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4,h5{text-transform:uppercase;letter-spacing:0.015em}
+  a{color:var(--color-accent-700);text-decoration:none}
+  a:hover{color:var(--color-accent);text-decoration:underline}
+</style>
+</helmet>
+
+<div style="width:1440px;max-width:1440px;margin:0 auto;background:var(--color-bg);color:var(--color-text);font-family:var(--font-body);font-size:15px">
+
+  <!-- TOP BAR -->
+  <header style="display:flex;align-items:center;gap:24px;padding:14px 80px;border-bottom:1px solid var(--color-divider);position:sticky;top:0;background:var(--color-bg);z-index:5">
+    <div style="font-family:var(--font-heading);font-size:20px;font-weight:700;letter-spacing:0.2em">BESTECH</div>
+    <nav style="display:flex;gap:20px;font-size:14px">
+      <a href="A2 Product.dc.html">Продукт</a>
+      <a href="#industries">Отрасли</a>
+      <a href="#0">Услуги</a>
+      <a href="A5 Pricing.dc.html">Тарифы</a>
+      <a href="#cases">Кейсы</a>
+      <a href="#0">Компания</a>
+    </nav>
+    <div style="margin-left:auto;display:flex;align-items:center;gap:12px">
+      <div style="display:flex;border:1px solid var(--color-divider);font-family:var(--font-mono);font-size:11px">
+        <span style="padding:5px 9px;background:var(--color-accent);color:var(--color-bg)">RU</span>
+        <span style="padding:5px 9px;border-left:1px solid var(--color-divider)">KZ</span>
+        <span style="padding:5px 9px;border-left:1px solid var(--color-divider)">EN</span>
+      </div>
+      <a class="btn btn-secondary" href="B2 My Assets.dc.html">Войти в кабинет</a>
+      <a class="btn btn-primary blueprint" href="A8 Pilot Request.dc.html" style="position:relative">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        Запросить пилот
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section style="border-bottom:1px solid var(--color-divider);padding:52px 80px 0">
+    <div style="display:grid;grid-template-columns:minmax(0,460px) minmax(0,1fr);gap:56px;align-items:start">
+      <div style="padding-bottom:56px">
+        <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.16em;color:var(--color-accent-700);margin-bottom:18px">◭ ЛИСТ 01 / ГЛАВНАЯ</div>
+        <h1 style="font-size:60px;line-height:0.98;margin:0 0 18px">Интеллектуальная цифровая модель</h1>
+        <p style="font-size:17px;color:var(--ink-72);margin:0 0 10px;text-wrap:pretty">Единая информационная модель объекта на всех стадиях жизни: проектирование, строительство, эксплуатация. Проектные параметры фиксируются как эталон, приборы на площадке измеряют фактические.</p>
+        <p style="font-size:17px;margin:0 0 28px;font-weight:500">Отклонение видно сразу, а не в отчёте через месяц.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn btn-primary blueprint" href="A8 Pilot Request.dc.html" style="position:relative;font-size:15px;padding:11px 20px">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            Запросить пилот
+          </a>
+          <a class="btn btn-secondary" href="C1 Twin Overview.dc.html" style="font-size:15px;padding:11px 20px">Посмотреть двойник</a>
+        </div>
+        <div style="margin-top:34px;border-top:1px solid var(--color-divider);padding-top:14px;display:grid;grid-template-columns:1fr 1fr;gap:14px;font-family:var(--font-mono);font-size:11px;color:var(--ink-56)">
+          <div>ПРОЕКТНОЕ БЮРО<br /><span style="color:var(--color-text)">ГСЛ №0788280 · II категория</span></div>
+          <div>СТАНДАРТЫ<br /><span style="color:var(--color-text)">СН РК · СП РК · ГОСТ СПДС</span></div>
+        </div>
+      </div>
+
+      <!-- axonometric wireframe on axis grid -->
+      <figure style="margin:0;position:relative;border-left:1px solid var(--color-divider);border-right:1px solid var(--color-divider)">
+        <div style="position:absolute;top:10px;left:14px;font-family:var(--font-mono);font-size:10px;letter-spacing:0.12em;color:var(--ink-56)">ОБЪЕКТ 2026-014 · МОЛОЧНЫЙ КОМПЛЕКС, 1 200 ГОЛОВ · АКСОНОМЕТРИЯ</div>
+        <svg viewBox="0 0 760 440" width="100%" height="auto" style="display:block" role="img" aria-label="Аксонометрическая каркасная модель молочного комплекса на сетке осей с датчиками">
+          <!-- axis grid, z=0 -->
+          <g transform="matrix(12.124,7,-12.124,7,300,150)" stroke="#B5D9FD" stroke-width="0.09" fill="none">
+            <path d="M0 -1.5V13.5M4 -1.5V13.5M8 -1.5V13.5M12 -1.5V13.5M16 -1.5V13.5M20 -1.5V13.5M24 -1.5V13.5" />
+            <path d="M-1.5 0H25.5M-1.5 4H25.5M-1.5 8H25.5M-1.5 12H25.5" />
+          </g>
+          <!-- footprint -->
+          <g transform="matrix(12.124,7,-12.124,7,300,150)" stroke="#749DC4" stroke-width="0.13" fill="none">
+            <path d="M0 0H24V12H0Z" />
+          </g>
+          <!-- axis bubbles -->
+          <g font-family="IBM Plex Mono" font-size="10" fill="#416180" text-anchor="middle">
+            <text x="324" y="139">1</text><text x="373" y="167">2</text><text x="421" y="195">3</text><text x="469" y="223">4</text><text x="518" y="251">5</text><text x="566" y="279">6</text><text x="614" y="307">7</text>
+            <text x="276" y="139">А</text><text x="227" y="167">Б</text><text x="179" y="195">В</text><text x="130" y="223">Г</text>
+          </g>
+          <!-- back wall (hidden edges) -->
+          <g transform="matrix(12.124,7,0,-14,154.5,234)" stroke="#94BCE3" stroke-width="0.09" fill="none">
+            <path d="M0 0H24V6H0Z" />
+            <path d="M4 0V6M8 0V6M12 0V6M16 0V6M20 0V6" stroke-dasharray="0.4 0.3" />
+          </g>
+          <!-- roof planes -->
+          <polygon points="227.3,52 518.3,220 445.5,318 154.5,150" fill="#EEF6FF" stroke="#749DC4" stroke-width="1" />
+          <polygon points="300,66 591,234 518.3,220 227.3,52" fill="#D6EBFF" stroke="#416180" stroke-width="1.1" />
+          <g stroke="#94BCE3" stroke-width="0.8">
+            <path d="M348.5 94 275.8 80M397 122 324.3 108M445.5 150 372.8 136M494 178 421.3 164M542.5 206 469.8 192" />
+          </g>
+          <!-- front wall -->
+          <g transform="matrix(12.124,7,0,-14,300,150)" stroke="#416180" stroke-width="0.1" fill="none">
+            <path d="M0 0H24V6H0Z" stroke-width="0.13" />
+            <path d="M4 0V6M8 0V6M12 0V6M16 0V6M20 0V6" />
+            <path d="M2 0V3.2H6V0M10 0V3.2H14V0M18 0V3.2H22V0" stroke="#749DC4" stroke-width="0.08" />
+          </g>
+          <!-- gables -->
+          <g transform="matrix(-12.124,7,0,-14,300,150)" stroke="#416180" stroke-width="0.12" fill="none">
+            <path d="M0 0H12V6L6 10L0 6Z" />
+          </g>
+          <g transform="matrix(-12.124,7,0,-14,591,318)" stroke="#94BCE3" stroke-width="0.1" fill="none">
+            <path d="M0 0H12V6L6 10L0 6Z" />
+          </g>
+          <!-- ridge -->
+          <path d="M227.3 52 518.3 220" stroke="#1D2D3D" stroke-width="1.2" />
+          <!-- dimension: length -->
+          <g stroke="#416180" stroke-width="1" fill="none">
+            <path d="M300 150 282 181M591 318 573 349" stroke="#B5D9FD" />
+            <path d="M286 174 577 342" />
+            <path d="M286 174 300 176.5 297 168zM577 342 563 339.5 566 348z" fill="#416180" />
+          </g>
+          <text x="431" y="252" transform="rotate(30 431 252)" font-family="IBM Plex Mono" font-size="11" fill="#416180" text-anchor="middle">24 000</text>
+          <!-- dimension: height -->
+          <g stroke="#416180" stroke-width="1" fill="none">
+            <path d="M617 234V318" />
+            <path d="M617 234 614.5 248h5zM617 318 614.5 304h5z" fill="#416180" />
+          </g>
+          <text x="634" y="280" transform="rotate(-90 634 280)" font-family="IBM Plex Mono" font-size="11" fill="#416180" text-anchor="middle">6 000</text>
+
+          <!-- sensors -->
+          <g>
+            <path d="M445.5 192 404 392" stroke="#3E7A55" stroke-width="0.8" stroke-dasharray="3 2" />
+            <circle cx="445.5" cy="192" r="5.5" fill="#F2F2F3" stroke="#3E7A55" stroke-width="1.6" />
+            <circle cx="445.5" cy="192" r="2" fill="#3E7A55" />
+            <rect x="316" y="396" width="176" height="30" fill="#F2F2F3" stroke="#3E7A55" stroke-width="1" />
+            <text x="324" y="408" font-family="IBM Plex Mono" font-size="9.5" fill="#3E7A55">● В ДОПУСКЕ · КЖ-3, ось Б/4</text>
+            <text x="324" y="420" font-family="IBM Plex Mono" font-size="9.5" fill="#1D1F20">Темп. бетона 18,4 °C</text>
+          </g>
+          <g>
+            <path d="M457.6 171 612 96" stroke="#A03A2E" stroke-width="0.8" stroke-dasharray="3 2" />
+            <circle cx="457.6" cy="171" r="5.5" fill="#F2F2F3" stroke="#A03A2E" stroke-width="1.6" />
+            <circle cx="457.6" cy="171" r="2" fill="#A03A2E" />
+            <rect x="612" y="74" width="142" height="30" fill="#F2F2F3" stroke="#A03A2E" stroke-width="1" />
+            <text x="620" y="86" font-family="IBM Plex Mono" font-size="9.5" fill="#A03A2E">▲ ВНЕ ДОПУСКА · Ф-2</text>
+            <text x="620" y="98" font-family="IBM Plex Mono" font-size="9.5" fill="#1D1F20">Нагрузка 86 % проекта</text>
+          </g>
+          <g>
+            <path d="M275.7 248 118 318" stroke="#8F6511" stroke-width="0.8" stroke-dasharray="3 2" />
+            <circle cx="275.7" cy="248" r="5.5" fill="#F2F2F3" stroke="#8F6511" stroke-width="1.6" />
+            <circle cx="275.7" cy="248" r="2" fill="#8F6511" />
+            <rect x="6" y="318" width="160" height="30" fill="#F2F2F3" stroke="#8F6511" stroke-width="1" />
+            <text x="14" y="330" font-family="IBM Plex Mono" font-size="9.5" fill="#8F6511">▲ У ГРАНИЦЫ · ГМ-07</text>
+            <text x="14" y="342" font-family="IBM Plex Mono" font-size="9.5" fill="#1D1F20">Осадка 12 мм / 15 мм</text>
+          </g>
+        </svg>
+        <figcaption style="font-family:var(--font-mono);font-size:10px;color:var(--ink-56);padding:0 14px 12px">Каркасная модель IFC · 48 датчиков размещены на осях · обновление каждые 15 мин</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- FACTS STRIP -->
+  <section style="display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--color-divider)">
+    <div style="padding:22px 80px;border-right:1px solid var(--color-divider)">
+      <div style="font-family:var(--font-mono);font-size:11px;color:var(--ink-56);letter-spacing:0.1em">BIM</div>
+      <div style="font-family:var(--font-heading);font-size:19px;text-transform:uppercase;letter-spacing:0.02em">Revit · IFC · DWG</div>
+    </div>
+    <div style="padding:22px 28px;border-right:1px solid var(--color-divider)">
+      <div style="font-family:var(--font-mono);font-size:11px;color:var(--ink-56);letter-spacing:0.1em">НОРМЫ РК</div>
+      <div style="font-family:var(--font-heading);font-size:19px;text-transform:uppercase;letter-spacing:0.02em">СН РК · СП РК · ГОСТ</div>
+    </div>
+    <div style="padding:22px 28px;border-right:1px solid var(--color-divider)">
+      <div style="font-family:var(--font-mono);font-size:11px;color:var(--ink-56);letter-spacing:0.1em">IoT</div>
+      <div style="font-family:var(--font-heading);font-size:19px;text-transform:uppercase;letter-spacing:0.02em">Геодезия · бетон · нагрузки</div>
+    </div>
+    <div style="padding:22px 28px">
+      <div style="font-family:var(--font-mono);font-size:11px;color:var(--ink-56);letter-spacing:0.1em">ЛИЦЕНЗИЯ</div>
+      <div style="font-family:var(--font-heading);font-size:19px;text-transform:uppercase;letter-spacing:0.02em">ГСЛ №0788280</div>
+    </div>
+  </section>
+
+  <!-- THREE STAGES -->
+  <section id="product" style="padding:56px 80px;border-bottom:1px solid var(--color-divider)">
+    <div style="display:flex;align-items:baseline;gap:18px;margin-bottom:30px">
+      <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.16em;color:var(--color-accent-700)">◭ ЛИСТ 02 / ПРОДУКТ</div>
+      <div style="flex:1;height:1px;background:var(--color-divider)"></div>
+      <div style="font-family:var(--font-mono);font-size:11px;color:var(--ink-56)">нажмите стадию — раскроется схема данных</div>
+    </div>
+    <h2 style="font-size:38px;margin:0 0 4px">Три стадии жизни объекта</h2>
+    <p style="max-width:70ch;color:var(--ink-72);margin:0 0 32px">Один информационный контур: модель задаёт эталон, двойник фиксирует факт, система управления удерживает параметры в эксплуатации.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:2px solid var(--color-divider)">
+      <button type="button" onClick="{{ pickModel }}" style="text-align:left;background:none;border:0;border-top:2px solid {{ c0 }};margin-top:-2px;padding:16px 20px 16px 0;cursor:pointer;font-family:inherit;color:inherit">
+        <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.12em;color:var(--color-accent-700)">01 · ПРОЕКТИРОВАНИЕ</div>
+        <div style="font-family:var(--font-heading);font-size:25px;text-transform:uppercase;letter-spacing:0.02em;line-height:1.1">Проектная цифровая модель</div>
+        <div style="font-size:13px;color:var(--ink-72);margin-top:4px">ИИ параметризует модель по заданию, выдаёт разделы ПД, проверяет по нормам РК</div>
+      </button>
+      <button type="button" onClick="{{ pickTwin }}" style="text-align:left;background:none;border:0;border-top:2px solid {{ c1 }};margin-top:-2px;padding:16px 20px;cursor:pointer;font-family:inherit;color:inherit;border-left:1px solid var(--color-divider);border-right:1px solid var(--color-divider)">
+        <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.12em;color:var(--color-accent-700)">02 · СТРОИТЕЛЬСТВО</div>
+        <div style="font-family:var(--font-heading);font-size:25px;text-transform:uppercase;letter-spacing:0.02em;line-height:1.1">Цифровой двойник</div>
+        <div style="font-size:13px;color:var(--ink-72);margin-top:4px">Приборы измеряют факт, расхождение с проектом собирает двойник и исполнительную документацию</div>
+      </button>
+      <button type="button" onClick="{{ pickControl }}" style="text-align:left;background:none;border:0;border-top:2px solid {{ c2 }};margin-top:-2px;padding:16px 0 16px 20px;cursor:pointer;font-family:inherit;color:inherit">
+        <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.12em;color:var(--color-accent-700)">03 · ЭКСПЛУАТАЦИЯ</div>
+        <div style="font-family:var(--font-heading);font-size:25px;text-transform:uppercase;letter-spacing:0.02em;line-height:1.1">Система управления</div>
+        <div style="font-size:13px;color:var(--ink-72);margin-top:4px">Датчики следят за параметрами двойника: паспорт, регламенты ТО, журнал дефектов, учёт ресурсов</div>
+      </button>
+    </div>
+
+    <div class="blueprint" style="margin-top:26px;padding:26px 28px;background:var(--color-accent-100)">
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0">
+        <div style="padding-right:28px">
+          <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.12em;color:var(--color-accent-700);margin-bottom:10px">УЧАСТНИК</div>
+          <div style="font-family:var(--font-heading);font-size:21px;text-transform:uppercase;letter-spacing:0.02em">{{ stageActor }}</div>
+          <div style="font-size:13px;color:var(--ink-72);margin-top:6px">{{ stageActorNote }}</div>
+        </div>
+        <div style="padding:0 28px;border-left:1px solid var(--color-accent-400);position:relative">
+          <div style="position:absolute;left:-6px;top:50%;width:11px;height:11px;border-top:1px solid var(--color-accent-700);border-right:1px solid var(--color-accent-700);transform:rotate(45deg);background:var(--color-accent-100)"></div>
+          <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.12em;color:var(--color-accent-700);margin-bottom:10px">ВХОДНЫЕ ДАННЫЕ</div>
+          <ul style="margin:0;padding-left:16px;font-size:14px;display:grid;gap:5px">
+            <sc-for list="{{ stageInputs }}" as="row" hint-placeholder-count="4">
+              <li>{{ row }}</li>
+            </sc-for>
+          </ul>
+        </div>
+        <div style="padding-left:28px;border-left:1px solid var(--color-accent-400);position:relative">
+          <div style="position:absolute;left:-6px;top:50%;width:11px;height:11px;border-top:1px solid var(--color-accent-700);border-right:1px solid var(--color-accent-700);transform:rotate(45deg);background:var(--color-accent-100)"></div>
+          <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.12em;color:var(--color-accent-700);margin-bottom:10px">РЕЗУЛЬТАТ</div>
+          <ul style="margin:0;padding-left:16px;font-size:14px;display:grid;gap:5px">
+            <sc-for list="{{ stageOutputs }}" as="row" hint-placeholder-count="4">
+              <li>{{ row }}</li>
+            </sc-for>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIVERGENCE -->
+  <section style="padding:56px 80px;border-bottom:1px solid var(--color-divider)">
+    <div style="display:flex;align-items:baseline;gap:18px;margin-bottom:30px">
+      <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.16em;color:var(--color-accent-700)">◭ ЛИСТ 03 / РАСХОЖДЕНИЕ</div>
+      <div style="flex:1;height:1px;background:var(--color-divider)"></div>
+      <div style="font-family:var(--font-mono);font-size:11px;color:var(--ink-56)">объект 2026-014 · КЖ · ось Б/4</div>
+    </div>
+    <div style="display:grid;grid-template-columns:minmax(0,400px) minmax(0,1fr);gap:56px;align-items:start">
+      <div>
+        <h2 style="font-size:38px;margin:0 0 14px">Отклонение видно сразу</h2>
+        <p style="color:var(--ink-72);margin:0 0 18px;text-wrap:pretty">Проектные параметры зафиксированы как эталон. Геодезия, сканирование и датчики дают факт — платформа сравнивает их в момент измерения и адресует отклонение ответственному.</p>
+        <div style="display:grid;gap:0;border-top:1px solid var(--color-divider);font-family:var(--font-mono);font-size:12px">
+          <div style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--color-divider)"><span>Проектная осадка, мм</span><span>≤ 15</span></div>
+          <div style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--color-divider)"><span>Факт 09.09.2026, мм</span><span style="color:var(--sem-warn)">12</span></div>
+          <div style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--color-divider)"><span>Δ до допуска, мм</span><span>3</span></div>
+          <div style="display:flex;justify-content:space-between;padding:9px 0"><span>Реакция платформы</span><span>15 мин</span></div>
+        </div>
+      </div>
+      <figure class="blueprint" style="margin:0;padding:22px 24px 14px">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <div style="display:flex;gap:22px;font-family:var(--font-mono);font-size:10px;color:var(--ink-56);margin-bottom:12px">
+          <span style="display:flex;align-items:center;gap:6px"><svg width="22" height="6"><path d="M0 3H22" stroke="#416180" stroke-width="1.8"/></svg>ФАКТ ИЗМЕРЕНИЙ</span>
+          <span style="display:flex;align-items:center;gap:6px"><svg width="22" height="6"><path d="M0 3H22" stroke="#94BCE3" stroke-width="1.4" stroke-dasharray="4 3"/></svg>ПРОЕКТНЫЙ ПРОГНОЗ</span>
+          <span style="display:flex;align-items:center;gap:6px"><svg width="22" height="6"><path d="M0 3H22" stroke="#A03A2E" stroke-width="1.2" stroke-dasharray="6 3"/></svg>ДОПУСК 15 мм</span>
+        </div>
+        <svg viewBox="0 0 640 240" width="100%" height="auto" style="display:block" role="img" aria-label="График осадки марки ГМ-07: факт, проектный прогноз и линия допуска">
+          <g stroke="var(--color-divider)" stroke-width="1">
+            <path d="M46 14V206M46 206H632" />
+          </g>
+          <g stroke="var(--color-divider)" stroke-dasharray="2 5">
+            <path d="M46 46H632M46 86H632M46 126H632M46 166H632" />
+          </g>
+          <path d="M46 30H632" stroke="#A03A2E" stroke-width="1.2" stroke-dasharray="6 3" />
+          <rect x="46" y="30" width="586" height="8" fill="#F5E7E4" />
+          <polyline points="46,190 129,178 212,160 295,140 378,118 461,98 544,82 620,70" fill="none" stroke="#94BCE3" stroke-width="1.4" stroke-dasharray="4 3" />
+          <polyline points="46,192 129,184 212,166 295,138 378,112 461,86 544,66 620,54" fill="none" stroke="#416180" stroke-width="2" />
+          <g fill="#416180">
+            <circle cx="46" cy="192" r="2.6" /><circle cx="129" cy="184" r="2.6" /><circle cx="212" cy="166" r="2.6" /><circle cx="295" cy="138" r="2.6" /><circle cx="378" cy="112" r="2.6" /><circle cx="461" cy="86" r="2.6" />
+          </g>
+          <circle cx="544" cy="66" r="5" fill="#F4EEE0" stroke="#8F6511" stroke-width="2" />
+          <circle cx="620" cy="54" r="5" fill="#F4EEE0" stroke="#8F6511" stroke-width="2" />
+          <path d="M544 66 452 210" stroke="#8F6511" stroke-width="0.8" stroke-dasharray="3 2" />
+          <rect x="358" y="210" width="190" height="26" fill="#F4EEE0" stroke="#8F6511" />
+          <text x="368" y="227" font-family="IBM Plex Mono" font-size="10.5" fill="#8F6511">▲ У ГРАНИЦЫ ДОПУСКА · ГМ-07</text>
+          <g font-family="IBM Plex Mono" font-size="10" fill="#7A7A7D">
+            <text x="16" y="34">15</text><text x="16" y="90">10</text><text x="22" y="146">5</text><text x="22" y="210">0</text>
+            <text x="30" y="224">01.08</text><text x="270" y="224">20.08</text><text x="590" y="224">09.09</text>
+            <text x="46" y="12">ОСАДКА МАРКИ ГМ-07, ММ</text>
+          </g>
+        </svg>
+      </figure>
+    </div>
+  </section>
+
+  <!-- INDUSTRIES -->
+  <section id="industries" style="padding:56px 80px;border-bottom:1px solid var(--color-divider)">
+    <div style="display:flex;align-items:baseline;gap:18px;margin-bottom:30px">
+      <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.16em;color:var(--color-accent-700)">◭ ЛИСТ 04 / ОТРАСЛЕВЫЕ РЕШЕНИЯ</div>
+      <div style="flex:1;height:1px;background:var(--color-divider)"></div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:22px">
+      <article class="blueprint" style="padding:20px">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em;color:var(--color-accent-700)">01 · АПК</div>
+        <h3 style="font-size:21px;margin:8px 0 8px;line-height:1.12">Животноводство и агропром</h3>
+        <p style="font-size:13px;color:var(--ink-72);margin:0 0 14px">Комплексы КРС, откорм, кормоцеха: технология, микроклимат, ветзоны — в одной модели с КЖ и ОВ.</p>
+        <div style="font-family:var(--font-mono);font-size:11px;border-top:1px solid var(--color-divider);padding-top:10px;color:var(--ink-56)">ТХ · КЖ · ОВ · ВК</div>
+      </article>
+      <article class="blueprint" style="padding:20px">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em;color:var(--color-accent-700)">02 · ВОДА</div>
+        <h3 style="font-size:21px;margin:8px 0 8px;line-height:1.12">Водозаборы и сети</h3>
+        <p style="font-size:13px;color:var(--ink-72);margin:0 0 14px">Водозаборные сооружения, насосные, магистрали: расход, давление, зоны санитарной охраны.</p>
+        <div style="font-family:var(--font-mono);font-size:11px;border-top:1px solid var(--color-divider);padding-top:10px;color:var(--ink-56)">ВК · ЭОМ · СС</div>
+      </article>
+      <article class="blueprint" style="padding:20px">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em;color:var(--color-accent-700)">03 · ПРОМ</div>
+        <h3 style="font-size:21px;margin:8px 0 8px;line-height:1.12">Промышленные объекты</h3>
+        <p style="font-size:13px;color:var(--ink-72);margin:0 0 14px">Цеха и заводы: металлокаркас, крановые нагрузки, технологические линии, обследование конструкций.</p>
+        <div style="font-family:var(--font-mono);font-size:11px;border-top:1px solid var(--color-divider);padding-top:10px;color:var(--ink-56)">КМ · КЖ · ТХ</div>
+      </article>
+      <article class="blueprint" style="padding:20px">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em;color:var(--color-accent-700)">04 · СЕТИ</div>
+        <h3 style="font-size:21px;margin:8px 0 8px;line-height:1.12">Инженерные сети</h3>
+        <p style="font-size:13px;color:var(--ink-72);margin:0 0 14px">Наружные сети и подключения: мониторинг режимов, аварийность, учёт ресурсов по узлам.</p>
+        <div style="font-family:var(--font-mono);font-size:11px;border-top:1px solid var(--color-divider);padding-top:10px;color:var(--ink-56)">ГП · ЭОМ · ВК</div>
+      </article>
+    </div>
+  </section>
+
+  <!-- CASES -->
+  <section id="cases" style="padding:56px 80px;border-bottom:1px solid var(--color-divider)">
+    <div style="display:flex;align-items:baseline;gap:18px;margin-bottom:30px">
+      <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.16em;color:var(--color-accent-700)">◭ ЛИСТ 05 / КЕЙСЫ</div>
+      <div style="flex:1;height:1px;background:var(--color-divider)"></div>
+      <a href="#0" style="font-family:var(--font-mono);font-size:11px">ВСЕ КЕЙСЫ →</a>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:22px">
+      <article style="border:1px solid var(--color-divider);padding:0">
+        <div style="height:96px;border-bottom:1px solid var(--color-divider);background-image:linear-gradient(to right,var(--color-accent-200) 1px,transparent 1px),linear-gradient(to bottom,var(--color-accent-200) 1px,transparent 1px);background-size:20px 20px;display:grid;place-items:center">
+          <svg width="120" height="58" viewBox="0 0 120 58" fill="none" stroke="#416180" stroke-width="1"><path d="M6 50h108M18 50V22l24-12 24 12v28M66 50V30h36v20M18 22h48"/></svg>
+        </div>
+        <div style="padding:16px">
+          <div style="font-family:var(--font-mono);font-size:10px;color:var(--ink-56)">2024-031 · АСТАНА</div>
+          <h3 style="font-size:18px;margin:6px 0 8px;line-height:1.14">Завод металлоконструкций</h3>
+          <p style="font-size:13px;color:var(--ink-72);margin:0">Проект КМ и монтажные схемы, контроль геометрии каркаса по сканированию.</p>
+        </div>
+      </article>
+      <article style="border:1px solid var(--color-divider);padding:0">
+        <div style="height:96px;border-bottom:1px solid var(--color-divider);background-image:linear-gradient(to right,var(--color-accent-200) 1px,transparent 1px),linear-gradient(to bottom,var(--color-accent-200) 1px,transparent 1px);background-size:20px 20px;display:grid;place-items:center">
+          <svg width="120" height="58" viewBox="0 0 120 58" fill="none" stroke="#416180" stroke-width="1"><path d="M8 50h104M20 50V16h32v34M52 30h44v20M28 24h8M28 34h8M28 44h8"/></svg>
+        </div>
+        <div style="padding:16px">
+          <div style="font-family:var(--font-mono);font-size:10px;color:var(--ink-56)">2023-118 · ҚАРАҒАНДЫ</div>
+          <h3 style="font-size:18px;margin:6px 0 8px;line-height:1.14">Фармацевтическая фабрика</h3>
+          <p style="font-size:13px;color:var(--ink-72);margin:0">Чистые помещения, ОВ и ВК, нормоконтроль разделов перед экспертизой.</p>
+        </div>
+      </article>
+      <article style="border:1px solid var(--color-divider);padding:0">
+        <div style="height:96px;border-bottom:1px solid var(--color-divider);background-image:linear-gradient(to right,var(--color-accent-200) 1px,transparent 1px),linear-gradient(to bottom,var(--color-accent-200) 1px,transparent 1px);background-size:20px 20px;display:grid;place-items:center">
+          <svg width="120" height="58" viewBox="0 0 120 58" fill="none" stroke="#416180" stroke-width="1"><path d="M8 50h104M22 50V28l20-10 20 10v22M70 50V34l18-8 18 8v16M30 38h8M78 42h8"/></svg>
+        </div>
+        <div style="padding:16px">
+          <div style="font-family:var(--font-mono);font-size:10px;color:var(--ink-56)">2025-006 · АЛМАТЫ</div>
+          <h3 style="font-size:18px;margin:6px 0 8px;line-height:1.14">Завод переработки отходов</h3>
+          <p style="font-size:13px;color:var(--ink-72);margin:0">Технологические линии, нагрузки на перекрытия, исполнительная документация из двойника.</p>
+        </div>
+      </article>
+      <article style="border:1px solid var(--color-divider);padding:0">
+        <div style="height:96px;border-bottom:1px solid var(--color-divider);background-image:linear-gradient(to right,var(--color-accent-200) 1px,transparent 1px),linear-gradient(to bottom,var(--color-accent-200) 1px,transparent 1px);background-size:20px 20px;display:grid;place-items:center">
+          <svg width="120" height="58" viewBox="0 0 120 58" fill="none" stroke="#416180" stroke-width="1"><path d="M8 50h104M24 50V14h30v36" stroke-dasharray="4 3"/><path d="M60 50V26h32v24M66 34h6M78 34h6"/></svg>
+        </div>
+        <div style="padding:16px">
+          <div style="font-family:var(--font-mono);font-size:10px;color:var(--ink-56)">2025-042 · АЛМАТЫ</div>
+          <h3 style="font-size:18px;margin:6px 0 8px;line-height:1.14">Демонтаж жилого дома</h3>
+          <p style="font-size:13px;color:var(--ink-72);margin:0">Обследование конструкций, проект демонтажа, мониторинг соседних зданий.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background:var(--color-accent-900);color:var(--color-accent-100);padding:52px 80px">
+    <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,420px);gap:56px;align-items:start">
+      <div>
+        <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.16em;color:#94BCE3;margin-bottom:16px">◭ ЛИСТ 06 / ПИЛОТ</div>
+        <h2 style="font-size:40px;margin:0 0 12px;color:#EEF6FF">Запросить пилот на своём объекте</h2>
+        <p style="max-width:62ch;color:#B5D9FD;margin:0 0 24px">Четыре шага: объект → стадия → исходные данные → контакты. Разбираем задание, показываем модель и расхождение на вашем объекте.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn blueprint" href="A8 Pilot Request.dc.html" style="position:relative;background:#B5D9FD;color:#1D2D3D;border-color:#B5D9FD;font-size:15px;padding:11px 20px">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            Заполнить заявку
+          </a>
+          <button class="btn" type="button" style="border-color:rgba(181,217,253,0.45);color:#D6EBFF;font-size:15px;padding:11px 20px">Скачать описание платформы</button>
+        </div>
+      </div>
+      <div style="border:1px solid rgba(181,217,253,0.35);font-family:var(--font-mono);font-size:12px">
+        <div style="display:grid;grid-template-columns:auto 1fr">
+          <div style="padding:10px 14px;border-right:1px solid rgba(181,217,253,0.2);border-bottom:1px solid rgba(181,217,253,0.2);color:#94BCE3">ТЕЛЕФОН</div>
+          <div style="padding:10px 14px;border-bottom:1px solid rgba(181,217,253,0.2)">+7 777 957-61-63</div>
+          <div style="padding:10px 14px;border-right:1px solid rgba(181,217,253,0.2);border-bottom:1px solid rgba(181,217,253,0.2);color:#94BCE3">E-MAIL</div>
+          <div style="padding:10px 14px;border-bottom:1px solid rgba(181,217,253,0.2)">engpro.kz@gmail.com</div>
+          <div style="padding:10px 14px;border-right:1px solid rgba(181,217,253,0.2);border-bottom:1px solid rgba(181,217,253,0.2);color:#94BCE3">АДРЕС</div>
+          <div style="padding:10px 14px;border-bottom:1px solid rgba(181,217,253,0.2)">Астана, Кенесары 8, офис 1701</div>
+          <div style="padding:10px 14px;border-right:1px solid rgba(181,217,253,0.2);color:#94BCE3">САЙТ</div>
+          <div style="padding:10px 14px">engpro.kz</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER TITLE BLOCK -->
+  <footer style="display:grid;grid-template-columns:1.6fr repeat(4,1fr);border-top:1.5px solid var(--color-text);font-family:var(--font-mono);font-size:11px">
+    <div style="padding:14px 80px;border-right:1px solid var(--color-divider)">
+      <div style="color:var(--ink-56);font-size:10px">ОБЪЕКТ</div>
+      <div>BESTECH · Bek Stroy Invest LLP</div>
+    </div>
+    <div style="padding:14px 16px;border-right:1px solid var(--color-divider)">
+      <div style="color:var(--ink-56);font-size:10px">РАЗДЕЛ</div>
+      <div>Маркетинговый сайт · A1</div>
+    </div>
+    <div style="padding:14px 16px;border-right:1px solid var(--color-divider)">
+      <div style="color:var(--ink-56);font-size:10px">СТАДИЯ</div>
+      <div>Макет 1440</div>
+    </div>
+    <div style="padding:14px 16px;border-right:1px solid var(--color-divider)">
+      <div style="color:var(--ink-56);font-size:10px">ДАТА</div>
+      <div>11.09.2026</div>
+    </div>
+    <div style="padding:14px 16px">
+      <div style="color:var(--ink-56);font-size:10px">ЛИСТ</div>
+      <div>02 / 03</div>
+    </div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;activeStage&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;model&quot;,&quot;twin&quot;,&quot;control&quot;],&quot;default&quot;:&quot;twin&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Схема стадий&quot;}}">
+const STAGES = {
+  model: {
+    actor: 'Заказчик и ГИП',
+    note: 'Проектное бюро формирует разделы, заказчик согласует и фиксирует эталон.',
+    inputs: ['Задание на проектирование', 'АПЗ и технические условия', 'Инженерные изыскания', 'Технологическое задание'],
+    outputs: ['Разделы ПД: ГП, ТХ, АР, КМ, КЖ, ОВ, ВК, ЭОМ, СС', 'Нормоконтроль по СН РК и СП РК', 'Эталонные параметры модели', 'Комплект на экспертизу']
+  },
+  twin: {
+    actor: 'Подрядчик и технадзор',
+    note: 'Приборы на площадке передают факт, технадзор отрабатывает отклонения.',
+    inputs: ['Геодезическая съёмка, марки осадок', 'Сканирование с БПЛА, облако точек', 'Датчики температуры и прочности бетона', 'Мониторинг нагрузок и сетей'],
+    outputs: ['Расхождение факт / проект по элементам', 'Общий журнал работ', 'Акты скрытых работ', 'Исполнительные чертежи и протоколы испытаний']
+  },
+  control: {
+    actor: 'Служба эксплуатации',
+    note: 'Двойник передаётся эксплуатации вместе с регламентами и паспортом.',
+    inputs: ['Показания датчиков объекта', 'Заявки и дефекты', 'Приборы учёта: вода, электро, тепло', 'Регламенты ППР'],
+    outputs: ['Технический паспорт объекта', 'Календарь ТО и журнал дефектов', 'Отчёты по потреблению ресурсов', 'Удалённый мониторинг и уведомления']
+  }
+};
+
+class Component extends DCLogic {
+  state = { stage: this.props.activeStage || 'twin' };
+  renderVals() {
+    const key = STAGES[this.state.stage] ? this.state.stage : 'twin';
+    const s = STAGES[key];
+    const on = 'var(--color-accent)';
+    const off = 'var(--color-divider)';
+    return {
+      stageActor: s.actor,
+      stageActorNote: s.note,
+      stageInputs: s.inputs,
+      stageOutputs: s.outputs,
+      c0: key === 'model' ? on : off,
+      c1: key === 'twin' ? on : off,
+      c2: key === 'control' ? on : off,
+      pickModel: () => this.setState({ stage: 'model' }),
+      pickTwin: () => this.setState({ stage: 'twin' }),
+      pickControl: () => this.setState({ stage: 'control' })
+    };
+  }
+}
+</script>
+</body>
+</html>

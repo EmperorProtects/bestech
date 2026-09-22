@@ -1,0 +1,44 @@
+# Зависимости и сборка
+node_modules/
+.next/
+out/
+dist/
+build/
+.turbo/
+*.tsbuildinfo
+
+# Данные стенда: SQLite, загруженные файлы, логи запусков
+.data/
+logDir/
+*.log
+
+# Переменные окружения (в них пароли демо-учёток и ключи шлюзов)
+.env
+.env.*
+!.env.example
+
+# Модели и чертежи: их место в мастерской newExport, а не в репозитории
+*.rvt
+*.rte
+*.rfa
+*.rfa.*
+*.dwg
+*.dxf
+*.ifc
+*.nwd
+
+# Установщики и архивы
+*.msi
+*.exe
+*.zip
+*.7z
+
+# Служебное: редакторы, ОС, локальные настройки Claude Code
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
+.claude/settings.local.json
+.thumbnail

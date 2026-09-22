@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/industry-a458f529-fc3f-4d39-8047-7968176c36b5/styles.css">
+<script src="_ds/industry-a458f529-fc3f-4d39-8047-7968176c36b5/_ds_bundle.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap&subset=cyrillic,cyrillic-ext,latin" rel="stylesheet">
+<style>
+  :root{
+    --font-heading:"Fira Sans Condensed","Barlow Condensed",system-ui,sans-serif;
+    --font-body:"IBM Plex Sans",system-ui,sans-serif;
+    --font-mono:"IBM Plex Mono",ui-monospace,monospace;
+    --sem-ok:#3E7A55; --sem-warn:#8F6511; --sem-alarm:#A03A2E;
+    --ink-56:color-mix(in srgb, var(--color-text) 56%, transparent);
+    --ink-72:color-mix(in srgb, var(--color-text) 72%, transparent);
+  }
+  body{margin:0;font-variant-numeric:tabular-nums;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4,h5{text-transform:uppercase;letter-spacing:0.015em}
+  a{color:var(--color-accent-700);text-decoration:none}
+  a:hover{color:var(--color-accent);text-decoration:underline}
+</style>
+</helmet>
+
+<div style="width:1440px;max-width:1440px;margin:0 auto;background:var(--color-bg);color:var(--color-text);font-family:var(--font-body);font-size:15px;display:grid;grid-template-columns:216px minmax(0,1fr)">
+
+  <!-- SIDEBAR -->
+  <aside style="border-right:1px solid var(--color-divider);display:flex;flex-direction:column;min-height:900px">
+    <div style="padding:16px;border-bottom:1px solid var(--color-divider)">
+      <a href="A1 Home.dc.html" style="font-family:var(--font-heading);font-size:18px;font-weight:700;letter-spacing:0.2em;color:var(--color-text)">BESTECH</a>
+      <div style="font-family:var(--font-mono);font-size:10px;color:var(--ink-56);letter-spacing:0.1em">КАБИНЕТ ЗАКАЗЧИКА</div>
+    </div>
+    <div style="padding:12px;border-bottom:1px solid var(--color-divider)">
+      <div style="border:1px solid var(--color-divider);padding:8px 10px">
+        <div style="font-family:var(--font-mono);font-size:10px;color:var(--ink-56)">ОРГАНИЗАЦИЯ</div>
+        <div style="display:flex;align-items:center;gap:8px">
+          <span style="font-family:var(--font-heading);font-size:15px;text-transform:uppercase;line-height:1.15">ТОО «Акмола Агро»</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin-left:auto;flex:none"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+      </div>
+    </div>
+    <nav style="padding:10px 8px;display:grid;gap:2px;font-size:13.5px">
+      <a href="B2 My Assets.dc.html" style="display:flex;align-items:center;gap:9px;padding:8px 10px;background:var(--color-accent-100);color:var(--color-accent-800);border-left:2px solid var(--color-accent)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16v16H4zM4 10h16M10 10v10"/></svg>Мои объекты</a>
+      <a href="B5 Documentation.dc.html" style="display:flex;align-items:center;gap:9px;padding:8px 10px;color:var(--color-text)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 5h16M4 12h16M4 19h16M9 5v14"/></svg>Документация <span style="margin-left:auto;font-family:var(--font-mono);font-size:11px;color:var(--sem-warn)">3</span></a>
+      <a href="C1 Twin Overview.dc.html" style="display:flex;align-items:center;gap:9px;padding:8px 10px;color:var(--color-text)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3 3 8v8l9 5 9-5V8z"/><path d="M3 8l9 5 9-5M12 21v-8"/></svg>Двойник</a>
+      <a href="D1 AI Assistant.dc.html" style="display:flex;align-items:center;gap:9px;padding:8px 10px;color:var(--color-text)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 10h8"/></svg>ИИ-сервисы</a>
+      <a href="#0" style="display:flex;align-items:center;gap:9px;padding:8px 10px;color:var(--color-text)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6h16v12H4zM4 10h16"/></svg>Финансы</a>
+      <a href="#0" style="display:flex;align-items:center;gap:9px;padding:8px 10px;color:var(--color-text)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 8a6 6 0 0 1 12 0v5l2 3H4l2-3z"/><path d="M10 19a2 2 0 0 0 4 0"/></svg>Уведомления <span style="margin-left:auto;font-family:var(--font-mono);font-size:11px;color:var(--sem-alarm)">5</span></a>
+    </nav>
+    <div style="margin-top:auto;padding:12px;border-top:1px solid var(--color-divider)">
+      <button class="btn btn-secondary" type="button" onClick="{{ toggleDensity }}" style="width:100%;font-size:12px;padding:5px 8px">Плотность: {{ densityLabel }}</button>
+      <div style="display:flex;align-items:center;gap:9px;margin-top:14px">
+        <span style="width:28px;height:28px;border:1px solid var(--color-divider);display:grid;place-items:center;font-family:var(--font-mono);font-size:11px">ТБ</span>
+        <div style="line-height:1.2"><div style="font-size:13px">Бекжанов Т.</div><div style="font-family:var(--font-mono);font-size:10px;color:var(--ink-56)">Заказчик · ГИП</div></div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <div style="display:flex;flex-direction:column;min-width:0">
+
+    <!-- TITLE BLOCK -->
+    <header style="display:grid;grid-template-columns:minmax(0,1fr) auto;border-bottom:1px solid var(--color-divider)">
+      <div style="display:grid;grid-template-columns:repeat(4,auto);justify-content:start;font-family:var(--font-mono);font-size:11px">
+        <div style="padding:10px 16px;border-right:1px solid var(--color-divider)"><div style="color:var(--ink-56);font-size:10px">РАЗДЕЛ</div><div>МОИ ОБЪЕКТЫ</div></div>
+        <div style="padding:10px 16px;border-right:1px solid var(--color-divider)"><div style="color:var(--ink-56);font-size:10px">ОБЪЕКТОВ</div><div>3</div></div>
+        <div style="padding:10px 16px;border-right:1px solid var(--color-divider)"><div style="color:var(--ink-56);font-size:10px">ОТКРЫТЫХ ЗАМЕЧАНИЙ</div><div style="color:var(--sem-warn)">▲ 4</div></div>
+        <div style="padding:10px 16px"><div style="color:var(--ink-56);font-size:10px">АВАРИЙ</div><div style="color:var(--sem-alarm)">▲ 2</div></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;padding:0 16px">
+        <div style="display:flex;border:1px solid var(--color-divider);font-family:var(--font-mono);font-size:11px">
+          <button type="button" onClick="{{ showList }}" style="padding:5px 11px;border:0;cursor:pointer;font-family:inherit;background:{{ listBg }};color:{{ listFg }}">СПИСОК</button>
+          <button type="button" onClick="{{ showMap }}" style="padding:5px 11px;border:0;border-left:1px solid var(--color-divider);cursor:pointer;font-family:inherit;background:{{ mapBg }};color:{{ mapFg }}">КАРТА</button>
+        </div>
+        <div style="display:flex;border:1px solid var(--color-divider);font-family:var(--font-mono);font-size:11px">
+          <span style="padding:5px 9px;background:var(--color-accent);color:var(--color-bg)">RU</span>
+          <span style="padding:5px 9px;border-left:1px solid var(--color-divider)">KZ</span>
+          <span style="padding:5px 9px;border-left:1px solid var(--color-divider)">EN</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- FILTERS -->
+    <div style="display:flex;align-items:center;gap:10px;padding:12px 24px;border-bottom:1px solid var(--color-divider)">
+      <input class="input" type="search" placeholder="Поиск по шифру или наименованию" aria-label="Поиск объектов" style="max-width:300px" />
+      <select class="input" aria-label="Стадия" style="max-width:190px"><option>Все стадии</option><option>Проектирование</option><option>Строительство</option><option>Эксплуатация</option></select>
+      <select class="input" aria-label="Регион" style="max-width:190px"><option>Все регионы</option><option>Акмолинская обл.</option><option>Карагандинская обл.</option></select>
+      <button class="btn btn-secondary btn-icon" type="button" aria-label="Ещё фильтры"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5h18l-7 8v6l-4-2v-4z"/></svg></button>
+      <a class="btn btn-primary blueprint" href="A8 Pilot Request.dc.html" style="position:relative;margin-left:auto">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        Добавить объект
+      </a>
+    </div>
+
+    <!-- LIST -->
+    <sc-if value="{{ isList }}" hint-placeholder-val="{{ true }}">
+      <section style="padding:{{ pagePad }} 24px;display:grid;gap:{{ gap }}">
+        <sc-for list="{{ assets }}" as="a" hint-placeholder-count="3">
+          <article class="blueprint" style="padding:{{ cardPad }};display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:28px;align-items:start">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <div style="min-width:0">
+              <div style="display:flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:11px;color:var(--ink-56)">
+                <span>{{ a.code }}</span>
+                <span style="width:1px;height:11px;background:var(--color-divider)"></span>
+                <span>{{ a.region }}</span>
+                <span style="display:inline-flex;align-items:center;gap:5px;border:1px solid {{ a.stageColor }};color:{{ a.stageColor }};padding:1px 7px;letter-spacing:0.1em;margin-left:4px">{{ a.stageLabel }}</span>
+              </div>
+              <h2 style="font-size:25px;margin:8px 0 4px;line-height:1.08"><a href="B3 Asset Page.dc.html" style="color:var(--color-text)">{{ a.name }}</a></h2>
+              <div style="font-family:var(--font-mono);font-size:11px;color:var(--ink-56);margin-bottom:14px">ГИП {{ a.chief }} · {{ a.meta }}</div>
+
+              <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px;border-top:1px solid var(--color-divider);padding-top:12px">
+                <div>
+                  <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em;color:var(--ink-56)">ГОТОВНОСТЬ</div>
+                  <div style="font-family:var(--font-mono);font-size:20px">{{ a.progressLabel }}</div>
+                  <svg viewBox="0 0 160 8" width="100%" height="8" preserveAspectRatio="none" style="display:block;margin-top:3px">
+                    <path d="M1 4H159" stroke="var(--color-divider)" stroke-width="1" />
+                    <path d="M1 4H{{ a.barX }}" stroke="var(--color-accent)" stroke-width="2" />
+                    <path d="M1 0V8M{{ a.barX }} 0V8" stroke="var(--color-accent)" stroke-width="0.8" />
+                  </svg>
+                </div>
+                <div>
+                  <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em;color:var(--ink-56)">СЛЕДУЮЩИЙ СРОК</div>
+                  <div style="font-family:var(--font-mono);font-size:15px">{{ a.deadline }}</div>
+                  <div style="font-size:12px;color:var(--ink-72);margin-top:2px">{{ a.deadlineNote }}</div>
+                </div>
+                <div>
+                  <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em;color:var(--ink-56)">ЗАМЕЧАНИЯ</div>
+                  <div style="display:flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:15px;color:{{ a.remarkColor }}">
+                    <span>{{ a.remarkGlyph }}</span><span>{{ a.remarks }}</span>
+                  </div>
+                  <div style="font-size:12px;color:var(--ink-72);margin-top:2px">{{ a.remarkNote }}</div>
+                </div>
+                <div>
+                  <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em;color:var(--ink-56)">ДАТЧИКИ</div>
+                  <div style="display:flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:15px;color:{{ a.sensorColor }}">
+                    <span>{{ a.sensorGlyph }}</span><span>{{ a.sensors }}</span>
+                  </div>
+                  <div style="font-size:12px;color:var(--ink-72);margin-top:2px">{{ a.sensorNote }}</div>
+                </div>
+              </div>
+
+              <sc-if value="{{ a.hasAlarm }}" hint-placeholder-val="{{ false }}">
+                <div style="display:flex;gap:10px;align-items:flex-start;margin-top:14px;border-left:3px solid var(--sem-alarm);background:#F5E7E4;border-top:1px solid var(--color-divider);border-right:1px solid var(--color-divider);border-bottom:1px solid var(--color-divider);padding:10px 12px">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--sem-alarm)" stroke-width="1.5" style="flex:none;margin-top:1px"><path d="M12 2 2 20h20L12 2ZM12 9v5M12 17.5h.01"/></svg>
+                  <div>
+                    <div style="font-family:var(--font-heading);font-size:14px;text-transform:uppercase;letter-spacing:0.03em;color:var(--sem-alarm)">{{ a.alarmTitle }}</div>
+                    <div style="font-size:12.5px;color:var(--ink-72)">{{ a.alarmNote }}</div>
+                  </div>
+                  <a class="btn btn-secondary" href="C5 Alarms.dc.html" style="margin-left:auto;font-size:12px;padding:4px 10px;flex:none">Открыть</a>
+                </div>
+              </sc-if>
+            </div>
+
+            <div style="border-left:1px solid var(--color-divider);padding-left:22px">
+              <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em;color:var(--ink-56);margin-bottom:8px">СХЕМА ОБЪЕКТА</div>
+              <div style="border:1px solid var(--color-divider);background-image:linear-gradient(to right,var(--color-accent-200) 1px,transparent 1px),linear-gradient(to bottom,var(--color-accent-200) 1px,transparent 1px);background-size:18px 18px">
+                {{ a.figure }}
+              </div>
+              <div style="display:grid;gap:0;margin-top:12px;border-top:1px solid var(--color-divider)">
+                <div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--color-divider);font-family:var(--font-mono);font-size:11px"><span style="color:var(--ink-56)">РАЗДЕЛОВ ПД</span><span>{{ a.sections }}</span></div>
+                <div style="display:flex;justify-content:space-between;padding:6px 0;font-family:var(--font-mono);font-size:11px"><span style="color:var(--ink-56)">ОБНОВЛЕНО</span><span>{{ a.updated }}</span></div>
+              </div>
+              <a class="btn btn-secondary" href="B3 Asset Page.dc.html" style="width:100%;margin-top:12px;justify-content:center">Открыть лист объекта</a>
+            </div>
+          </article>
+        </sc-for>
+      </section>
+    </sc-if>
+
+    <!-- MAP -->
+    <sc-if value="{{ isMap }}" hint-placeholder-val="{{ false }}">
+      <section style="padding:20px 24px;display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:22px;align-items:start">
+        <figure class="blueprint" style="margin:0;padding:0">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div style="padding:9px 14px;border-bottom:1px solid var(--color-divider);font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em;color:var(--ink-56)">РАЗМЕЩЕНИЕ ОБЪЕКТОВ · СХЕМА · 3 ПОЗИЦИИ</div>
+          <svg viewBox="0 0 820 470" width="100%" height="auto" style="display:block" role="img" aria-label="Схема размещения трёх объектов: Акмолинская область, Астана, Карагандинская область">
+            <rect x="0" y="0" width="820" height="470" fill="#F5F5F8" />
+            <g stroke="#E7E7EA" stroke-width="1">
+              <path d="M0 60H820M0 120H820M0 180H820M0 240H820M0 300H820M0 360H820M0 420H820" />
+              <path d="M60 0V470M120 0V470M180 0V470M240 0V470M300 0V470M360 0V470M420 0V470M480 0V470M540 0V470M600 0V470M660 0V470M720 0V470M780 0V470" />
+            </g>
+            <path d="M120 300 200 180 340 120 470 150 590 110 700 200 740 330 600 400 420 380 260 420Z" fill="#EEF6FF" stroke="#94BCE3" stroke-width="1.4" />
+            <path d="M340 120 400 250 470 150M400 250 590 110M400 250 420 380" stroke="#B5D9FD" stroke-width="1" stroke-dasharray="5 4" />
+            <g font-family="IBM Plex Mono" font-size="10" fill="#7A7A7D">
+              <text x="128" y="290">Республика Казахстан · схематично</text>
+            </g>
+            <g>
+              <rect x="332" y="112" width="16" height="16" fill="#F2F2F3" stroke="#8F6511" stroke-width="2" />
+              <path d="M340 116v8M340 126h.01" stroke="#8F6511" stroke-width="1.6" />
+              <rect x="356" y="98" width="230" height="44" fill="#F2F2F3" stroke="#8F6511" />
+              <text x="366" y="116" font-family="IBM Plex Mono" font-size="11" fill="#1D1F20">2026-014 · Молочный комплекс</text>
+              <text x="366" y="132" font-family="IBM Plex Mono" font-size="10" fill="#8F6511">▲ 3 замечания · готовность 62 %</text>
+            </g>
+            <g>
+              <circle cx="470" cy="150" r="8" fill="#F2F2F3" stroke="#416180" stroke-width="2" />
+              <circle cx="470" cy="150" r="2.6" fill="#416180" />
+              <rect x="484" y="156" width="208" height="44" fill="#F2F2F3" stroke="#416180" />
+              <text x="494" y="174" font-family="IBM Plex Mono" font-size="11" fill="#1D1F20">2026-021 · Водозабор</text>
+              <text x="494" y="190" font-family="IBM Plex Mono" font-size="10" fill="#416180">● проектирование · ВК на проверке</text>
+            </g>
+            <g>
+              <circle cx="420" cy="380" r="8" fill="#F2F2F3" stroke="#3E7A55" stroke-width="2" />
+              <circle cx="420" cy="380" r="2.6" fill="#3E7A55" />
+              <rect x="434" y="386" width="196" height="44" fill="#F2F2F3" stroke="#3E7A55" />
+              <text x="444" y="404" font-family="IBM Plex Mono" font-size="11" fill="#1D1F20">2025-097 · Кормоцех</text>
+              <text x="444" y="420" font-family="IBM Plex Mono" font-size="10" fill="#3E7A55">● эксплуатация · ТО по графику</text>
+            </g>
+            <g font-family="IBM Plex Mono" font-size="9" fill="#7A7A7D">
+              <text x="700" y="450">М 1:5 000 000</text>
+            </g>
+          </svg>
+        </figure>
+        <div>
+          <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.12em;color:var(--color-accent-700);margin-bottom:10px">◭ ОБЪЕКТЫ НА СХЕМЕ</div>
+          <div style="display:grid;gap:0;border-top:1px solid var(--color-divider)">
+            <sc-for list="{{ assets }}" as="a" hint-placeholder-count="3">
+              <a href="B3 Asset Page.dc.html" style="display:grid;grid-template-columns:16px minmax(0,1fr);gap:10px;padding:11px 0;border-bottom:1px solid var(--color-divider);color:var(--color-text)">
+                <span style="font-family:var(--font-mono);font-size:11px;color:{{ a.stageColor }}">{{ a.sensorGlyph }}</span>
+                <span>
+                  <span style="display:block;font-family:var(--font-heading);font-size:16px;text-transform:uppercase;letter-spacing:0.02em;line-height:1.15">{{ a.name }}</span>
+                  <span style="display:block;font-family:var(--font-mono);font-size:10.5px;color:var(--ink-56);margin-top:2px">{{ a.code }} · {{ a.region }} · {{ a.stageLabel }}</span>
+                </span>
+              </a>
+            </sc-for>
+          </div>
+        </div>
+      </section>
+    </sc-if>
+
+    <footer style="margin-top:auto;display:grid;grid-template-columns:1.6fr repeat(4,1fr);border-top:1.5px solid var(--color-text);font-family:var(--font-mono);font-size:11px">
+      <div style="padding:12px 24px;border-right:1px solid var(--color-divider)"><div style="color:var(--ink-56);font-size:10px">ОРГАНИЗАЦИЯ</div><div>ТОО «Акмола Агро» · 3 объекта</div></div>
+      <div style="padding:12px 16px;border-right:1px solid var(--color-divider)"><div style="color:var(--ink-56);font-size:10px">РАЗДЕЛ</div><div>Кабинет · B2</div></div>
+      <div style="padding:12px 16px;border-right:1px solid var(--color-divider)"><div style="color:var(--ink-56);font-size:10px">ПОЛЬЗОВАТЕЛЬ</div><div>Бекжанов Т.</div></div>
+      <div style="padding:12px 16px;border-right:1px solid var(--color-divider)"><div style="color:var(--ink-56);font-size:10px">ДАТА</div><div>11.09.2026</div></div>
+      <div style="padding:12px 16px"><div style="color:var(--ink-56);font-size:10px">ЛИСТ</div><div>B2 / 17</div></div>
+    </footer>
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440},&quot;view&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;list&quot;,&quot;map&quot;],&quot;default&quot;:&quot;list&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Вид&quot;},&quot;density&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;comfortable&quot;,&quot;compact&quot;],&quot;default&quot;:&quot;comfortable&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Плотность&quot;}}">
+const E = React.createElement;
+const OK = '#3E7A55', WARN = '#8F6511', ALARM = '#A03A2E', ACC = '#416180';
+
+function barn() {
+  return E('svg', { viewBox: '0 0 260 130', width: '100%', height: 'auto', style: { display: 'block' },
+    role: 'img', 'aria-label': 'Каркасная аксонометрия здания молочного комплекса' },
+    E('g', { stroke: '#416180', strokeWidth: 1, fill: 'none' },
+      E('path', { d: 'M30 96 130 124 230 96 130 68Z' }),
+      E('path', { d: 'M30 96V56M230 96V56M130 124V84' }),
+      E('path', { d: 'M30 56 130 28 230 56 130 84Z' }),
+      E('path', { d: 'M130 28V12M30 56 130 40 230 56' })),
+    E('g', { stroke: '#94BCE3', strokeWidth: 0.8, fill: 'none' },
+      E('path', { d: 'M55 89V49M80 82V42M105 75V35M155 75V35M180 82V42M205 89V49' })));
+}
+function intake() {
+  return E('svg', { viewBox: '0 0 260 130', width: '100%', height: 'auto', style: { display: 'block' },
+    role: 'img', 'aria-label': 'Каркасная схема водозаборного сооружения' },
+    E('g', { stroke: '#416180', strokeWidth: 1, fill: 'none' },
+      E('path', { d: 'M40 100 130 126 220 100 130 74Z' }),
+      E('path', { d: 'M40 100V64M220 100V64M130 126V90M40 64 130 38 220 64 130 90Z' }),
+      E('circle', { cx: 130, cy: 62, r: 16 }),
+      E('path', { d: 'M130 46V30M114 62H98M146 62h16' })),
+    E('g', { stroke: '#94BCE3', strokeWidth: 0.8, fill: 'none', strokeDasharray: '4 3' },
+      E('path', { d: 'M20 110H240M20 118H240' })));
+}
+function mill() {
+  return E('svg', { viewBox: '0 0 260 130', width: '100%', height: 'auto', style: { display: 'block' },
+    role: 'img', 'aria-label': 'Каркасная схема кормоцеха с силосами' },
+    E('g', { stroke: '#416180', strokeWidth: 1, fill: 'none' },
+      E('path', { d: 'M50 104 120 122 190 104 120 86Z' }),
+      E('path', { d: 'M50 104V52M190 104V52M120 122V70M50 52 120 34 190 52 120 70Z' }),
+      E('path', { d: 'M196 96V44M228 96V44M196 44a16 8 0 0 1 32 0M196 96a16 8 0 0 0 32 0' })),
+    E('g', { stroke: '#94BCE3', strokeWidth: 0.8, fill: 'none' },
+      E('path', { d: 'M80 98V46M150 98V46M120 34V18' })));
+}
+
+const ASSETS = [
+  { code: '2026-014', region: 'Акмолинская обл.', name: 'Молочный комплекс, 1 200 голов',
+    chief: 'Бекжанов Т.', meta: '4 820 м² · пилот с 12.03.2026',
+    stageLabel: 'СТРОИТЕЛЬСТВО', stageColor: WARN, progress: 62, progressLabel: '62 %',
+    deadline: '25.09.2026', deadlineNote: 'Акт скрытых работ, КЖ монолит',
+    remarks: '3 открытых', remarkGlyph: '▲', remarkColor: WARN, remarkNote: 'АР-05, АР-07, КМ-02',
+    sensors: '47 / 48', sensorGlyph: '●', sensorColor: OK, sensorNote: 'ЭОМ-ТП — нет связи 4 ч',
+    sections: '9 из 9 выдано', updated: '11.09.2026 09:42', figure: barn(),
+    hasAlarm: true, alarmTitle: 'Вне допуска · нагрузка на ферму Ф-2',
+    alarmNote: '86 % от проектной (порог 80 %) · технадзор Ким А. · SLA 4 ч' },
+  { code: '2026-021', region: 'Карагандинская обл.', name: 'Водозаборное сооружение, Q = 5 000 м³/сут',
+    chief: 'Оспанова Д.', meta: 'Q = 5 000 м³/сут · договор от 04.06.2026',
+    stageLabel: 'ПРОЕКТИРОВАНИЕ', stageColor: ACC, progress: 34, progressLabel: '34 %',
+    deadline: '30.09.2026', deadlineNote: 'Выдача раздела ВК, версия 3',
+    remarks: '1 на проверке', remarkGlyph: '●', remarkColor: ACC, remarkNote: 'ВК на нормоконтроле',
+    sensors: 'не подключены', sensorGlyph: '○', sensorColor: '#7A7A7D', sensorNote: 'Двойник после старта СМР',
+    sections: '4 из 9 выдано', updated: '10.09.2026 16:20', figure: intake(),
+    hasAlarm: false, alarmTitle: '', alarmNote: '' },
+  { code: '2025-097', region: 'Акмолинская обл.', name: 'Кормоцех, 20 т/ч',
+    chief: 'Сагинтаев Е.', meta: '20 т/ч · введён 18.04.2026',
+    stageLabel: 'ЭКСПЛУАТАЦИЯ', stageColor: OK, progress: 100, progressLabel: '100 %',
+    deadline: '17.09.2026', deadlineNote: 'ТО-04, ревизия насосной',
+    remarks: 'нет', remarkGlyph: '●', remarkColor: OK, remarkNote: 'Замечания закрыты 22.05.2026',
+    sensors: '22 / 22', sensorGlyph: '●', sensorColor: OK, sensorNote: 'Учёт ресурсов ведётся',
+    sections: 'комплект в архиве', updated: '11.09.2026 06:05', figure: mill(),
+    hasAlarm: false, alarmTitle: '', alarmNote: '' }
+];
+
+class Component extends DCLogic {
+  state = { view: this.props.view === 'map' ? 'map' : 'list', compact: this.props.density === 'compact' };
+  renderVals() {
+    const map = this.state.view === 'map';
+    const c = this.state.compact;
+    const selBg = 'var(--color-accent)', selFg = 'var(--color-bg)';
+    return {
+      assets: ASSETS.map(a => Object.assign({}, a, { barX: (1 + 158 * a.progress / 100).toFixed(1) })),
+      isList: !map, isMap: map,
+      listBg: map ? 'transparent' : selBg, listFg: map ? 'var(--color-text)' : selFg,
+      mapBg: map ? selBg : 'transparent', mapFg: map ? selFg : 'var(--color-text)',
+      showList: () => this.setState({ view: 'list' }),
+      showMap: () => this.setState({ view: 'map' }),
+      pagePad: c ? '14px' : '20px',
+      gap: c ? '14px' : '20px',
+      cardPad: c ? '16px' : '22px',
+      densityLabel: c ? 'компактная' : 'обычная',
+      toggleDensity: () => this.setState(s => ({ compact: !s.compact }))
+    };
+  }
+}
+</script>
+</body>
+</html>

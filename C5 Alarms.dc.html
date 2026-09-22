@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/industry-a458f529-fc3f-4d39-8047-7968176c36b5/styles.css">
+<script src="_ds/industry-a458f529-fc3f-4d39-8047-7968176c36b5/_ds_bundle.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap&subset=cyrillic,cyrillic-ext,latin" rel="stylesheet">
+<style>
+  :root{
+    --font-heading:"Fira Sans Condensed","Barlow Condensed",system-ui,sans-serif;
+    --font-body:"IBM Plex Sans",system-ui,sans-serif;
+    --font-mono:"IBM Plex Mono",ui-monospace,monospace;
+    --cy-bg:#1D2D3D; --cy-surface:#24384C; --cy-deep:#16222E;
+    --cy-line:rgba(181,217,253,0.22); --cy-line-2:#416180;
+    --cy-text:#EEF6FF; --cy-mute:#94BCE3; --cy-draw:#B5D9FD;
+    --cy-ok:#7FC49A; --cy-warn:#E3B865; --cy-alarm:#E8837A;
+  }
+  body{margin:0;font-variant-numeric:tabular-nums;-webkit-font-smoothing:antialiased;background:#1D2D3D}
+  h1,h2,h3,h4,h5{text-transform:uppercase;letter-spacing:0.015em}
+  a{color:#B5D9FD;text-decoration:none}
+  a:hover{color:#EEF6FF;text-decoration:underline}
+</style>
+</helmet>
+
+<div style="width:1440px;max-width:1440px;margin:0 auto;background:var(--cy-bg);color:var(--cy-text);font-family:var(--font-body);font-size:14px;display:grid;grid-template-columns:216px minmax(0,1fr)">
+
+  <aside style="border-right:1px solid var(--cy-line);display:flex;flex-direction:column;min-height:900px">
+    <div style="padding:16px 16px 14px;border-bottom:1px solid var(--cy-line)">
+      <a href="A1 Home.dc.html" style="font-family:var(--font-heading);font-size:18px;font-weight:700;letter-spacing:0.2em;color:var(--cy-text)">BESTECH</a>
+      <div style="font-family:var(--font-mono);font-size:10px;color:var(--cy-mute);letter-spacing:0.1em">ЦИФРОВОЙ ДВОЙНИК</div>
+    </div>
+    <div style="padding:12px 12px 14px;border-bottom:1px solid var(--cy-line)">
+      <div style="border:1px solid var(--cy-line);padding:8px 10px">
+        <div style="font-family:var(--font-mono);font-size:10px;color:var(--cy-mute)">ОБЪЕКТ · 2026-014</div>
+        <div style="display:flex;align-items:center;gap:8px">
+          <span style="font-family:var(--font-heading);font-size:15px;text-transform:uppercase;line-height:1.15">Молочный комплекс</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin-left:auto;flex:none"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+      </div>
+    </div>
+    <nav style="padding:10px 8px;display:grid;gap:2px;font-size:13.5px">
+      <a href="C1 Twin Overview.dc.html" style="display:flex;align-items:center;gap:9px;padding:8px 10px;color:var(--cy-draw)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3 3 8v8l9 5 9-5V8z"/><path d="M3 8l9 5 9-5M12 21v-8"/></svg>Обзор двойника</a>
+      <a href="C2 Actual vs Design.dc.html" style="display:flex;align-items:center;gap:9px;padding:8px 10px;color:var(--cy-draw)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 5h16M4 12h16M4 19h16M9 5v14"/></svg>Факт / проект <span style="margin-left:auto;font-family:var(--font-mono);font-size:11px;color:var(--cy-warn)">7</span></a>
+      <a href="C3 Telemetry.dc.html" style="display:flex;align-items:center;gap:9px;padding:8px 10px;color:var(--cy-draw)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 17 9 11l4 4 8-8"/></svg>Телеметрия</a>
+      <a href="#0" style="display:flex;align-items:center;gap:9px;padding:8px 10px;color:var(--cy-draw)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 4 3 9v6l9 5 9-5V9z"/><circle cx="12" cy="12" r="2.5"/></svg>БПЛА и сканирование</a>
+      <a href="C5 Alarms.dc.html" style="display:flex;align-items:center;gap:9px;padding:8px 10px;background:var(--cy-surface);border-left:2px solid var(--cy-draw);color:var(--cy-text)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 2 20h20L12 2ZM12 9v5M12 17.5h.01"/></svg>Аварии <span style="margin-left:auto;font-family:var(--font-mono);font-size:11px;color:var(--cy-alarm)">2</span></a>
+      <a href="#0" style="display:flex;align-items:center;gap:9px;padding:8px 10px;color:var(--cy-draw)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 3h9l5 5v13H5zM14 3v5h5M8 13h8"/></svg>Исполнительная</a>
+    </nav>
+    <div style="margin-top:auto;padding:12px;border-top:1px solid var(--cy-line);display:flex;align-items:center;gap:9px">
+      <span style="width:28px;height:28px;border:1px solid var(--cy-line);display:grid;place-items:center;font-family:var(--font-mono);font-size:11px">АК</span>
+      <div style="line-height:1.2"><div style="font-size:13px">Ким А.</div><div style="font-family:var(--font-mono);font-size:10px;color:var(--cy-mute)">Технадзор</div></div>
+    </div>
+  </aside>
+
+  <div style="display:flex;flex-direction:column;min-width:0">
+
+    <header style="display:grid;grid-template-columns:minmax(0,1fr) auto;border-bottom:1px solid var(--cy-line)">
+      <div style="display:grid;grid-template-columns:repeat(5,auto);justify-content:start;font-family:var(--font-mono);font-size:11px">
+        <div style="padding:10px 16px;border-right:1px solid var(--cy-line)"><div style="color:var(--cy-mute);font-size:10px">ШИФР</div><div>2026-014</div></div>
+        <div style="padding:10px 16px;border-right:1px solid var(--cy-line)"><div style="color:var(--cy-mute);font-size:10px">ОЧЕРЕДЬ</div><div>АВАРИИ И ИНЦИДЕНТЫ</div></div>
+        <div style="padding:10px 16px;border-right:1px solid var(--cy-line)"><div style="color:var(--cy-mute);font-size:10px">КРИТИЧНЫХ</div><div style="color:var(--cy-alarm)">▲ 2</div></div>
+        <div style="padding:10px 16px;border-right:1px solid var(--cy-line)"><div style="color:var(--cy-mute);font-size:10px">SLA ПРОСРОЧЕНО</div><div style="color:var(--cy-alarm)">▲ 1</div></div>
+        <div style="padding:10px 16px"><div style="color:var(--cy-mute);font-size:10px">ЗА 30 ДНЕЙ ЗАКРЫТО</div><div style="color:var(--cy-ok)">● 14</div></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;padding:0 16px">
+        <button class="btn" type="button" style="border-color:var(--cy-line);color:var(--cy-text);font-size:12px">Экспорт отчёта</button>
+        <button class="btn" type="button" style="background:var(--cy-draw);border-color:var(--cy-draw);color:var(--cy-bg);font-size:12px">Новый инцидент</button>
+      </div>
+    </header>
+
+    <div style="display:flex;align-items:center;gap:10px;padding:11px 20px;border-bottom:1px solid var(--cy-line);font-family:var(--font-mono);font-size:11px;flex-wrap:wrap">
+      <span style="color:var(--cy-mute);letter-spacing:0.1em">СРОЧНОСТЬ</span>
+      <div style="display:flex;border:1px solid var(--cy-line)">
+        <sc-for list="{{ sevFilters }}" as="s" hint-placeholder-count="4">
+          <button type="button" onClick="{{ s.pick }}" style="padding:4px 11px;border:0;border-left:1px solid var(--cy-line);cursor:pointer;font-family:inherit;font-size:11px;background:{{ s.bg }};color:{{ s.fg }}">{{ s.label }}</button>
+        </sc-for>
+      </div>
+      <select class="input" aria-label="Ответственный" style="max-width:190px;background:transparent;border-color:var(--cy-line);color:var(--cy-text);font-size:12px;margin-left:8px">
+        <option>Все ответственные</option><option>Ким А. · технадзор</option><option>Оспанов Р. · геодезия</option><option>ЭлектроМонтаж</option>
+      </select>
+      <span style="margin-left:auto;color:var(--cy-mute)">ПОКАЗАНО: {{ shownCount }} из 6</span>
+    </div>
+
+    <div style="display:grid;grid-template-columns:minmax(0,1fr) 470px;flex:1;min-height:0">
+
+      <!-- QUEUE -->
+      <section style="border-right:1px solid var(--cy-line);overflow:auto">
+        <sc-for list="{{ incidents }}" as="a" hint-placeholder-count="6">
+          <button type="button" onClick="{{ a.pick }}" style="width:100%;text-align:left;background:{{ a.bg }};border:0;border-bottom:1px solid var(--cy-line);border-left:3px solid {{ a.color }};padding:14px 18px;cursor:pointer;font-family:inherit;color:inherit;display:grid;grid-template-columns:22px minmax(0,1fr);gap:12px">
+            <span style="font-family:var(--font-mono);font-size:13px;color:{{ a.color }};padding-top:2px">{{ a.glyph }}</span>
+            <span style="min-width:0">
+              <span style="display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:4px">
+                <span style="font-family:var(--font-mono);font-size:10.5px;color:var(--cy-mute)">{{ a.id }}</span>
+                <span style="display:inline-flex;align-items:center;gap:5px;border:1px solid {{ a.color }};color:{{ a.color }};padding:1px 7px;font-family:var(--font-mono);font-size:10px;letter-spacing:0.09em">{{ a.severity }}</span>
+                <span style="font-family:var(--font-mono);font-size:10px;border:1px solid var(--cy-line-2);padding:1px 6px;color:var(--cy-draw)">{{ a.disc }}</span>
+                <span style="margin-left:auto;font-family:var(--font-mono);font-size:10.5px;color:{{ a.slaColor }}">SLA {{ a.sla }}</span>
+              </span>
+              <span style="display:block;font-family:var(--font-heading);font-size:19px;text-transform:uppercase;letter-spacing:0.02em;line-height:1.12;color:{{ a.titleColor }}">{{ a.title }}</span>
+              <span style="display:block;font-size:13px;color:var(--cy-draw);margin-top:3px">{{ a.note }}</span>
+              <span style="display:flex;gap:16px;font-family:var(--font-mono);font-size:10.5px;color:var(--cy-mute);margin-top:6px;flex-wrap:wrap">
+                <span>{{ a.date }}</span><span>{{ a.owner }}</span><span>{{ a.elem }}</span><span>{{ a.status }}</span>
+              </span>
+            </span>
+          </button>
+        </sc-for>
+      </section>
+
+      <!-- DETAIL -->
+      <aside style="display:flex;flex-direction:column;min-width:0;overflow:auto">
+        <div style="padding:16px 18px;border-bottom:1px solid var(--cy-line)">
+          <div style="display:flex;align-items:center;gap:9px;margin-bottom:10px;flex-wrap:wrap">
+            <span style="font-family:var(--font-mono);font-size:10.5px;color:var(--cy-mute)">{{ selId }}</span>
+            <span style="display:inline-flex;align-items:center;gap:6px;border:1.5px solid {{ selColor }};color:{{ selColor }};padding:3px 9px;font-family:var(--font-mono);font-size:10.5px;letter-spacing:0.12em;transform:rotate(-1.5deg)">{{ selGlyph }} {{ selSeverity }}</span>
+            <span style="margin-left:auto;font-family:var(--font-mono);font-size:10.5px;color:{{ selSlaColor }}">SLA {{ selSla }}</span>
+          </div>
+          <h1 style="font-size:26px;margin:0 0 8px;line-height:1.08;color:{{ selTitleColor }}">{{ selTitle }}</h1>
+          <p style="font-size:13.5px;color:var(--cy-draw);margin:0">{{ selDescription }}</p>
+        </div>
+
+        <div style="padding:16px 18px;border-bottom:1px solid var(--cy-line)">
+          <div style="display:grid;grid-template-columns:auto 1fr;border:1px solid var(--cy-line);font-family:var(--font-mono);font-size:11.5px">
+            <div style="padding:7px 11px;border-right:1px solid var(--cy-line);border-bottom:1px solid var(--cy-line);color:var(--cy-mute)">ЭЛЕМЕНТ</div>
+            <div style="padding:7px 11px;border-bottom:1px solid var(--cy-line)">{{ selElem }}</div>
+            <div style="padding:7px 11px;border-right:1px solid var(--cy-line);border-bottom:1px solid var(--cy-line);color:var(--cy-mute)">ПРОЕКТ / ФАКТ</div>
+            <div style="padding:7px 11px;border-bottom:1px solid var(--cy-line);color:{{ selColor }}">{{ selValues }}</div>
+            <div style="padding:7px 11px;border-right:1px solid var(--cy-line);border-bottom:1px solid var(--cy-line);color:var(--cy-mute)">ИСТОЧНИК</div>
+            <div style="padding:7px 11px;border-bottom:1px solid var(--cy-line)">{{ selSource }}</div>
+            <div style="padding:7px 11px;border-right:1px solid var(--cy-line);border-bottom:1px solid var(--cy-line);color:var(--cy-mute)">ОТВЕТСТВЕННЫЙ</div>
+            <div style="padding:7px 11px;border-bottom:1px solid var(--cy-line)">{{ selOwner }}</div>
+            <div style="padding:7px 11px;border-right:1px solid var(--cy-line);border-bottom:1px solid var(--cy-line);color:var(--cy-mute)">НОРМА</div>
+            <div style="padding:7px 11px;border-bottom:1px solid var(--cy-line)">{{ selNorm }}</div>
+            <div style="padding:7px 11px;border-right:1px solid var(--cy-line);color:var(--cy-mute)">СТАТУС</div>
+            <div style="padding:7px 11px">{{ selStatus }}</div>
+          </div>
+        </div>
+
+        <div style="padding:16px 18px;border-bottom:1px solid var(--cy-line)">
+          <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.12em;color:var(--cy-mute);margin-bottom:10px">◭ ДИНАМИКА ПАРАМЕТРА</div>
+          <svg viewBox="0 0 430 140" width="100%" height="auto" style="display:block;border:1px solid var(--cy-line)">
+            <path d="M38 12V118M38 118H418" stroke="#416180" />
+            <g stroke="#2C455D" stroke-dasharray="2 5"><path d="M38 40H418M38 68H418M38 96H418" /></g>
+            <path d="M38 34H418" stroke="{{ selColor }}" stroke-width="1.1" stroke-dasharray="6 3" />
+            <text x="42" y="28" font-family="IBM Plex Mono" font-size="8.5" fill="{{ selColor }}">ПОРОГ {{ selLimit }}</text>
+            <polyline points="{{ selSeries }}" fill="none" stroke="#B5D9FD" stroke-width="1.9" />
+            <circle cx="410" cy="{{ selLastY }}" r="4.5" fill="#1D2D3D" stroke="{{ selColor }}" stroke-width="2" />
+            <g font-family="IBM Plex Mono" font-size="8.5" fill="#94BCE3">
+              <text x="38" y="132">27.08</text><text x="200" y="132">04.09</text><text x="376" y="132">11.09</text>
+            </g>
+          </svg>
+        </div>
+
+        <div style="padding:16px 18px;border-bottom:1px solid var(--cy-line)">
+          <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.12em;color:var(--cy-mute);margin-bottom:10px">◭ ИСТОРИЯ ИНЦИДЕНТА</div>
+          <div style="display:grid;border-top:1px solid var(--cy-line)">
+            <sc-for list="{{ selHistory }}" as="h" hint-placeholder-count="3">
+              <div style="display:grid;grid-template-columns:112px 18px minmax(0,1fr);gap:10px;padding:10px 0;border-bottom:1px solid var(--cy-line);align-items:start">
+                <span style="font-family:var(--font-mono);font-size:10.5px;color:var(--cy-mute)">{{ h.date }}</span>
+                <span style="font-family:var(--font-mono);font-size:10.5px;color:{{ h.color }}">{{ h.glyph }}</span>
+                <span>
+                  <span style="display:block;font-size:13px">{{ h.text }}</span>
+                  <span style="display:block;font-family:var(--font-mono);font-size:10px;color:var(--cy-mute);margin-top:2px">{{ h.who }}</span>
+                </span>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+
+        <div style="padding:16px 18px;margin-top:auto">
+          <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.12em;color:var(--cy-mute);margin-bottom:10px">◭ ДЕЙСТВИЯ</div>
+          <div style="display:grid;gap:8px">
+            <button class="btn" type="button" style="background:var(--cy-draw);border-color:var(--cy-draw);color:var(--cy-bg);font-size:13px;justify-content:center">Назначить ответственного и срок</button>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+              <a class="btn" href="C2 Actual vs Design.dc.html" style="border-color:var(--cy-line);color:var(--cy-text);font-size:12.5px;justify-content:center">Показать в модели</a>
+              <a class="btn" href="C3 Telemetry.dc.html" style="border-color:var(--cy-line);color:var(--cy-text);font-size:12.5px;justify-content:center">Телеметрия</a>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+              <button class="btn" type="button" style="border-color:var(--cy-line);color:var(--cy-text);font-size:12.5px;justify-content:center">Приостановить работы</button>
+              <button class="btn" type="button" style="border-color:var(--cy-ok);color:var(--cy-ok);font-size:12.5px;justify-content:center">Закрыть инцидент</button>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <footer style="display:grid;grid-template-columns:1.6fr repeat(4,1fr);border-top:1px solid var(--cy-line);font-family:var(--font-mono);font-size:11px">
+      <div style="padding:12px 20px;border-right:1px solid var(--cy-line)"><div style="color:var(--cy-mute);font-size:10px">ОБЪЕКТ</div><div>Молочный комплекс, 1 200 голов</div></div>
+      <div style="padding:12px 16px;border-right:1px solid var(--cy-line)"><div style="color:var(--cy-mute);font-size:10px">РАЗДЕЛ</div><div>Двойник · C5</div></div>
+      <div style="padding:12px 16px;border-right:1px solid var(--cy-line)"><div style="color:var(--cy-mute);font-size:10px">ТЕМА</div><div>Цианотипия</div></div>
+      <div style="padding:12px 16px;border-right:1px solid var(--cy-line)"><div style="color:var(--cy-mute);font-size:10px">ДАТА</div><div>11.09.2026</div></div>
+      <div style="padding:12px 16px"><div style="color:var(--cy-mute);font-size:10px">ЛИСТ</div><div>C5 / 17</div></div>
+    </footer>
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440},&quot;severityFilter&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;all&quot;,&quot;critical&quot;,&quot;warning&quot;,&quot;closed&quot;],&quot;default&quot;:&quot;all&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Фильтр очереди&quot;}}">
+const OK = '#7FC49A', WARN = '#E3B865', ALARM = '#E8837A', OFF = '#B7B7BA', TEXT = '#EEF6FF';
+const INC = [
+  { id: 'INC-2026-0142', sev: 'critical', severity: 'КРИТИЧНО', glyph: '▲', color: ALARM,
+    disc: 'КМ', title: 'Вне допуска · нагрузка на ферму Ф-2', elem: 'Ферма Ф-2, оси 4–5, отм. +7.200',
+    note: 'Нагрузка 86 % от проектной при пороге 80 %. Тренд растёт третьи сутки.',
+    description: 'Тензометрия показала превышение расчётной нагрузки на ферму покрытия. До выяснения причины монтаж кровельных панелей в пролёте 4–5 приостановлен.',
+    date: '11.09.2026 09:18', owner: 'Ким А. · технадзор', status: 'В РАБОТЕ', sla: '4 ч · осталось 1 ч 20 мин', slaColor: ALARM,
+    values: '≤ 80 % / 86 %', limit: '80 %', source: 'Тензометрия Ф-2, 11.09.2026 09:18',
+    norm: 'СП РК 5.04-23-2019, п. 8.6', series: '38,104 100,98 162,90 224,78 286,62 348,48 410,38', lastY: 38,
+    history: [
+      { date: '11.09.2026 09:18', glyph: '▲', color: ALARM, text: 'Автоматически создан инцидент: превышение порога 80 %', who: 'Платформа BESTECH' },
+      { date: '11.09.2026 09:26', glyph: '●', color: TEXT, text: 'Назначен ответственный: технадзор Ким А., SLA 4 часа', who: 'Бекжанов Т. · ГИП' },
+      { date: '11.09.2026 09:40', glyph: '●', color: TEXT, text: 'Монтаж кровельных панелей в пролёте 4–5 приостановлен', who: 'Ким А. · технадзор' }
+    ] },
+  { id: 'INC-2026-0141', sev: 'critical', severity: 'КРИТИЧНО', glyph: '▲', color: ALARM,
+    disc: 'ВК', title: 'Вне допуска · уклон выпуска В1-У2', elem: 'Самотечный выпуск В1-У2, отм. −1.200',
+    note: 'Фактический уклон 0,017 против проектных 0,020 при допуске ±0,002.',
+    description: 'Исполнительная съёмка выявила недостаточный уклон самотечного выпуска. Требуется перекладка участка до узла У2 либо согласование отклонения с автором раздела ВК.',
+    date: '10.09.2026 14:05', owner: 'Оспанова Д. · автор ВК', status: 'ОЖИДАЕТ РЕШЕНИЯ', sla: '24 ч · просрочено 4 ч', slaColor: ALARM,
+    values: '0,020 / 0,017', limit: '0,002', source: 'Исполнительная съёмка, 06.09.2026',
+    norm: 'СП РК 4.01-101-2012, п. 7.4', series: '38,60 100,64 162,70 224,76 286,84 348,90 410,96', lastY: 96,
+    history: [
+      { date: '10.09.2026 14:05', glyph: '▲', color: ALARM, text: 'Инцидент создан по результатам исполнительной съёмки', who: 'Оспанов Р. · геодезия' },
+      { date: '10.09.2026 16:30', glyph: '●', color: TEXT, text: 'Запрошено решение автора раздела ВК', who: 'Ким А. · технадзор' }
+    ] },
+  { id: 'INC-2026-0138', sev: 'warning', severity: 'ПРЕДУПРЕЖДЕНИЕ', glyph: '▲', color: WARN,
+    disc: 'КЖ', title: 'У границы допуска · осадка марки ГМ-07', elem: 'Деформационная марка ГМ-07, ось В/2',
+    note: 'Осадка 12 мм при допуске 15 мм, прирост +1,4 мм в неделю.',
+    description: 'Скорость осадки превышает расчётную. Учащён цикл нивелирования до двух раз в неделю, запрошено заключение по основанию фундамента.',
+    date: '09.09.2026 17:40', owner: 'Оспанов Р. · геодезия', status: 'НАБЛЮДЕНИЕ', sla: '24 ч · в срок', slaColor: WARN,
+    values: '≤ 15 мм / 12 мм', limit: '15 мм', source: 'Нивелирование, 09.09.2026 17:40',
+    norm: 'СН РК 5.01-03-2013, п. 6.4', series: '38,100 100,94 162,84 224,72 286,60 348,50 410,44', lastY: 44,
+    history: [
+      { date: '02.09.2026 17:20', glyph: '●', color: TEXT, text: 'Превышен предупредительный порог 10 мм', who: 'Платформа BESTECH' },
+      { date: '09.09.2026 17:40', glyph: '▲', color: WARN, text: 'Осадка 12 мм, цикл нивелирования учащён до 2 раз в неделю', who: 'Оспанов Р. · геодезия' }
+    ] },
+  { id: 'INC-2026-0137', sev: 'warning', severity: 'ПРЕДУПРЕЖДЕНИЕ', glyph: '▲', color: WARN,
+    disc: 'КЖ', title: 'У границы допуска · прочность перекрытия П-3', elem: 'Перекрытие П-3, отм. +3.600',
+    note: 'Набор прочности 68 % от R28 при требуемых 70 % к дате распалубки.',
+    description: 'По данным датчиков зрелости прочность отстаёт от графика на двое суток. Распалубка перенесена, прогноз достижения R28 — 26.09.2026.',
+    date: '08.09.2026 08:15', owner: 'Бекжанов Т. · ГИП', status: 'В РАБОТЕ', sla: '48 ч · в срок', slaColor: WARN,
+    values: '≥ 70 % / 68 %', limit: '70 %', source: 'Датчики зрелости, 11.09.2026 09:40',
+    norm: 'СП РК 5.03-102-2013, п. 9.2', series: '38,110 100,96 162,84 224,72 286,60 348,52 410,46', lastY: 46,
+    history: [
+      { date: '08.09.2026 08:15', glyph: '▲', color: WARN, text: 'Отставание набора прочности от графика на 2 суток', who: 'Платформа BESTECH' },
+      { date: '08.09.2026 11:00', glyph: '●', color: TEXT, text: 'Распалубка перенесена на 16.09.2026', who: 'Бекжанов Т. · ГИП' }
+    ] },
+  { id: 'INC-2026-0136', sev: 'info', severity: 'СВЯЗЬ', glyph: '✕', color: OFF,
+    disc: 'ЭОМ', title: 'Нет связи · трансформаторная подстанция ТП-1', elem: 'ТП-1, ось А/1',
+    note: 'Последний пакет данных 11.09.2026 05:30, прибор не отвечает 4 часа.',
+    description: 'Контроллер ТП-1 не передаёт данные. Возможная причина — отключение питания шкафа автоматики на время монтажных работ.',
+    date: '11.09.2026 05:30', owner: 'ЭлектроМонтаж · подрядчик', status: 'ДИАГНОСТИКА', sla: '8 ч · в срок', slaColor: OFF,
+    values: '— / нет связи', limit: '8 ч', source: 'Контроллер ТП-1',
+    norm: 'СН РК 4.04-01-2011, п. 5.2', series: '38,60 100,60 162,62 224,60 286,60 348,62 410,62', lastY: 62,
+    history: [
+      { date: '11.09.2026 05:30', glyph: '✕', color: OFF, text: 'Потеря связи с контроллером ТП-1', who: 'Платформа BESTECH' },
+      { date: '11.09.2026 08:10', glyph: '●', color: TEXT, text: 'Заявка передана подрядчику ЭлектроМонтаж', who: 'Ким А. · технадзор' }
+    ] },
+  { id: 'INC-2026-0129', sev: 'closed', severity: 'ЗАКРЫТО', glyph: '●', color: OK,
+    disc: 'КМ', title: 'Закрыто · отклонение колонны К-08 от вертикали', elem: 'Колонна К-08, ось Б/3',
+    note: 'Отклонение 13 мм устранено рихтовкой, факт после правки — 6 мм.',
+    description: 'Колонна отрихтована, контрольная тахеометрия подтвердила отклонение 6 мм при допуске 10 мм. Акт скрытых работ подписан.',
+    date: '29.08.2026 12:00', owner: 'Ким А. · технадзор', status: 'ЗАКРЫТО 02.09.2026', sla: 'выполнено в срок', slaColor: OK,
+    values: '≤ 10 мм / 6 мм', limit: '10 мм', source: 'Тахеометрия, 02.09.2026',
+    norm: 'СП РК 5.04-101-2013, п. 11.3', series: '38,40 100,44 162,52 224,66 286,84 348,96 410,100', lastY: 100,
+    history: [
+      { date: '29.08.2026 12:00', glyph: '▲', color: ALARM, text: 'Отклонение 13 мм превышает допуск 10 мм', who: 'Оспанов Р. · геодезия' },
+      { date: '01.09.2026 15:20', glyph: '●', color: TEXT, text: 'Выполнена рихтовка колонны', who: 'Подрядчик СМР' },
+      { date: '02.09.2026 10:40', glyph: '●', color: OK, text: 'Контроль: 6 мм. Инцидент закрыт, акт подписан', who: 'Ким А. · технадзор' }
+    ] }
+];
+const SEVS = [
+  { id: 'all', label: 'ВСЕ' }, { id: 'critical', label: 'КРИТИЧНЫЕ' },
+  { id: 'warning', label: 'ПРЕДУПР.' }, { id: 'closed', label: 'ЗАКРЫТЫЕ' }
+];
+
+class Component extends DCLogic {
+  state = { sev: 'all', i: 0 };
+  renderVals() {
+    const vis = INC.filter(a => this.state.sev === 'all' || a.sev === this.state.sev);
+    const sel = INC[this.state.i];
+    const selBg = 'var(--cy-draw)', selFg = '#1D2D3D';
+    return {
+      shownCount: vis.length,
+      incidents: vis.map(a => {
+        const idx = INC.indexOf(a);
+        return {
+          id: a.id, severity: a.severity, glyph: a.glyph, color: a.color, disc: a.disc,
+          title: a.title, note: a.note, date: a.date, owner: a.owner, elem: a.elem, status: a.status,
+          sla: a.sla, slaColor: a.slaColor,
+          titleColor: a.sev === 'closed' ? '#B5D9FD' : '#EEF6FF',
+          bg: idx === this.state.i ? 'var(--cy-surface)' : 'transparent',
+          pick: () => this.setState({ i: idx })
+        };
+      }),
+      sevFilters: SEVS.map(s => ({
+        label: s.label,
+        bg: s.id === this.state.sev ? selBg : 'transparent',
+        fg: s.id === this.state.sev ? selFg : 'var(--cy-draw)',
+        pick: () => this.setState({ sev: s.id })
+      })),
+      selId: sel.id, selSeverity: sel.severity, selGlyph: sel.glyph, selColor: sel.color,
+      selTitle: sel.title, selTitleColor: sel.sev === 'closed' ? '#B5D9FD' : '#EEF6FF',
+      selDescription: sel.description, selElem: sel.elem, selValues: sel.values,
+      selSource: sel.source, selOwner: sel.owner, selNorm: sel.norm, selStatus: sel.status,
+      selSla: sel.sla, selSlaColor: sel.slaColor, selLimit: sel.limit,
+      selSeries: sel.series, selLastY: sel.lastY, selHistory: sel.history
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+/* BESTECH — токены. Две темы: «Бумага» (light) и «Цианотипия» (dark, операторская). */
+
+:root {
+  /* Типографика: кириллица + казахские ә ғ қ ң ө ұ ү һ і */
+  --bst-font-heading: var(--font-heading, "Fira Sans Condensed"), system-ui, sans-serif;
+  --bst-font-body: var(--font-body, "IBM Plex Sans"), system-ui, sans-serif;
+  --bst-font-mono: var(--font-mono, "IBM Plex Mono"), ui-monospace, monospace;
+
+  /* Шаг 4 px */
+  --bst-space-1: 4px;
+  --bst-space-2: 8px;
+  --bst-space-3: 12px;
+  --bst-space-4: 16px;
+  --bst-space-5: 20px;
+  --bst-space-6: 24px;
+  --bst-space-8: 32px;
+  --bst-space-10: 40px;
+  --bst-space-14: 56px;
+
+  /* Почти квадратные радиусы */
+  --bst-radius-1: 2px;
+  --bst-radius-2: 4px;
+  --bst-radius-3: 7px;
+
+  /* Сетка: 12 колонок, поля 80 px на 1440 */
+  --bst-page-margin: 80px;
+  --bst-sidebar: 216px;
+
+  /* Blueprint-акцент не зависит от темы */
+  --bst-accent-100: #eef6ff;
+  --bst-accent-200: #d6ebff;
+  --bst-accent-300: #b5d9fd;
+  --bst-accent-400: #94bce3;
+  --bst-accent-500: #749dc4;
+  --bst-accent-600: #5980a6;
+  --bst-accent-700: #416180;
+  --bst-accent-800: #2c455d;
+  --bst-accent-900: #1d2d3d;
+
+  --bst-row-pad: 9px 10px;
+  --bst-card-pad: var(--bst-space-5);
+}
+
+[data-density="compact"] {
+  --bst-row-pad: 5px 10px;
+  --bst-card-pad: var(--bst-space-4);
+}
+
+/* ── Бумага ───────────────────────────────────────────── */
+[data-theme="paper"] {
+  color-scheme: light;
+  --bst-bg: #f2f2f3;
+  --bst-surface: #e9e9ea;
+  --bst-raised: #ffffff;
+  --bst-text: #1d1f20;
+  --bst-text-mute: color-mix(in srgb, #1d1f20 56%, transparent);
+  --bst-text-soft: color-mix(in srgb, #1d1f20 72%, transparent);
+  --bst-line: color-mix(in srgb, #1d1f20 16%, transparent);
+  --bst-line-strong: #1d1f20;
+  --bst-accent: var(--bst-accent-600);
+  --bst-accent-ink: var(--bst-accent-700);
+  --bst-accent-tint: var(--bst-accent-100);
+  --bst-accent-edge: var(--bst-accent-400);
+  --bst-on-accent: #f2f2f3;
+  --bst-grid: var(--bst-accent-200);
+
+  --bst-ok: #3e7a55;
+  --bst-ok-tint: #e7efe9;
+  --bst-warn: #8f6511;
+  --bst-warn-tint: #f4eee0;
+  --bst-alarm: #a03a2e;
+  --bst-alarm-tint: #f5e7e4;
+  --bst-offline: #5d5d60;
+  --bst-offline-tint: #ececed;
+}
+
+/* ── Цианотипия ───────────────────────────────────────── */
+[data-theme="cyanotype"] {
+  color-scheme: dark;
+  --bst-bg: #1d2d3d;
+  --bst-surface: #24384c;
+  --bst-raised: #16222e;
+  --bst-text: #eef6ff;
+  --bst-text-mute: #94bce3;
+  --bst-text-soft: #b5d9fd;
+  --bst-line: rgba(181, 217, 253, 0.22);
+  --bst-line-strong: #416180;
+  --bst-accent: var(--bst-accent-300);
+  --bst-accent-ink: var(--bst-accent-300);
+  --bst-accent-tint: rgba(181, 217, 253, 0.1);
+  --bst-accent-edge: var(--bst-accent-700);
+  --bst-on-accent: #1d2d3d;
+  --bst-grid: #2c455d;
+
+  --bst-ok: #7fc49a;
+  --bst-ok-tint: rgba(127, 196, 154, 0.12);
+  --bst-warn: #e3b865;
+  --bst-warn-tint: rgba(227, 184, 101, 0.12);
+  --bst-alarm: #e8837a;
+  --bst-alarm-tint: rgba(232, 131, 122, 0.12);
+  --bst-offline: #b7b7ba;
+  --bst-offline-tint: rgba(183, 183, 186, 0.12);
+}

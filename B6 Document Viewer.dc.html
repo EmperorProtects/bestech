@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/industry-a458f529-fc3f-4d39-8047-7968176c36b5/styles.css">
+<script src="_ds/industry-a458f529-fc3f-4d39-8047-7968176c36b5/_ds_bundle.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap&subset=cyrillic,cyrillic-ext,latin" rel="stylesheet">
+<style>
+  :root{
+    --font-heading:"Fira Sans Condensed","Barlow Condensed",system-ui,sans-serif;
+    --font-body:"IBM Plex Sans",system-ui,sans-serif;
+    --font-mono:"IBM Plex Mono",ui-monospace,monospace;
+    --sem-ok:#3E7A55; --sem-warn:#8F6511; --sem-alarm:#A03A2E;
+    --ink-56:color-mix(in srgb, var(--color-text) 56%, transparent);
+    --ink-72:color-mix(in srgb, var(--color-text) 72%, transparent);
+  }
+  body{margin:0;font-variant-numeric:tabular-nums;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4,h5{text-transform:uppercase;letter-spacing:0.015em}
+  a{color:var(--color-accent-700);text-decoration:none}
+  a:hover{color:var(--color-accent);text-decoration:underline}
+</style>
+</helmet>
+
+<div style="width:1440px;max-width:1440px;margin:0 auto;background:var(--color-bg);color:var(--color-text);font-family:var(--font-body);font-size:15px;display:flex;flex-direction:column;min-height:900px">
+
+  <!-- TOP BAR -->
+  <header style="display:flex;align-items:center;gap:14px;padding:10px 20px;border-bottom:1px solid var(--color-divider)">
+    <a href="B5 Documentation.dc.html" style="display:flex;align-items:center;gap:7px;font-family:var(--font-mono);font-size:11px">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 6l-6 6 6 6"/></svg>ВЕДОМОСТЬ
+    </a>
+    <div style="width:1px;height:22px;background:var(--color-divider)"></div>
+    <div style="font-family:var(--font-mono);font-size:11px;color:var(--ink-56)">2026-014 · АР · версия 5</div>
+    <div style="font-family:var(--font-heading);font-size:19px;text-transform:uppercase;letter-spacing:0.03em">Лист АР-05 · План на отм. +3.600</div>
+    <span style="display:inline-flex;align-items:center;gap:6px;border:1.5px solid var(--sem-warn);color:var(--sem-warn);padding:3px 9px;border-radius:2px;font-family:var(--font-mono);font-size:11px;letter-spacing:0.12em;transform:rotate(-1.5deg)">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v5M12 17h.01M10.3 3.9 2.4 17.5A1.8 1.8 0 0 0 4 20.2h16a1.8 1.8 0 0 0 1.6-2.7L13.7 3.9a1.8 1.8 0 0 0-3.4 0Z"/></svg>ЗАМЕЧАНИЯ
+    </span>
+    <div style="margin-left:auto;display:flex;align-items:center;gap:8px">
+      <div style="display:flex;border:1px solid var(--color-divider);font-family:var(--font-mono);font-size:11px">
+        <button type="button" onClick="{{ showPdf }}" style="padding:5px 11px;border:0;cursor:pointer;font-family:inherit;background:{{ pdfBg }};color:{{ pdfFg }}">PDF</button>
+        <button type="button" onClick="{{ showDwg }}" style="padding:5px 11px;border:0;border-left:1px solid var(--color-divider);cursor:pointer;font-family:inherit;background:{{ dwgBg }};color:{{ dwgFg }}">DWG</button>
+      </div>
+      <button class="btn btn-secondary" type="button" onClick="{{ toggleCompare }}" style="font-size:12px">{{ compareLabel }}</button>
+      <button class="btn btn-secondary btn-icon" type="button" aria-label="Скачать лист"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v12M7 11l5 5 5-5M4 21h16"/></svg></button>
+      <button class="btn btn-primary blueprint" type="button" onClick="{{ openSign }}" style="position:relative">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        Согласовать лист
+      </button>
+    </div>
+  </header>
+
+  <div style="display:grid;grid-template-columns:64px minmax(0,1fr) 396px;flex:1;min-height:0">
+
+    <!-- SHEET THUMBS -->
+    <nav style="border-right:1px solid var(--color-divider);padding:10px 0;display:grid;gap:8px;align-content:start;justify-items:center">
+      <sc-for list="{{ thumbs }}" as="t" hint-placeholder-count="6">
+        <button type="button" onClick="{{ t.pick }}" aria-label="Лист {{ t.code }}" style="width:44px;border:1px solid {{ t.border }};background:{{ t.bg }};padding:3px;cursor:pointer;display:grid;gap:2px;justify-items:center">
+          <span style="display:block;width:100%;height:26px;border:1px solid var(--color-neutral-300);background-image:linear-gradient(to right,var(--color-accent-200) 1px,transparent 1px),linear-gradient(to bottom,var(--color-accent-200) 1px,transparent 1px);background-size:7px 7px"></span>
+          <span style="font-family:var(--font-mono);font-size:8.5px;color:{{ t.fg }}">{{ t.code }}</span>
+        </button>
+      </sc-for>
+    </nav>
+
+    <!-- SHEET -->
+    <section style="position:relative;background:var(--color-neutral-100);display:flex;flex-direction:column;min-width:0">
+      <div style="display:flex;align-items:center;gap:10px;padding:8px 16px;border-bottom:1px solid var(--color-divider);font-family:var(--font-mono);font-size:10.5px;color:var(--ink-56);background:var(--color-bg)">
+        <span>МАСШТАБ 1:100</span>
+        <span>ФОРМАТ А1</span>
+        <span>ИЗМ. 5 · 05.09.2026</span>
+        <sc-if value="{{ compareOn }}" hint-placeholder-val="{{ false }}">
+          <span style="color:var(--color-accent-700)">СРАВНЕНИЕ: ВЕРСИЯ 4 ↔ 5 · синим — добавлено, штрихом — удалено</span>
+        </sc-if>
+        <div style="margin-left:auto;display:flex;gap:6px">
+          <button class="btn btn-secondary btn-icon" type="button" aria-label="Уменьшить" style="width:26px;height:26px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14"/></svg></button>
+          <span style="font-family:var(--font-mono);font-size:11px;align-self:center">86 %</span>
+          <button class="btn btn-secondary btn-icon" type="button" aria-label="Увеличить" style="width:26px;height:26px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12h14"/></svg></button>
+        </div>
+      </div>
+
+      <div style="flex:1;padding:20px;display:grid;place-items:center;overflow:auto">
+        <div style="background:#FFFFFF;border:1px solid var(--color-neutral-400);box-shadow:0 1px 0 rgba(0,0,0,0.06)">
+          <svg viewBox="0 0 840 600" width="840" height="600" style="display:block" role="img" aria-label="Лист АР-05: план на отметке +3.600 с пинами замечаний">
+            <!-- sheet frame -->
+            <rect x="8" y="8" width="824" height="584" fill="none" stroke="#1D1F20" stroke-width="1" />
+            <rect x="28" y="14" width="798" height="572" fill="none" stroke="#1D1F20" stroke-width="1.6" />
+
+            <!-- axis grid -->
+            <g stroke="#B5D9FD" stroke-width="0.8" stroke-dasharray="14 4 3 4">
+              <path d="M110 60V470M210 60V470M310 60V470M410 60V470M510 60V470M610 60V470M710 60V470" />
+              <path d="M80 100H740M80 200H740M80 300H740M80 400H740" />
+            </g>
+            <g font-family="IBM Plex Mono" font-size="10" fill="#416180" text-anchor="middle">
+              <circle cx="110" cy="52" r="9" fill="none" stroke="#416180" stroke-width="0.8" /><text x="110" y="55.5">1</text>
+              <circle cx="210" cy="52" r="9" fill="none" stroke="#416180" stroke-width="0.8" /><text x="210" y="55.5">2</text>
+              <circle cx="310" cy="52" r="9" fill="none" stroke="#416180" stroke-width="0.8" /><text x="310" y="55.5">3</text>
+              <circle cx="410" cy="52" r="9" fill="none" stroke="#416180" stroke-width="0.8" /><text x="410" y="55.5">4</text>
+              <circle cx="510" cy="52" r="9" fill="none" stroke="#416180" stroke-width="0.8" /><text x="510" y="55.5">5</text>
+              <circle cx="610" cy="52" r="9" fill="none" stroke="#416180" stroke-width="0.8" /><text x="610" y="55.5">6</text>
+              <circle cx="710" cy="52" r="9" fill="none" stroke="#416180" stroke-width="0.8" /><text x="710" y="55.5">7</text>
+              <circle cx="68" cy="100" r="9" fill="none" stroke="#416180" stroke-width="0.8" /><text x="68" y="103.5">А</text>
+              <circle cx="68" cy="200" r="9" fill="none" stroke="#416180" stroke-width="0.8" /><text x="68" y="203.5">Б</text>
+              <circle cx="68" cy="300" r="9" fill="none" stroke="#416180" stroke-width="0.8" /><text x="68" y="303.5">В</text>
+              <circle cx="68" cy="400" r="9" fill="none" stroke="#416180" stroke-width="0.8" /><text x="68" y="403.5">Г</text>
+            </g>
+
+            <!-- walls -->
+            <g stroke="#1D1F20" stroke-width="2.4" fill="none">
+              <path d="M110 100H710M110 400H710M110 100V400M710 100V400" />
+            </g>
+            <g stroke="#1D1F20" stroke-width="1.4" fill="none">
+              <path d="M310 100V400M510 100V400M110 300H710" />
+            </g>
+            <!-- columns -->
+            <g fill="#1D1F20">
+              <rect x="205" y="195" width="10" height="10" /><rect x="405" y="195" width="10" height="10" /><rect x="605" y="195" width="10" height="10" />
+              <rect x="205" y="295" width="10" height="10" /><rect x="405" y="295" width="10" height="10" /><rect x="605" y="295" width="10" height="10" />
+            </g>
+            <!-- doors -->
+            <g stroke="#1D1F20" stroke-width="1" fill="none">
+              <path d="M150 100h40M150 100a40 40 0 0 1 40 40" />
+              <path d="M350 400h40M350 400a40 40 0 0 0 40-40" />
+            </g>
+            <!-- compare overlay -->
+            <sc-if value="{{ compareOn }}" hint-placeholder-val="{{ false }}">
+              <g>
+                <path d="M510 100V400" stroke="#5980A6" stroke-width="3" opacity="0.5" />
+                <path d="M410 300H510" stroke="#A03A2E" stroke-width="2" stroke-dasharray="6 4" />
+                <text x="518" y="118" font-family="IBM Plex Mono" font-size="10" fill="#5980A6">+ перегородка, изм. 5</text>
+                <text x="418" y="292" font-family="IBM Plex Mono" font-size="10" fill="#A03A2E">− удалено в изм. 5</text>
+              </g>
+            </sc-if>
+            <!-- room labels -->
+            <g font-family="IBM Plex Mono" font-size="10" fill="#5D5D60">
+              <text x="200" y="160">1. Доильный зал</text><text x="200" y="174">312,4 м²</text>
+              <text x="400" y="160">2. Молочный блок</text><text x="400" y="174">148,0 м²</text>
+              <text x="600" y="160">3. Техпомещение</text><text x="600" y="174">96,2 м²</text>
+              <text x="200" y="352">4. Секция содержания</text><text x="200" y="366">640,8 м²</text>
+              <text x="400" y="352">5. Кормовой проход</text><text x="600" y="352">6. Венткамера</text>
+            </g>
+            <!-- dimension line -->
+            <g stroke="#1D1F20" stroke-width="0.8" fill="none">
+              <path d="M110 440V470M710 440V470M110 460H710" />
+              <path d="M110 460 122 457v6zM710 460 698 457v6z" fill="#1D1F20" />
+            </g>
+            <text x="410" y="454" font-family="IBM Plex Mono" font-size="10" fill="#1D1F20" text-anchor="middle">60 000</text>
+
+            <!-- title block -->
+            <g stroke="#1D1F20" stroke-width="1" fill="none">
+              <rect x="486" y="490" width="340" height="92" />
+              <path d="M486 514H826M486 538H826M486 562H826M626 490V582M726 490V582" />
+            </g>
+            <g font-family="IBM Plex Mono" font-size="9" fill="#1D1F20">
+              <text x="492" y="506">Молочный комплекс, 1 200 голов</text>
+              <text x="632" y="506">2026-014-АР</text>
+              <text x="732" y="506">лист 5 из 12</text>
+              <text x="492" y="530">ГИП Бекжанов Т.</text><text x="632" y="530">изм. 5</text><text x="732" y="530">05.09.2026</text>
+              <text x="492" y="554">Разработал Ким А.</text><text x="632" y="554">М 1:100</text><text x="732" y="554">формат А1</text>
+              <text x="492" y="578">План на отм. +3.600</text><text x="632" y="578">ГСЛ №0788280</text><text x="732" y="578">Bek Stroy Invest</text>
+            </g>
+
+            <!-- remark pins -->
+            <sc-for list="{{ pins }}" as="p" hint-placeholder-count="3">
+              <g onClick="{{ p.pick }}" style="cursor:pointer">
+                <circle cx="{{ p.x }}" cy="{{ p.y }}" r="{{ p.r }}" fill="#FFFFFF" stroke="{{ p.color }}" stroke-width="2" />
+                <text x="{{ p.x }}" y="{{ p.ty }}" font-family="IBM Plex Mono" font-size="11" fill="{{ p.color }}" text-anchor="middle">{{ p.n }}</text>
+                <circle cx="{{ p.x }}" cy="{{ p.y }}" r="{{ p.halo }}" fill="none" stroke="{{ p.color }}" stroke-width="0.8" stroke-dasharray="3 3" opacity="{{ p.haloOpacity }}" />
+              </g>
+            </sc-for>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- REMARKS PANEL -->
+    <aside style="border-left:1px solid var(--color-divider);display:flex;flex-direction:column;min-width:0">
+      <div style="display:flex;align-items:center;gap:8px;padding:10px 14px;border-bottom:1px solid var(--color-divider);font-family:var(--font-mono);font-size:10px;letter-spacing:0.12em;color:var(--ink-56)">
+        ◭ ЗАМЕЧАНИЯ НА ЛИСТЕ
+        <span style="margin-left:auto;color:var(--sem-warn)">▲ 2 ОТКРЫТО</span>
+      </div>
+
+      <div style="flex:1;overflow:auto">
+        <sc-for list="{{ remarks }}" as="r" hint-placeholder-count="3">
+          <article style="border-bottom:1px solid var(--color-divider);background:{{ r.bg }};border-left:3px solid {{ r.edge }}">
+            <button type="button" onClick="{{ r.pick }}" style="width:100%;text-align:left;background:none;border:0;padding:14px;cursor:pointer;font-family:inherit;color:inherit">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+                <span style="width:20px;height:20px;border:1.5px solid {{ r.color }};color:{{ r.color }};display:grid;place-items:center;font-family:var(--font-mono);font-size:11px;flex:none">{{ r.n }}</span>
+                <span style="display:inline-flex;align-items:center;gap:5px;border:1px solid {{ r.color }};color:{{ r.color }};padding:1px 7px;font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em">{{ r.glyph }} {{ r.status }}</span>
+                <span style="margin-left:auto;font-family:var(--font-mono);font-size:10px;color:var(--ink-56)">{{ r.date }}</span>
+              </div>
+              <div style="font-size:14px;margin-bottom:8px">{{ r.text }}</div>
+              <div style="display:flex;flex-wrap:wrap;gap:6px">
+                <span style="font-family:var(--font-mono);font-size:10px;border:1px solid var(--color-divider);padding:2px 7px;background:var(--color-bg)">{{ r.clause }}</span>
+                <span style="font-family:var(--font-mono);font-size:10px;border:1px solid var(--color-divider);padding:2px 7px;background:var(--color-bg)">{{ r.locus }}</span>
+              </div>
+            </button>
+            <sc-if value="{{ r.open }}" hint-placeholder-val="{{ false }}">
+              <div style="padding:0 14px 14px">
+                <div style="border-top:1px solid var(--color-divider);padding-top:12px;display:grid;gap:10px">
+                  <sc-for list="{{ r.thread }}" as="m" hint-placeholder-count="2">
+                    <div style="display:grid;grid-template-columns:26px minmax(0,1fr);gap:9px">
+                      <span style="width:26px;height:26px;border:1px solid var(--color-divider);display:grid;place-items:center;font-family:var(--font-mono);font-size:10px">{{ m.ini }}</span>
+                      <div>
+                        <div style="font-family:var(--font-mono);font-size:10px;color:var(--ink-56)">{{ m.who }} · {{ m.role }} · {{ m.date }}</div>
+                        <div style="font-size:13.5px;margin-top:2px">{{ m.text }}</div>
+                      </div>
+                    </div>
+                  </sc-for>
+                  <div style="display:flex;gap:8px;margin-top:2px">
+                    <input class="input" type="text" placeholder="Ответ автора раздела…" aria-label="Ответ" style="font-size:13px" />
+                    <button class="btn btn-secondary" type="button" style="font-size:12px;flex:none">Ответить</button>
+                  </div>
+                  <div style="display:flex;gap:8px">
+                    <button class="btn btn-primary" type="button" style="font-size:12px;flex:1">Принять правку</button>
+                    <button class="btn btn-ghost" type="button" style="font-size:12px">Отклонить</button>
+                  </div>
+                </div>
+              </div>
+            </sc-if>
+          </article>
+        </sc-for>
+      </div>
+
+      <div style="border-top:1px solid var(--color-divider);padding:14px">
+        <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.12em;color:var(--ink-56);margin-bottom:10px">◭ ВЕРСИИ ЛИСТА</div>
+        <div style="display:grid;border-top:1px solid var(--color-divider);margin-bottom:14px">
+          <div style="display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--color-divider);font-family:var(--font-mono);font-size:11px"><span>изм. 5 · текущая</span><span style="color:var(--sem-warn)">▲ замечания</span></div>
+          <div style="display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--color-divider);font-family:var(--font-mono);font-size:11px"><span>изм. 4 · 22.08.2026</span><span style="color:var(--ink-56)">архив</span></div>
+          <div style="display:flex;justify-content:space-between;padding:7px 0;font-family:var(--font-mono);font-size:11px"><span>изм. 3 · 04.08.2026</span><span style="color:var(--ink-56)">архив</span></div>
+        </div>
+        <div style="border:1px solid var(--color-divider);padding:12px;background:var(--color-surface)">
+          <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em;color:var(--ink-56);margin-bottom:6px">СОГЛАСОВАНИЕ</div>
+          <div style="display:grid;gap:6px;font-family:var(--font-mono);font-size:11px">
+            <div style="display:flex;justify-content:space-between"><span>Автор раздела · Ким А.</span><span style="color:var(--sem-ok)">● подписано</span></div>
+            <div style="display:flex;justify-content:space-between"><span>ГИП · Бекжанов Т.</span><span style="color:var(--ink-56)">○ ожидает</span></div>
+            <div style="display:flex;justify-content:space-between"><span>Заказчик</span><span style="color:var(--ink-56)">○ ожидает</span></div>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- SIGN MODAL -->
+  <sc-if value="{{ signOpen }}" hint-placeholder-val="{{ false }}">
+    <div style="position:fixed;inset:0;background:rgba(29,31,32,0.55);display:grid;place-items:center;z-index:20">
+      <div class="blueprint" style="width:520px;background:var(--color-bg);padding:26px">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.12em;color:var(--color-accent-700);margin-bottom:10px">◭ СОГЛАСОВАНИЕ ЛИСТА АР-05</div>
+        <h2 style="font-size:26px;margin:0 0 10px;line-height:1.08">Подписать лист электронной подписью</h2>
+        <p style="font-size:14px;color:var(--ink-72);margin:0 0 18px">На листе 2 открытых замечания. Согласование с открытыми замечаниями фиксируется в журнале как согласование с оговоркой.</p>
+        <div style="display:flex;gap:10px;border-left:3px solid var(--sem-warn);background:#F4EEE0;border-top:1px solid var(--color-divider);border-right:1px solid var(--color-divider);border-bottom:1px solid var(--color-divider);padding:11px 13px;margin-bottom:18px">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--sem-warn)" stroke-width="1.5" style="flex:none;margin-top:1px"><path d="M12 8v5M12 17h.01M10.3 3.9 2.4 17.5A1.8 1.8 0 0 0 4 20.2h16a1.8 1.8 0 0 0 1.6-2.7L13.7 3.9a1.8 1.8 0 0 0-3.4 0Z"/></svg>
+          <div style="font-size:13px">Замечание 1 (ГОСТ 21.501, п. 5.3) не закрыто автором раздела.</div>
+        </div>
+        <div class="field" style="margin-bottom:16px">
+          <label for="b6-cert">Сертификат ЭЦП</label>
+          <select class="input" id="b6-cert"><option>НУЦ РК · Бекжанов Т. · до 14.02.2027</option><option>Выбрать другой сертификат…</option></select>
+        </div>
+        <div style="font-family:var(--font-mono);font-size:10px;color:var(--ink-56);margin-bottom:18px">Подписание ЭЦП — заглушка макета, реальная интеграция с НУЦ РК на стороне бэкенда.</div>
+        <div style="display:flex;gap:10px;justify-content:flex-end">
+          <button class="btn btn-ghost" type="button" onClick="{{ closeSign }}">Отмена</button>
+          <button class="btn btn-primary blueprint" type="button" onClick="{{ closeSign }}" style="position:relative">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            Подписать с оговоркой
+          </button>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <footer style="display:grid;grid-template-columns:1.6fr repeat(4,1fr);border-top:1.5px solid var(--color-text);font-family:var(--font-mono);font-size:11px">
+    <div style="padding:12px 20px;border-right:1px solid var(--color-divider)"><div style="color:var(--ink-56);font-size:10px">ДОКУМЕНТ</div><div>2026-014-АР · лист 5 из 12 · изм. 5</div></div>
+    <div style="padding:12px 16px;border-right:1px solid var(--color-divider)"><div style="color:var(--ink-56);font-size:10px">РАЗДЕЛ</div><div>Кабинет · B6</div></div>
+    <div style="padding:12px 16px;border-right:1px solid var(--color-divider)"><div style="color:var(--ink-56);font-size:10px">СТАТУС</div><div style="color:var(--sem-warn)">ЗАМЕЧАНИЯ</div></div>
+    <div style="padding:12px 16px;border-right:1px solid var(--color-divider)"><div style="color:var(--ink-56);font-size:10px">ДАТА</div><div>11.09.2026</div></div>
+    <div style="padding:12px 16px"><div style="color:var(--ink-56);font-size:10px">ЛИСТ</div><div>B6 / 17</div></div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440},&quot;showCompare&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Сравнение версий&quot;}}">
+const WARN = '#8F6511', ACC = '#416180', OK = '#3E7A55';
+const REMARKS = [
+  { n: '1', x: 250, y: 130, status: 'ОТКРЫТО', glyph: '▲', color: WARN,
+    date: '05.09.2026', clause: 'ГОСТ 21.501, п. 5.3', locus: 'ось Б/2 · доильный зал',
+    text: 'Не указана отметка чистого пола. Отметки уровней должны быть показаны на плане и разрезе.',
+    thread: [
+      { ini: 'ЕС', who: 'Сагинтаев Е.', role: 'нормоконтроль', date: '05.09.2026 11:05', text: 'Лист АР-05: отсутствует отметка чистого пола в помещении 1. Прошу внести по ГОСТ 21.501, п. 5.3.' },
+      { ini: 'АК', who: 'Ким А.', role: 'автор раздела АР', date: '08.09.2026 09:20', text: 'Принято, отметку +3.600 нанесу на план и разрез 1-1. Версия 6 выйдет 12.09.2026.' }
+    ] },
+  { n: '2', x: 620, y: 345, status: 'ОТКРЫТО', glyph: '▲', color: WARN,
+    date: '05.09.2026', clause: 'ГОСТ 21.501, п. 7.2', locus: 'ось В/6 · венткамера',
+    text: 'Площадь венткамеры в экспликации не совпадает с геометрией плана: 96,2 м² против 88,4 м².',
+    thread: [
+      { ini: 'ЕС', who: 'Сагинтаев Е.', role: 'нормоконтроль', date: '05.09.2026 11:12', text: 'Расхождение площади помещения 6 между экспликацией и планом. Уточнить и синхронизировать с разделом ОВ.' }
+    ] },
+  { n: '3', x: 420, y: 250, status: 'ЗАКРЫТО', glyph: '●', color: OK,
+    date: '22.08.2026', clause: 'СН РК 3.02-07-2014', locus: 'ось Б/4 · молочный блок',
+    text: 'Ширина технологического проезда 3,2 м вместо нормируемых 3,5 м.',
+    thread: [
+      { ini: 'АК', who: 'Ким А.', role: 'автор раздела АР', date: '28.08.2026 16:40', text: 'Проезд расширен до 3,5 м за счёт переноса перегородки по оси 5. Внесено в изм. 5.' }
+    ] }
+];
+const THUMBS = ['АР-01', 'АР-04', 'АР-05', 'АР-06', 'АР-07', 'АР-09'];
+
+class Component extends DCLogic {
+  state = { active: 0, fmt: 'pdf', compare: !!this.props.showCompare, sign: false, sheet: 2 };
+  renderVals() {
+    const a = this.state.active;
+    const sel = 'var(--color-accent)', selFg = 'var(--color-bg)';
+    return {
+      pins: REMARKS.map((r, i) => ({
+        n: r.n, x: r.x, y: r.y, ty: r.y + 4, color: r.color,
+        r: i === a ? 13 : 11, halo: i === a ? 20 : 16, haloOpacity: i === a ? 1 : 0,
+        pick: () => this.setState({ active: i })
+      })),
+      remarks: REMARKS.map((r, i) => ({
+        n: r.n, status: r.status, glyph: r.glyph, color: r.color, date: r.date,
+        text: r.text, clause: r.clause, locus: r.locus, thread: r.thread,
+        open: i === a,
+        bg: i === a ? 'var(--color-accent-100)' : 'transparent',
+        edge: i === a ? r.color : 'transparent',
+        pick: () => this.setState({ active: i })
+      })),
+      thumbs: THUMBS.map((c, i) => ({
+        code: c,
+        border: i === this.state.sheet ? 'var(--color-accent)' : 'var(--color-divider)',
+        bg: i === this.state.sheet ? 'var(--color-accent-100)' : 'transparent',
+        fg: i === this.state.sheet ? 'var(--color-accent-800)' : 'color-mix(in srgb, var(--color-text) 56%, transparent)',
+        pick: () => this.setState({ sheet: i })
+      })),
+      pdfBg: this.state.fmt === 'pdf' ? sel : 'transparent',
+      pdfFg: this.state.fmt === 'pdf' ? selFg : 'var(--color-text)',
+      dwgBg: this.state.fmt === 'dwg' ? sel : 'transparent',
+      dwgFg: this.state.fmt === 'dwg' ? selFg : 'var(--color-text)',
+      showPdf: () => this.setState({ fmt: 'pdf' }),
+      showDwg: () => this.setState({ fmt: 'dwg' }),
+      compareOn: this.state.compare,
+      compareLabel: this.state.compare ? 'Скрыть сравнение' : 'Сравнить с изм. 4',
+      toggleCompare: () => this.setState(s => ({ compare: !s.compare })),
+      signOpen: this.state.sign,
+      openSign: () => this.setState({ sign: true }),
+      closeSign: () => this.setState({ sign: false })
+    };
+  }
+}
+</script>
+</body>
+</html>

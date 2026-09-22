@@ -1,0 +1,31 @@
+{
+  "name": "@bestech/portal",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "demo:sensors": "node scripts/sensor-simulator.mjs"
+  },
+  "dependencies": {
+    "@bestech/tokens": "workspace:*",
+    "@bestech/ui-kit": "workspace:*",
+    "lucide-react": "^0.445.0",
+    "next": "14.2.13",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "three": "0.186.0",
+    "zustand": "^4.5.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.4",
+    "@types/react": "^18.3.8",
+    "@types/react-dom": "^18.3.0",
+    "@types/three": "0.186.0",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "14.2.13",
+    "typescript": "^5.6.2"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "bestech-portal",
+  "private": true,
+  "packageManager": "pnpm@9.7.0",
+  "engines": {
+    "node": ">=22.5"
+  },
+  "scripts": {
+    "dev": "pnpm --filter @bestech/portal dev",
+    "build": "pnpm --filter @bestech/portal build",
+    "start": "pnpm --filter @bestech/portal start",
+    "lint": "pnpm --filter @bestech/portal lint",
+    "typecheck": "pnpm -r exec tsc --noEmit",
+    "demo:sensors": "pnpm --filter @bestech/portal demo:sensors",
+    "console": "pnpm --filter @bestech/sensor-console start"
+  }
+}

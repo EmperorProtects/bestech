@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/industry-a458f529-fc3f-4d39-8047-7968176c36b5/styles.css">
+<script src="_ds/industry-a458f529-fc3f-4d39-8047-7968176c36b5/_ds_bundle.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap&subset=cyrillic,cyrillic-ext,latin" rel="stylesheet">
+<style>
+  :root{
+    --font-heading:"Fira Sans Condensed","Barlow Condensed",system-ui,sans-serif;
+    --font-body:"IBM Plex Sans",system-ui,sans-serif;
+    --font-mono:"IBM Plex Mono",ui-monospace,monospace;
+    --cy-bg:#1D2D3D; --cy-surface:#24384C; --cy-deep:#16222E;
+    --cy-line:rgba(181,217,253,0.22); --cy-line-2:#416180;
+    --cy-text:#EEF6FF; --cy-mute:#94BCE3; --cy-draw:#B5D9FD;
+    --cy-ok:#7FC49A; --cy-warn:#E3B865; --cy-alarm:#E8837A;
+  }
+  body{margin:0;font-variant-numeric:tabular-nums;-webkit-font-smoothing:antialiased;background:#1D2D3D}
+  h1,h2,h3,h4,h5{text-transform:uppercase;letter-spacing:0.015em}
+  a{color:#B5D9FD;text-decoration:none}
+  a:hover{color:#EEF6FF;text-decoration:underline}
+</style>
+</helmet>
+
+<div style="width:1440px;max-width:1440px;margin:0 auto;background:var(--cy-bg);color:var(--cy-text);font-family:var(--font-body);font-size:14px;display:grid;grid-template-columns:216px minmax(0,1fr)">
+
+  <!-- SIDEBAR -->
+  <aside style="border-right:1px solid var(--cy-line);display:flex;flex-direction:column;min-height:900px">
+    <div style="padding:16px 16px 14px;border-bottom:1px solid var(--cy-line)">
+      <div style="font-family:var(--font-heading);font-size:18px;font-weight:700;letter-spacing:0.2em">BESTECH</div>
+      <div style="font-family:var(--font-mono);font-size:10px;color:var(--cy-mute);letter-spacing:0.1em">ЦИФРОВОЙ ДВОЙНИК</div>
+    </div>
+    <div style="padding:12px 12px 14px;border-bottom:1px solid var(--cy-line)">
+      <div style="border:1px solid var(--cy-line);padding:8px 10px">
+        <div style="font-family:var(--font-mono);font-size:10px;color:var(--cy-mute)">ОБЪЕКТ · 2026-014</div>
+        <div style="display:flex;align-items:center;gap:8px">
+          <span style="font-family:var(--font-heading);font-size:15px;text-transform:uppercase;line-height:1.15">Молочный комплекс</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin-left:auto;flex:none"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+      </div>
+    </div>
+    <nav style="padding:10px 8px;display:grid;gap:2px;font-size:13.5px">
+      <a href="#0" style="display:flex;align-items:center;gap:9px;padding:8px 10px;background:var(--cy-surface);border-left:2px solid var(--cy-draw);color:var(--cy-text)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3 3 8v8l9 5 9-5V8z"/><path d="M3 8l9 5 9-5M12 21v-8"/></svg>Обзор двойника</a>
+      <a href="#0" style="display:flex;align-items:center;gap:9px;padding:8px 10px;color:var(--cy-draw)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 5h16M4 12h16M4 19h16M9 5v14"/></svg>Факт / проект <span style="margin-left:auto;font-family:var(--font-mono);font-size:11px;color:var(--cy-warn)">7</span></a>
+      <a href="#0" style="display:flex;align-items:center;gap:9px;padding:8px 10px;color:var(--cy-draw)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 17 9 11l4 4 8-8"/></svg>Телеметрия</a>
+      <a href="#0" style="display:flex;align-items:center;gap:9px;padding:8px 10px;color:var(--cy-draw)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 4 3 9v6l9 5 9-5V9z"/><circle cx="12" cy="12" r="2.5"/></svg>БПЛА и сканирование</a>
+      <a href="#0" style="display:flex;align-items:center;gap:9px;padding:8px 10px;color:var(--cy-draw)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 2 20h20L12 2ZM12 9v5M12 17.5h.01"/></svg>Аварии <span style="margin-left:auto;font-family:var(--font-mono);font-size:11px;color:var(--cy-alarm)">2</span></a>
+      <a href="#0" style="display:flex;align-items:center;gap:9px;padding:8px 10px;color:var(--cy-draw)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 3h9l5 5v13H5zM14 3v5h5M8 13h8M8 17h5"/></svg>Исполнительная</a>
+      <a href="#0" style="display:flex;align-items:center;gap:9px;padding:8px 10px;color:var(--cy-draw)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6h16v12H4zM4 10h16M9 14h6"/></svg>Эксплуатация</a>
+    </nav>
+    <div style="margin-top:auto;padding:12px;border-top:1px solid var(--cy-line)">
+      <div style="font-family:var(--font-mono);font-size:10px;color:var(--cy-mute);margin-bottom:8px">ПЛОТНОСТЬ</div>
+      <button class="btn" type="button" onClick="{{ toggleDensity }}" style="border-color:var(--cy-line);color:var(--cy-text);width:100%;font-size:12px;padding:5px 8px">{{ densityLabel }}</button>
+      <div style="display:flex;align-items:center;gap:9px;margin-top:14px">
+        <span style="width:28px;height:28px;border:1px solid var(--cy-line);display:grid;place-items:center;font-family:var(--font-mono);font-size:11px">АК</span>
+        <div style="line-height:1.2"><div style="font-size:13px">Ким А.</div><div style="font-family:var(--font-mono);font-size:10px;color:var(--cy-mute)">Технадзор</div></div>
+      </div>
+      <a href="A1 Home.dc.html" style="display:block;font-family:var(--font-mono);font-size:10px;color:var(--cy-mute);margin-top:12px">← НА САЙТ</a>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <div style="display:flex;flex-direction:column;min-width:0">
+
+    <!-- TITLE BLOCK -->
+    <header style="display:grid;grid-template-columns:minmax(0,1fr) auto;border-bottom:1px solid var(--cy-line)">
+      <div style="display:grid;grid-template-columns:repeat(5,auto);align-items:center;font-family:var(--font-mono);font-size:11px">
+        <div style="padding:10px 16px;border-right:1px solid var(--cy-line)">
+          <div style="color:var(--cy-mute);font-size:10px">ШИФР</div><div>2026-014</div>
+        </div>
+        <div style="padding:10px 16px;border-right:1px solid var(--cy-line)">
+          <div style="color:var(--cy-mute);font-size:10px">СТАДИЯ</div><div>СТРОИТЕЛЬСТВО</div>
+        </div>
+        <div style="padding:10px 16px;border-right:1px solid var(--cy-line)">
+          <div style="color:var(--cy-mute);font-size:10px">ГИП</div><div>Бекжанов Т.</div>
+        </div>
+        <div style="padding:10px 16px;border-right:1px solid var(--cy-line)">
+          <div style="color:var(--cy-mute);font-size:10px">ОБНОВЛЕНО</div><div>11.09.2026 09:42</div>
+        </div>
+        <div style="padding:10px 16px">
+          <div style="color:var(--cy-mute);font-size:10px">ЛИСТ</div><div>C1 / 07</div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;padding:0 16px">
+        <span style="display:inline-flex;align-items:center;gap:6px;border:1.5px solid var(--cy-alarm);color:var(--cy-alarm);padding:4px 9px;font-family:var(--font-mono);font-size:11px;letter-spacing:0.12em;transform:rotate(-1.5deg)">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 2 20h20L12 2ZM12 9v5M12 17.5h.01"/></svg>2 АВАРИИ
+        </span>
+        <div style="display:flex;border:1px solid var(--cy-line);font-family:var(--font-mono);font-size:11px">
+          <span style="padding:4px 8px;background:var(--cy-draw);color:var(--cy-bg)">RU</span>
+          <span style="padding:4px 8px;border-left:1px solid var(--cy-line)">KZ</span>
+          <span style="padding:4px 8px;border-left:1px solid var(--cy-line)">EN</span>
+        </div>
+      </div>
+    </header>
+
+    <div style="display:grid;grid-template-columns:minmax(0,1fr) 352px;flex:1">
+
+      <!-- 3D PANEL -->
+      <section style="border-right:1px solid var(--cy-line);display:flex;flex-direction:column;min-width:0">
+        <div style="display:flex;align-items:center;gap:8px;padding:10px 16px;border-bottom:1px solid var(--cy-line);font-family:var(--font-mono);font-size:11px">
+          <span style="color:var(--cy-mute);letter-spacing:0.12em">◭ МОДЕЛЬ IFC · КАРКАС</span>
+          <div style="display:flex;border:1px solid var(--cy-line);margin-left:12px">
+            <span style="padding:3px 9px;background:var(--cy-surface)">ИЗОМЕТРИЯ</span>
+            <span style="padding:3px 9px;border-left:1px solid var(--cy-line);color:var(--cy-mute)">ПЛАН</span>
+            <span style="padding:3px 9px;border-left:1px solid var(--cy-line);color:var(--cy-mute)">РАЗРЕЗ</span>
+          </div>
+          <div style="display:flex;gap:6px;margin-left:12px;color:var(--cy-mute)">
+            <span style="border:1px solid var(--cy-line);padding:3px 7px;background:var(--cy-surface);color:var(--cy-text)">КЖ</span>
+            <span style="border:1px solid var(--cy-line);padding:3px 7px">КМ</span>
+            <span style="border:1px solid var(--cy-line);padding:3px 7px">ОВ</span>
+            <span style="border:1px solid var(--cy-line);padding:3px 7px">ВК</span>
+            <span style="border:1px solid var(--cy-line);padding:3px 7px">ЭОМ</span>
+          </div>
+          <div style="margin-left:auto;display:flex;gap:6px">
+            <button class="btn btn-icon" type="button" aria-label="Уровень" style="border-color:var(--cy-line);color:var(--cy-text);width:28px;height:28px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button>
+            <button class="btn btn-icon" type="button" aria-label="Во весь экран" style="border-color:var(--cy-line);color:var(--cy-text);width:28px;height:28px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 9V4h5M20 15v5h-5M20 9V4h-5M4 15v5h5"/></svg></button>
+          </div>
+        </div>
+
+        <div style="flex:1;position:relative;background:var(--cy-deep)">
+          <svg viewBox="0 0 760 470" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" style="display:block" role="img" aria-label="Каркасная модель объекта с размещёнными датчиками, окрашенными по состоянию">
+            <!-- axis grid -->
+            <g transform="matrix(12.124,7,-12.124,7,300,160)" stroke="#2C455D" stroke-width="0.1" fill="none">
+              <path d="M0 -1.5V13.5M4 -1.5V13.5M8 -1.5V13.5M12 -1.5V13.5M16 -1.5V13.5M20 -1.5V13.5M24 -1.5V13.5" />
+              <path d="M-1.5 0H25.5M-1.5 4H25.5M-1.5 8H25.5M-1.5 12H25.5" />
+            </g>
+            <g transform="matrix(12.124,7,-12.124,7,300,160)" stroke="#416180" stroke-width="0.12" fill="none">
+              <path d="M0 0H24V12H0Z" />
+            </g>
+            <g font-family="IBM Plex Mono" font-size="10" fill="#94BCE3" text-anchor="middle">
+              <text x="324" y="149">1</text><text x="373" y="177">2</text><text x="421" y="205">3</text><text x="469" y="233">4</text><text x="518" y="261">5</text><text x="566" y="289">6</text><text x="614" y="317">7</text>
+              <text x="276" y="149">А</text><text x="227" y="177">Б</text><text x="179" y="205">В</text><text x="130" y="233">Г</text>
+            </g>
+            <!-- back wall -->
+            <g transform="matrix(12.124,7,0,-14,154.5,244)" stroke="#416180" stroke-width="0.1" fill="none">
+              <path d="M0 0H24V6H0Z" />
+              <path d="M4 0V6M8 0V6M12 0V6M16 0V6M20 0V6" stroke-dasharray="0.4 0.3" />
+            </g>
+            <!-- roof -->
+            <polygon points="227.3,62 518.3,230 445.5,328 154.5,160" fill="#1F3145" stroke="#416180" stroke-width="1" />
+            <polygon points="300,76 591,244 518.3,230 227.3,62" fill="#24384C" stroke="#B5D9FD" stroke-width="1.1" />
+            <g stroke="#416180" stroke-width="0.9">
+              <path d="M348.5 104 275.8 90M397 132 324.3 118M445.5 160 372.8 146M494 188 421.3 174M542.5 216 469.8 202" />
+            </g>
+            <!-- front wall -->
+            <g transform="matrix(12.124,7,0,-14,300,160)" stroke="#B5D9FD" stroke-width="0.1" fill="none">
+              <path d="M0 0H24V6H0Z" stroke-width="0.13" />
+              <path d="M4 0V6M8 0V6M12 0V6M16 0V6M20 0V6" />
+              <path d="M2 0V3.2H6V0M10 0V3.2H14V0M18 0V3.2H22V0" stroke="#416180" stroke-width="0.08" />
+            </g>
+            <!-- gables -->
+            <g transform="matrix(-12.124,7,0,-14,300,160)" stroke="#B5D9FD" stroke-width="0.12" fill="none"><path d="M0 0H12V6L6 10L0 6Z" /></g>
+            <g transform="matrix(-12.124,7,0,-14,591,328)" stroke="#416180" stroke-width="0.1" fill="none"><path d="M0 0H12V6L6 10L0 6Z" /></g>
+            <path d="M227.3 62 518.3 230" stroke="#EEF6FF" stroke-width="1.2" />
+
+            <!-- selection bracket -->
+            <rect x="{{ selX }}" y="{{ selY }}" width="26" height="26" fill="none" stroke="#EEF6FF" stroke-width="1" stroke-dasharray="4 3" />
+
+            <!-- sensors -->
+            <g onClick="{{ pick0 }}" style="cursor:pointer">
+              <circle cx="445.5" cy="202" r="7" fill="#1D2D3D" stroke="#7FC49A" stroke-width="1.8" />
+              <circle cx="445.5" cy="202" r="2.4" fill="#7FC49A" />
+              <text x="456" y="199" font-family="IBM Plex Mono" font-size="9.5" fill="#7FC49A">КЖ-3 Б/4</text>
+              <text x="456" y="210" font-family="IBM Plex Mono" font-size="9.5" fill="#EEF6FF">18,4 °C</text>
+            </g>
+            <g onClick="{{ pick1 }}" style="cursor:pointer">
+              <circle cx="275.7" cy="258" r="7" fill="#1D2D3D" stroke="#E3B865" stroke-width="1.8" />
+              <path d="M275.7 254.5 278.5 259.5h-5.6z" fill="#E3B865" />
+              <text x="286" y="255" font-family="IBM Plex Mono" font-size="9.5" fill="#E3B865">ГМ-07</text>
+              <text x="286" y="266" font-family="IBM Plex Mono" font-size="9.5" fill="#EEF6FF">12 / 15 мм</text>
+            </g>
+            <g onClick="{{ pick2 }}" style="cursor:pointer">
+              <circle cx="457.6" cy="181" r="8.5" fill="#1D2D3D" stroke="#E8837A" stroke-width="2" />
+              <circle cx="457.6" cy="181" r="13" fill="none" stroke="#E8837A" stroke-width="0.8" stroke-dasharray="3 3" />
+              <path d="M457.6 176.5 461 182.5h-6.8z" fill="#E8837A" />
+              <path d="M457.6 181 612 106" stroke="#E8837A" stroke-width="0.8" stroke-dasharray="3 2" />
+              <rect x="612" y="84" width="140" height="30" fill="#1D2D3D" stroke="#E8837A" />
+              <text x="620" y="96" font-family="IBM Plex Mono" font-size="9.5" fill="#E8837A">▲ ВНЕ ДОПУСКА Ф-2</text>
+              <text x="620" y="108" font-family="IBM Plex Mono" font-size="9.5" fill="#EEF6FF">86 % проектной</text>
+            </g>
+            <g onClick="{{ pick3 }}" style="cursor:pointer">
+              <circle cx="372.7" cy="160" r="7" fill="#1D2D3D" stroke="#7FC49A" stroke-width="1.8" />
+              <circle cx="372.7" cy="160" r="2.4" fill="#7FC49A" />
+              <text x="330" y="146" font-family="IBM Plex Mono" font-size="9.5" fill="#7FC49A">КЖ-1 А/1 · 21,2 °C</text>
+            </g>
+            <g onClick="{{ pick4 }}" style="cursor:pointer">
+              <circle cx="397" cy="356" r="7" fill="#1D2D3D" stroke="#7FC49A" stroke-width="1.8" />
+              <circle cx="397" cy="356" r="2.4" fill="#7FC49A" />
+              <text x="408" y="359" font-family="IBM Plex Mono" font-size="9.5" fill="#EEF6FF">ВК-У2 · 0,42 МПа</text>
+            </g>
+            <g onClick="{{ pick5 }}" style="cursor:pointer">
+              <circle cx="300" cy="188" r="7" fill="#1D2D3D" stroke="#7A7A7D" stroke-width="1.8" stroke-dasharray="3 2" />
+              <path d="M296.5 184.5 303.5 191.5M303.5 184.5 296.5 191.5" stroke="#B7B7BA" stroke-width="1.2" />
+              <text x="180" y="192" font-family="IBM Plex Mono" font-size="9.5" fill="#B7B7BA">ЭОМ-ТП · НЕТ СВЯЗИ</text>
+            </g>
+
+            <!-- legend -->
+            <g transform="translate(16,392)">
+              <rect x="0" y="0" width="250" height="62" fill="#1D2D3D" stroke="#416180" />
+              <text x="10" y="15" font-family="IBM Plex Mono" font-size="9" fill="#94BCE3" letter-spacing="1">УСЛОВНЫЕ ОБОЗНАЧЕНИЯ</text>
+              <circle cx="16" cy="29" r="5" fill="none" stroke="#7FC49A" stroke-width="1.6" /><text x="28" y="32" font-family="IBM Plex Mono" font-size="9" fill="#EEF6FF">● в допуске (44)</text>
+              <circle cx="16" cy="43" r="5" fill="none" stroke="#E3B865" stroke-width="1.6" /><text x="28" y="46" font-family="IBM Plex Mono" font-size="9" fill="#EEF6FF">▲ у границы (2)</text>
+              <circle cx="146" cy="29" r="5" fill="none" stroke="#E8837A" stroke-width="1.6" /><text x="158" y="32" font-family="IBM Plex Mono" font-size="9" fill="#EEF6FF">▲ вне допуска (1)</text>
+              <circle cx="146" cy="43" r="5" fill="none" stroke="#7A7A7D" stroke-width="1.6" stroke-dasharray="3 2" /><text x="158" y="46" font-family="IBM Plex Mono" font-size="9" fill="#EEF6FF">✕ нет связи (1)</text>
+            </g>
+            <g font-family="IBM Plex Mono" font-size="9" fill="#94BCE3">
+              <text x="640" y="452">М 1:200 · IFC 4</text>
+            </g>
+          </svg>
+          <div style="position:absolute;top:14px;right:16px;border:1px solid var(--cy-line);background:rgba(29,45,61,0.9);padding:8px 12px;font-family:var(--font-mono);font-size:10px;color:var(--cy-mute)">
+            <div style="color:var(--cy-text);font-size:11px">{{ selCode }}</div>
+            <div>{{ selAxis }}</div>
+          </div>
+        </div>
+
+        <!-- selected sensor detail -->
+        <div style="border-top:1px solid var(--cy-line);padding:14px 16px;display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:20px;align-items:center;background:var(--cy-surface)">
+          <div>
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px">
+              <span style="font-family:var(--font-mono);font-size:11px;border:1px solid var(--cy-line);padding:2px 7px">{{ selCode }}</span>
+              <span style="font-family:var(--font-heading);font-size:19px;text-transform:uppercase;letter-spacing:0.02em">{{ selName }}</span>
+              <span style="display:inline-flex;align-items:center;gap:6px;border:1.5px solid {{ selColor }};color:{{ selColor }};padding:2px 8px;font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em">{{ selGlyph }} {{ selStatus }}</span>
+            </div>
+            <div style="font-family:var(--font-mono);font-size:12px;color:var(--cy-mute)">{{ selMeta }}</div>
+          </div>
+          <div style="display:flex;gap:8px;justify-content:flex-end">
+            <button class="btn" type="button" style="border-color:var(--cy-line);color:var(--cy-text);font-size:12px">История</button>
+            <button class="btn" type="button" style="background:var(--cy-draw);border-color:var(--cy-draw);color:var(--cy-bg);font-size:12px">Открыть измерения</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- RIGHT PANEL -->
+      <aside style="display:flex;flex-direction:column;min-width:0">
+        <div style="display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--cy-line)">
+          <div style="padding:{{ tilePad }};border-right:1px solid var(--cy-line)">
+            <div style="font-family:var(--font-mono);font-size:10px;color:var(--cy-mute);letter-spacing:0.1em">ГОТОВНОСТЬ СМР</div>
+            <div style="font-family:var(--font-mono);font-size:30px;line-height:1.15">62 <span style="font-size:15px;color:var(--cy-mute)">%</span></div>
+            <svg viewBox="0 0 160 10" width="100%" height="10" preserveAspectRatio="none" style="display:block;margin-top:4px">
+              <path d="M2 5H158" stroke="#416180" /><path d="M2 5H99" stroke="#B5D9FD" stroke-width="2" /><path d="M2 0V10M99 0V10M92 0V10" stroke="#B5D9FD" stroke-width="0.8" />
+            </svg>
+            <div style="display:flex;justify-content:space-between;font-family:var(--font-mono);font-size:10px;color:var(--cy-mute);margin-top:3px"><span>план 58</span><span>факт 62</span></div>
+          </div>
+          <div style="padding:{{ tilePad }}">
+            <div style="font-family:var(--font-mono);font-size:10px;color:var(--cy-mute);letter-spacing:0.1em">ДАТЧИКИ НА СВЯЗИ</div>
+            <div style="font-family:var(--font-mono);font-size:30px;line-height:1.15">47<span style="font-size:15px;color:var(--cy-mute)">/48</span></div>
+            <svg viewBox="0 0 160 10" width="100%" height="10" preserveAspectRatio="none" style="display:block;margin-top:4px">
+              <path d="M2 5H158" stroke="#416180" /><path d="M2 5H154" stroke="#7FC49A" stroke-width="2" /><path d="M2 0V10M154 0V10" stroke="#7FC49A" stroke-width="0.8" />
+            </svg>
+            <div style="font-family:var(--font-mono);font-size:10px;color:var(--cy-mute);margin-top:3px">ЭОМ-ТП — 4 ч без связи</div>
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--cy-line)">
+          <div style="padding:{{ tilePad }};border-right:1px solid var(--cy-line)">
+            <div style="font-family:var(--font-mono);font-size:10px;color:var(--cy-mute);letter-spacing:0.1em">В ДОПУСКЕ</div>
+            <div style="display:flex;align-items:baseline;gap:8px">
+              <span style="font-family:var(--font-mono);font-size:26px;color:var(--cy-ok)">44</span>
+              <span style="font-family:var(--font-mono);font-size:11px;color:var(--cy-ok)">● норма</span>
+            </div>
+          </div>
+          <div style="padding:{{ tilePad }}">
+            <div style="font-family:var(--font-mono);font-size:10px;color:var(--cy-mute);letter-spacing:0.1em">ВНЕ ДОПУСКА</div>
+            <div style="display:flex;align-items:baseline;gap:8px">
+              <span style="font-family:var(--font-mono);font-size:26px;color:var(--cy-alarm)">1</span>
+              <span style="font-family:var(--font-mono);font-size:11px;color:var(--cy-warn)">▲ 2 у границы</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- alarms -->
+        <div style="border-bottom:1px solid var(--cy-line)">
+          <div style="display:flex;align-items:center;gap:8px;padding:10px 14px;border-bottom:1px solid var(--cy-line);font-family:var(--font-mono);font-size:10px;letter-spacing:0.12em;color:var(--cy-mute)">
+            ◭ АВАРИИ И СОБЫТИЯ
+            <a href="#0" style="margin-left:auto;font-size:10px">ВСЕ →</a>
+          </div>
+          <div style="display:flex;gap:10px;padding:12px 14px;border-left:3px solid var(--cy-alarm);border-bottom:1px solid var(--cy-line);background:rgba(232,131,122,0.08)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--cy-alarm)" stroke-width="1.5" style="flex:none;margin-top:2px"><path d="M12 2 2 20h20L12 2ZM12 9v5M12 17.5h.01"/></svg>
+            <div style="min-width:0">
+              <div style="font-family:var(--font-heading);font-size:15px;text-transform:uppercase;letter-spacing:0.03em;color:var(--cy-alarm)">Вне допуска · ферма Ф-2</div>
+              <div style="font-size:12.5px;color:var(--cy-draw)">Нагрузка 86 % от проектной (порог 80 %)</div>
+              <div style="font-family:var(--font-mono);font-size:10px;color:var(--cy-mute);margin-top:4px">11.09.2026 09:18 · КМ · технадзор Ким А. · SLA 4 ч</div>
+            </div>
+          </div>
+          <div style="display:flex;gap:10px;padding:12px 14px;border-left:3px solid var(--cy-warn);border-bottom:1px solid var(--cy-line)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--cy-warn)" stroke-width="1.5" style="flex:none;margin-top:2px"><path d="M12 8v5M12 17h.01M10.3 3.9 2.4 17.5A1.8 1.8 0 0 0 4 20.2h16a1.8 1.8 0 0 0 1.6-2.7L13.7 3.9a1.8 1.8 0 0 0-3.4 0Z"/></svg>
+            <div style="min-width:0">
+              <div style="font-family:var(--font-heading);font-size:15px;text-transform:uppercase;letter-spacing:0.03em;color:var(--cy-warn)">У границы · марка ГМ-07</div>
+              <div style="font-size:12.5px;color:var(--cy-draw)">Осадка 12 мм при допуске 15 мм, тренд растёт</div>
+              <div style="font-family:var(--font-mono);font-size:10px;color:var(--cy-mute);margin-top:4px">09.09.2026 17:40 · КЖ · геодезист Оспанов Р. · SLA 24 ч</div>
+            </div>
+          </div>
+          <div style="display:flex;gap:10px;padding:12px 14px">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B7B7BA" stroke-width="1.5" style="flex:none;margin-top:2px"><circle cx="12" cy="12" r="9"/><path d="M9 9l6 6M15 9l-6 6"/></svg>
+            <div style="min-width:0">
+              <div style="font-family:var(--font-heading);font-size:15px;text-transform:uppercase;letter-spacing:0.03em;color:#D4D4D7">Нет связи · ЭОМ-ТП</div>
+              <div style="font-size:12.5px;color:var(--cy-draw)">Последний пакет 11.09.2026 05:30</div>
+              <div style="font-family:var(--font-mono);font-size:10px;color:var(--cy-mute);margin-top:4px">ЭОМ · подрядчик ЭлектроМонтаж · SLA 8 ч</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- sensor list -->
+        <div style="flex:1;display:flex;flex-direction:column;min-height:0">
+          <div style="display:flex;align-items:center;gap:8px;padding:10px 14px;border-bottom:1px solid var(--cy-line);font-family:var(--font-mono);font-size:10px;letter-spacing:0.12em;color:var(--cy-mute)">
+            ◭ ПОСЛЕДНИЕ ИЗМЕРЕНИЯ
+            <span style="margin-left:auto">09:42</span>
+          </div>
+          <div style="display:grid">
+            <sc-for list="{{ sensors }}" as="s" hint-placeholder-count="6">
+              <button type="button" onClick="{{ s.pick }}" style="display:grid;grid-template-columns:22px 62px minmax(0,1fr) auto;gap:10px;align-items:center;text-align:left;background:{{ s.bg }};border:0;border-bottom:1px solid var(--cy-line);border-left:2px solid {{ s.edge }};padding:{{ rowPad }};cursor:pointer;font-family:inherit;color:var(--cy-text)">
+                <span style="font-family:var(--font-mono);font-size:11px;color:{{ s.color }}">{{ s.glyph }}</span>
+                <span style="font-family:var(--font-mono);font-size:11px">{{ s.code }}</span>
+                <span style="font-size:12.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">{{ s.name }}</span>
+                <span style="font-family:var(--font-mono);font-size:12px;color:{{ s.color }}">{{ s.value }}</span>
+              </button>
+            </sc-for>
+          </div>
+          <div style="margin-top:auto;padding:12px 14px;border-top:1px solid var(--cy-line);display:flex;gap:8px">
+            <button class="btn" type="button" style="border-color:var(--cy-line);color:var(--cy-text);font-size:12px;flex:1">Экспорт CSV</button>
+            <button class="btn" type="button" style="border-color:var(--cy-line);color:var(--cy-text);font-size:12px;flex:1">Настроить пороги</button>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <!-- FOOTER TITLE BLOCK -->
+    <footer style="display:grid;grid-template-columns:1.6fr repeat(4,1fr);border-top:1px solid var(--cy-line);font-family:var(--font-mono);font-size:11px">
+      <div style="padding:12px 16px;border-right:1px solid var(--cy-line)">
+        <div style="color:var(--cy-mute);font-size:10px">ОБЪЕКТ</div>
+        <div>Молочный комплекс, 1 200 голов · Акмолинская обл.</div>
+      </div>
+      <div style="padding:12px 16px;border-right:1px solid var(--cy-line)">
+        <div style="color:var(--cy-mute);font-size:10px">РАЗДЕЛ</div>
+        <div>Двойник · C1</div>
+      </div>
+      <div style="padding:12px 16px;border-right:1px solid var(--cy-line)">
+        <div style="color:var(--cy-mute);font-size:10px">ТЕМА</div>
+        <div>Цианотипия</div>
+      </div>
+      <div style="padding:12px 16px;border-right:1px solid var(--cy-line)">
+        <div style="color:var(--cy-mute);font-size:10px">ДАТА</div>
+        <div>11.09.2026</div>
+      </div>
+      <div style="padding:12px 16px">
+        <div style="color:var(--cy-mute);font-size:10px">ЛИСТ</div>
+        <div>03 / 03</div>
+      </div>
+    </footer>
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;density&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;comfortable&quot;,&quot;compact&quot;],&quot;default&quot;:&quot;comfortable&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Плотность&quot;}}">
+const OK = '#7FC49A', WARN = '#E3B865', ALARM = '#E8837A', OFF = '#B7B7BA';
+const SENSORS = [
+  { code: 'КЖ-3', name: 'Температура бетона, ось Б/4', value: '18,4 °C', status: 'В ДОПУСКЕ', glyph: '●', color: OK, x: 445.5, y: 202, axis: 'ось Б/4 · уровень +0.000', meta: 'Раздел КЖ · монолит перекрытия · порог 5…35 °C · измерение 11.09.2026 09:40' },
+  { code: 'ГМ-07', name: 'Осадка деформационной марки', value: '12 мм', status: 'У ГРАНИЦЫ', glyph: '▲', color: WARN, x: 275.7, y: 258, axis: 'ось В/2 · марка ГМ-07', meta: 'Раздел КЖ · допуск 15 мм · нивелирование 09.09.2026 17:40 · тренд +1,4 мм/нед' },
+  { code: 'Ф-2', name: 'Нагрузка на ферму покрытия', value: '86 %', status: 'ВНЕ ДОПУСКА', glyph: '▲', color: ALARM, x: 457.6, y: 181, axis: 'ось 4–5 · ферма Ф-2', meta: 'Раздел КМ · порог 80 % от проектной · тензометрия 11.09.2026 09:18 · ответственный технадзор Ким А.' },
+  { code: 'КЖ-1', name: 'Температура бетона, ось А/1', value: '21,2 °C', status: 'В ДОПУСКЕ', glyph: '●', color: OK, x: 372.7, y: 160, axis: 'ось А/1 · уровень +0.000', meta: 'Раздел КЖ · набор прочности 68 % от R28 · измерение 11.09.2026 09:40' },
+  { code: 'ВК-У2', name: 'Давление в узле водоснабжения', value: '0,42 МПа', status: 'В ДОПУСКЕ', glyph: '●', color: OK, x: 397, y: 356, axis: 'узел У2 · ввод В1', meta: 'Раздел ВК · рабочий диапазон 0,30…0,60 МПа · расход 3,8 м³/ч' },
+  { code: 'ЭОМ-ТП', name: 'Трансформаторная подстанция', value: 'нет связи', status: 'НЕТ СВЯЗИ', glyph: '✕', color: OFF, x: 300, y: 188, axis: 'ТП-1 · ось А/1', meta: 'Раздел ЭОМ · последний пакет 11.09.2026 05:30 · подрядчик ЭлектроМонтаж' }
+];
+
+class Component extends DCLogic {
+  state = { i: 2, compact: this.props.density === 'compact' };
+  renderVals() {
+    const i = this.state.i;
+    const sel = SENSORS[i];
+    const compact = this.state.compact;
+    return {
+      sensors: SENSORS.map((s, idx) => ({
+        code: s.code, name: s.name, value: s.value, glyph: s.glyph, color: s.color,
+        bg: idx === i ? '#24384C' : 'transparent',
+        edge: idx === i ? '#EEF6FF' : 'transparent',
+        pick: () => this.setState({ i: idx })
+      })),
+      selCode: sel.code,
+      selName: sel.name,
+      selStatus: sel.status,
+      selGlyph: sel.glyph,
+      selColor: sel.color,
+      selMeta: sel.meta,
+      selAxis: sel.axis,
+      selX: sel.x - 13,
+      selY: sel.y - 13,
+      rowPad: compact ? '6px 14px' : '10px 14px',
+      tilePad: compact ? '10px 14px' : '14px 16px',
+      densityLabel: compact ? 'Компактная' : 'Обычная',
+      toggleDensity: () => this.setState(s => ({ compact: !s.compact })),
+      pick0: () => this.setState({ i: 0 }),
+      pick1: () => this.setState({ i: 1 }),
+      pick2: () => this.setState({ i: 2 }),
+      pick3: () => this.setState({ i: 3 }),
+      pick4: () => this.setState({ i: 4 }),
+      pick5: () => this.setState({ i: 5 })
+    };
+  }
+}
+</script>
+</body>
+</html>

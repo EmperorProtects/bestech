@@ -1,0 +1,13 @@
+{
+  "name": "@bestech/sensor-console",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Пульт показаний датчиков: веб-страница для ручного ввода значений в цифровой двойник через API приёма портала",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server.mjs"
+  }
+}

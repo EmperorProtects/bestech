@@ -1,0 +1,52 @@
+# Деплой демо-стенда на Render: кабинет, документация и цифровой двойник.
+# Мастерская (newExport, Revit, сервер Claude) остаётся на рабочей машине и в облако не едет —
+# в сервисе она просто выключена переменной BESTECH_WORKSPACE_DIR.
+#
+# Как развернуть:
+#   1. Репозиторий на GitHub → Render → New → Blueprint → выбрать этот файл.
+#   2. Заполнить переменные с пометкой sync: false (пароль, ключ шлюза).
+#   3. После первого деплоя вписать выданный адрес в BESTECH_PUBLIC_HOST и сделать Manual Deploy.
+#
+# База SQLite и загруженные файлы лежат на постоянном диске /var/data и переживают деплои.
+# Диск работает только с одним экземпляром сервиса — автомасштабирование не включать.
+
+services:
+  - type: web
+    name: bestech-portal
+    runtime: node
+    plan: starter
+    region: frankfurt
+    branch: main
+    buildCommand: corepack enable && pnpm install --frozen-lockfile && pnpm --filter @bestech/portal build
+    startCommand: pnpm --filter @bestech/portal start
+    healthCheckPath: /login
+    autoDeploy: false
+    disk:
+      name: bestech-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      # node:sqlite есть только с Node 22.5+
+      - key: NODE_VERSION
+        value: "24"
+      # БД и загруженные файлы — на постоянном диске
+      - key: BESTECH_DATA_DIR
+        value: /var/data
+      # Мастерской в облаке нет: путь заведомо пустой, портал покажет «объект не связан»
+      - key: BESTECH_WORKSPACE_DIR
+        value: /var/data/no-workspace
+      - key: NEXT_PUBLIC_BESTECH_ENABLED_STAGES
+        value: design,construction
+      # В облаке опрос реже, чем на локальном показе (там 2 с)
+      - key: NEXT_PUBLIC_BESTECH_LIVE_POLL_MS
+        value: "15000"
+      # Адрес сервиса, например bestech-portal.onrender.com — вписать после первого деплоя,
+      # иначе Next отклонит вход и загрузку файлов как межсайтовые запросы
+      - key: BESTECH_PUBLIC_HOST
+        sync: false
+      # Пароль демо-учёток. Задать ДО первого запуска: пароли пишутся при засеве базы
+      - key: BESTECH_DEMO_PASSWORD
+        sync: false
+      # Ключ шлюза для пульта и эмулятора
+      - key: BESTECH_DEMO_INGEST_KEY
+        sync: false

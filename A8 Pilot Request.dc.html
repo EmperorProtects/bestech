@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/industry-a458f529-fc3f-4d39-8047-7968176c36b5/styles.css">
+<script src="_ds/industry-a458f529-fc3f-4d39-8047-7968176c36b5/_ds_bundle.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap&subset=cyrillic,cyrillic-ext,latin" rel="stylesheet">
+<style>
+  :root{
+    --font-heading:"Fira Sans Condensed","Barlow Condensed",system-ui,sans-serif;
+    --font-body:"IBM Plex Sans",system-ui,sans-serif;
+    --font-mono:"IBM Plex Mono",ui-monospace,monospace;
+    --sem-ok:#3E7A55;
+    --ink-56:color-mix(in srgb, var(--color-text) 56%, transparent);
+    --ink-72:color-mix(in srgb, var(--color-text) 72%, transparent);
+  }
+  body{margin:0;font-variant-numeric:tabular-nums;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4,h5{text-transform:uppercase;letter-spacing:0.015em}
+  a{color:var(--color-accent-700);text-decoration:none}
+  a:hover{color:var(--color-accent);text-decoration:underline}
+</style>
+</helmet>
+
+<div style="width:1440px;max-width:1440px;margin:0 auto;background:var(--color-bg);color:var(--color-text);font-family:var(--font-body);font-size:15px">
+
+  <header style="display:flex;align-items:center;gap:24px;padding:14px 80px;border-bottom:1px solid var(--color-divider)">
+    <a href="A1 Home.dc.html" style="font-family:var(--font-heading);font-size:20px;font-weight:700;letter-spacing:0.2em;color:var(--color-text)">BESTECH</a>
+    <nav style="display:flex;gap:20px;font-size:14px">
+      <a href="A2 Product.dc.html" style="color:var(--color-text)">Продукт</a>
+      <a href="A1 Home.dc.html#industries" style="color:var(--color-text)">Отрасли</a>
+      <a href="#0" style="color:var(--color-text)">Услуги</a>
+      <a href="A5 Pricing.dc.html" style="color:var(--color-text)">Тарифы</a>
+      <a href="A1 Home.dc.html#cases" style="color:var(--color-text)">Кейсы</a>
+      <a href="#0" style="color:var(--color-text)">Компания</a>
+    </nav>
+    <div style="margin-left:auto;display:flex;align-items:center;gap:12px">
+      <div style="display:flex;border:1px solid var(--color-divider);font-family:var(--font-mono);font-size:11px">
+        <span style="padding:5px 9px;background:var(--color-accent);color:var(--color-bg)">RU</span>
+        <span style="padding:5px 9px;border-left:1px solid var(--color-divider)">KZ</span>
+        <span style="padding:5px 9px;border-left:1px solid var(--color-divider)">EN</span>
+      </div>
+      <a class="btn btn-secondary" href="Flow Pilot to Alarm.dc.html">Войти в кабинет</a>
+    </div>
+  </header>
+
+  <div style="display:grid;grid-template-columns:minmax(0,1fr) 400px;min-height:820px">
+
+    <!-- FORM SHEET -->
+    <section style="padding:44px 56px 44px 80px;border-right:1px solid var(--color-divider)">
+      <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.16em;color:var(--color-accent-700);margin-bottom:16px">◭ ЛИСТ 08 / ЗАЯВКА НА ПИЛОТ</div>
+
+      <!-- stepper -->
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid var(--color-divider);margin-bottom:30px">
+        <div style="border-top:2px solid {{ s1 }};margin-top:-2px;padding:12px 16px 12px 0">
+          <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em;color:{{ t1 }}">ШАГ 01 {{ d1 }}</div>
+          <div style="font-family:var(--font-heading);font-size:17px;text-transform:uppercase;letter-spacing:0.02em;color:{{ t1 }}">Объект</div>
+        </div>
+        <div style="border-top:2px solid {{ s2 }};margin-top:-2px;padding:12px 16px">
+          <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em;color:{{ t2 }}">ШАГ 02 {{ d2 }}</div>
+          <div style="font-family:var(--font-heading);font-size:17px;text-transform:uppercase;letter-spacing:0.02em;color:{{ t2 }}">Стадия</div>
+        </div>
+        <div style="border-top:2px solid {{ s3 }};margin-top:-2px;padding:12px 16px">
+          <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em;color:{{ t3 }}">ШАГ 03 {{ d3 }}</div>
+          <div style="font-family:var(--font-heading);font-size:17px;text-transform:uppercase;letter-spacing:0.02em;color:{{ t3 }}">Исходные данные</div>
+        </div>
+        <div style="border-top:2px solid {{ s4 }};margin-top:-2px;padding:12px 16px">
+          <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em;color:{{ t4 }}">ШАГ 04 {{ d4 }}</div>
+          <div style="font-family:var(--font-heading);font-size:17px;text-transform:uppercase;letter-spacing:0.02em;color:{{ t4 }}">Контакты</div>
+        </div>
+      </div>
+
+      <!-- STEP 1 -->
+      <sc-if value="{{ isStep1 }}" hint-placeholder-val="{{ true }}">
+        <div>
+          <h1 style="font-size:38px;margin:0 0 8px;line-height:1.04">Что за объект</h1>
+          <p style="color:var(--ink-72);margin:0 0 26px;max-width:64ch">Достаточно основных параметров — уточним детали на встрече.</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:720px">
+            <div class="field" style="grid-column:span 2">
+              <label for="a8-name">Наименование объекта</label>
+              <input class="input" id="a8-name" type="text" placeholder="Молочный комплекс, 1 200 голов" />
+            </div>
+            <div class="field">
+              <label for="a8-type">Тип объекта</label>
+              <select class="input" id="a8-type">
+                <option>Животноводство и агропром</option>
+                <option>Водозаборные сооружения и сети</option>
+                <option>Промышленный объект</option>
+                <option>Инженерные сети</option>
+                <option>Другое</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="a8-region">Регион</label>
+              <select class="input" id="a8-region">
+                <option>Акмолинская область</option>
+                <option>г. Астана</option>
+                <option>г. Алматы</option>
+                <option>Карагандинская область</option>
+                <option>Другой регион</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="a8-area">Площадь, м²</label>
+              <input class="input" id="a8-area" type="text" placeholder="4 820" style="font-family:var(--font-mono)" />
+            </div>
+            <div class="field">
+              <label for="a8-cap">Мощность / производительность</label>
+              <input class="input" id="a8-cap" type="text" placeholder="1 200 голов · 20 т/ч · 5 000 м³/сут" />
+            </div>
+          </div>
+        </div>
+      </sc-if>
+
+      <!-- STEP 2 -->
+      <sc-if value="{{ isStep2 }}" hint-placeholder-val="{{ false }}">
+        <div>
+          <h1 style="font-size:38px;margin:0 0 8px;line-height:1.04">На какой стадии объект</h1>
+          <p style="color:var(--ink-72);margin:0 0 26px;max-width:64ch">От стадии зависит состав пилота: модель, двойник или система управления.</p>
+          <div style="display:grid;gap:14px;max-width:720px">
+            <sc-for list="{{ stages }}" as="st" hint-placeholder-count="3">
+              <button type="button" onClick="{{ st.pick }}" class="blueprint" style="text-align:left;cursor:pointer;font-family:inherit;color:inherit;padding:18px;background:{{ st.bg }};border-color:{{ st.border }}">
+                <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+                <div style="display:flex;align-items:baseline;gap:12px">
+                  <span style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.12em;color:var(--color-accent-700)">{{ st.n }}</span>
+                  <span style="font-family:var(--font-heading);font-size:22px;text-transform:uppercase;letter-spacing:0.02em">{{ st.title }}</span>
+                  <span style="margin-left:auto;font-family:var(--font-mono);font-size:11px;color:var(--color-accent-700)">{{ st.mark }}</span>
+                </div>
+                <div style="font-size:14px;color:var(--ink-72);margin-top:6px">{{ st.note }}</div>
+              </button>
+            </sc-for>
+            <div class="field" style="margin-top:4px">
+              <label for="a8-date">Планируемый старт работ</label>
+              <input class="input" id="a8-date" type="text" placeholder="01.11.2026" style="font-family:var(--font-mono);max-width:220px" />
+            </div>
+          </div>
+        </div>
+      </sc-if>
+
+      <!-- STEP 3 -->
+      <sc-if value="{{ isStep3 }}" hint-placeholder-val="{{ false }}">
+        <div>
+          <h1 style="font-size:38px;margin:0 0 8px;line-height:1.04">Исходные данные</h1>
+          <p style="color:var(--ink-72);margin:0 0 26px;max-width:64ch">Приложите то, что есть. Недостающее соберём вместе на первой встрече.</p>
+          <div style="display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:24px;max-width:860px;align-items:start">
+            <div style="border:1px dashed var(--color-accent-500);padding:34px 24px;text-align:center;background:var(--color-accent-100)">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-700)" stroke-width="1.5" style="margin:0 auto 8px"><path d="M4 16v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3M12 3v12M8 7l4-4 4 4"/></svg>
+              <div style="font-family:var(--font-heading);font-size:18px;text-transform:uppercase;letter-spacing:0.03em">Перетащите файлы на лист</div>
+              <div style="font-family:var(--font-mono);font-size:11px;color:var(--ink-56);margin:6px 0 14px">PDF · DWG · IFC · XLSX · DOCX — до 200 МБ</div>
+              <button class="btn btn-secondary" type="button">Выбрать файлы</button>
+            </div>
+            <div>
+              <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.12em;color:var(--color-accent-700);margin-bottom:10px">ЧЕК-ЛИСТ КОМПЛЕКТНОСТИ</div>
+              <div style="display:grid;gap:0;border-top:1px solid var(--color-divider)">
+                <sc-for list="{{ checklist }}" as="c" hint-placeholder-count="5">
+                  <label style="display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--color-divider);font-size:13.5px;cursor:pointer">
+                    <input type="checkbox" checked="{{ c.on }}" aria-label="{{ c.t }}" />
+                    <span>{{ c.t }}</span>
+                    <span style="margin-left:auto;font-family:var(--font-mono);font-size:10px;color:var(--ink-56)">{{ c.code }}</span>
+                  </label>
+                </sc-for>
+              </div>
+            </div>
+            <div class="field" style="grid-column:span 2">
+              <label for="a8-task">Задача пилота</label>
+              <textarea class="input" id="a8-task" rows="3" placeholder="Нужно контролировать геометрию каркаса и осадку фундаментов в ходе монтажа"></textarea>
+            </div>
+          </div>
+        </div>
+      </sc-if>
+
+      <!-- STEP 4 -->
+      <sc-if value="{{ isStep4 }}" hint-placeholder-val="{{ false }}">
+        <div>
+          <h1 style="font-size:38px;margin:0 0 8px;line-height:1.04">Контакты</h1>
+          <p style="color:var(--ink-72);margin:0 0 26px;max-width:64ch">Свяжемся в течение одного рабочего дня и согласуем время встречи.</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:720px">
+            <div class="field">
+              <label for="a8-fio">ФИО</label>
+              <input class="input" id="a8-fio" type="text" placeholder="Бекжанов Тимур" />
+            </div>
+            <div class="field">
+              <label for="a8-role">Должность</label>
+              <input class="input" id="a8-role" type="text" placeholder="Главный инженер проекта" />
+            </div>
+            <div class="field">
+              <label for="a8-org">Организация</label>
+              <input class="input" id="a8-org" type="text" placeholder="ТОО «Акмола Агро»" />
+            </div>
+            <div class="field">
+              <label for="a8-phone">Телефон</label>
+              <input class="input" id="a8-phone" type="tel" placeholder="+7 777 000-00-00" style="font-family:var(--font-mono)" />
+            </div>
+            <div class="field" style="grid-column:span 2">
+              <label for="a8-mail">E-mail</label>
+              <input class="input" id="a8-mail" type="email" placeholder="name@company.kz" />
+            </div>
+            <label style="grid-column:span 2;display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--ink-72)">
+              <input type="checkbox" style="margin-top:3px" />
+              <span>Согласен на обработку персональных данных и получение коммерческого предложения на указанный e-mail.</span>
+            </label>
+          </div>
+        </div>
+      </sc-if>
+
+      <!-- SUCCESS -->
+      <sc-if value="{{ isDone }}" hint-placeholder-val="{{ false }}">
+        <div class="blueprint" style="padding:38px;max-width:720px">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px">
+            <span style="display:inline-flex;align-items:center;gap:6px;border:1.5px solid var(--sem-ok);color:var(--sem-ok);padding:5px 10px;border-radius:2px;font-family:var(--font-mono);font-size:11px;letter-spacing:0.12em;transform:rotate(-1.5deg)">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>ЗАЯВКА ПРИНЯТА
+            </span>
+            <span style="font-family:var(--font-mono);font-size:11px;color:var(--ink-56)">11.09.2026 09:42</span>
+          </div>
+          <h1 style="font-size:36px;margin:0 0 12px;line-height:1.05">Заявка №&#8202;PR-2026-0187 зарегистрирована</h1>
+          <p style="color:var(--ink-72);margin:0 0 24px;max-width:60ch">Проверили комплектность исходных данных: задание и ТУ получены, АПЗ отсутствует. ГИП свяжется с вами в течение одного рабочего дня.</p>
+          <div style="display:grid;grid-template-columns:auto 1fr;border:1px solid var(--color-divider);font-family:var(--font-mono);font-size:12px;margin-bottom:24px">
+            <div style="padding:9px 14px;border-right:1px solid var(--color-divider);border-bottom:1px solid var(--color-divider);color:var(--ink-56)">ОБЪЕКТ</div>
+            <div style="padding:9px 14px;border-bottom:1px solid var(--color-divider)">Молочный комплекс, 1 200 голов · Акмолинская обл.</div>
+            <div style="padding:9px 14px;border-right:1px solid var(--color-divider);border-bottom:1px solid var(--color-divider);color:var(--ink-56)">СТАДИЯ</div>
+            <div style="padding:9px 14px;border-bottom:1px solid var(--color-divider)">{{ chosenStage }}</div>
+            <div style="padding:9px 14px;border-right:1px solid var(--color-divider);border-bottom:1px solid var(--color-divider);color:var(--ink-56)">ФАЙЛЫ</div>
+            <div style="padding:9px 14px;border-bottom:1px solid var(--color-divider)">Задание_2026.pdf · ТУ_водоснабжение.pdf</div>
+            <div style="padding:9px 14px;border-right:1px solid var(--color-divider);color:var(--ink-56)">ОТВЕТСТВЕННЫЙ</div>
+            <div style="padding:9px 14px">Бекжанов Т., ГИП · +7 777 957-61-63</div>
+          </div>
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <a class="btn btn-primary blueprint" href="Flow Pilot to Alarm.dc.html" style="position:relative">
+              <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+              Войти в кабинет
+            </a>
+            <button class="btn btn-secondary" type="button" onClick="{{ restart }}">Отправить ещё одну заявку</button>
+          </div>
+        </div>
+      </sc-if>
+
+      <!-- NAV -->
+      <sc-if value="{{ showNav }}" hint-placeholder-val="{{ true }}">
+        <div style="display:flex;align-items:center;gap:14px;margin-top:34px;border-top:1px solid var(--color-divider);padding-top:20px;max-width:860px">
+          <button class="btn btn-ghost" type="button" onClick="{{ prev }}" disabled="{{ atFirst }}">← Назад</button>
+          <div style="font-family:var(--font-mono);font-size:11px;color:var(--ink-56);margin-left:8px">{{ progressLabel }}</div>
+          <button class="btn btn-primary blueprint" type="button" onClick="{{ next }}" style="position:relative;margin-left:auto">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            {{ nextLabel }}
+          </button>
+        </div>
+      </sc-if>
+    </section>
+
+    <!-- SIDE: CONTACTS -->
+    <aside style="padding:44px 80px 44px 32px;display:flex;flex-direction:column;gap:26px">
+      <div>
+        <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.12em;color:var(--color-accent-700);margin-bottom:12px">◭ КОНТАКТЫ</div>
+        <div style="display:grid;grid-template-columns:auto 1fr;border:1px solid var(--color-text);font-family:var(--font-mono);font-size:12px">
+          <div style="padding:9px 12px;border-right:1px solid var(--color-divider);border-bottom:1px solid var(--color-divider);color:var(--ink-56)">ТЕЛ.</div>
+          <div style="padding:9px 12px;border-bottom:1px solid var(--color-divider)">+7 777 957-61-63</div>
+          <div style="padding:9px 12px;border-right:1px solid var(--color-divider);border-bottom:1px solid var(--color-divider);color:var(--ink-56)">E-MAIL</div>
+          <div style="padding:9px 12px;border-bottom:1px solid var(--color-divider);word-break:break-all">engpro.kz@gmail.com</div>
+          <div style="padding:9px 12px;border-right:1px solid var(--color-divider);border-bottom:1px solid var(--color-divider);color:var(--ink-56)">АДРЕС</div>
+          <div style="padding:9px 12px;border-bottom:1px solid var(--color-divider)">Астана, Кенесары 8, офис 1701</div>
+          <div style="padding:9px 12px;border-right:1px solid var(--color-divider);color:var(--ink-56)">САЙТ</div>
+          <div style="padding:9px 12px">engpro.kz</div>
+        </div>
+      </div>
+
+      <div>
+        <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.12em;color:var(--color-accent-700);margin-bottom:12px">◭ ЧТО БУДЕТ ДАЛЬШЕ</div>
+        <div style="display:grid;gap:0;border-top:1px solid var(--color-divider)">
+          <div style="display:grid;grid-template-columns:30px 1fr;gap:10px;padding:11px 0;border-bottom:1px solid var(--color-divider)">
+            <span style="font-family:var(--font-mono);font-size:11px;color:var(--ink-56)">01</span>
+            <span style="font-size:13.5px">Звонок ГИП в течение рабочего дня, уточнение задачи</span>
+          </div>
+          <div style="display:grid;grid-template-columns:30px 1fr;gap:10px;padding:11px 0;border-bottom:1px solid var(--color-divider)">
+            <span style="font-family:var(--font-mono);font-size:11px;color:var(--ink-56)">02</span>
+            <span style="font-size:13.5px">Проверка комплектности исходных данных, список недостающего</span>
+          </div>
+          <div style="display:grid;grid-template-columns:30px 1fr;gap:10px;padding:11px 0;border-bottom:1px solid var(--color-divider)">
+            <span style="font-family:var(--font-mono);font-size:11px;color:var(--ink-56)">03</span>
+            <span style="font-size:13.5px">Демонстрация модели и расхождения на вашем объекте</span>
+          </div>
+          <div style="display:grid;grid-template-columns:30px 1fr;gap:10px;padding:11px 0">
+            <span style="font-family:var(--font-mono);font-size:11px;color:var(--ink-56)">04</span>
+            <span style="font-size:13.5px">Коммерческое предложение и договор на пилот</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="border-left:3px solid var(--color-accent);background:var(--color-accent-100);padding:14px 16px">
+        <div style="font-family:var(--font-heading);font-size:16px;text-transform:uppercase;letter-spacing:0.03em;margin-bottom:4px">Проектное бюро</div>
+        <div style="font-size:13.5px;color:var(--ink-72)">Государственная лицензия ГСЛ №0788280, II категория. Собственная разработка платформы, без сторонних подрядчиков.</div>
+      </div>
+
+      <figure style="margin:0;border:1px solid var(--color-divider);padding:0">
+        <svg viewBox="0 0 280 150" width="100%" height="auto" style="display:block" role="img" aria-label="Схематичная карта: офис в Астане, Кенесары 8">
+          <rect x="0" y="0" width="280" height="150" fill="#F5F5F8" />
+          <g stroke="#D4D4D7" stroke-width="1">
+            <path d="M0 40H280M0 92H280M70 0V150M180 0V150" />
+          </g>
+          <g stroke="#B5D9FD" stroke-width="6" fill="none"><path d="M0 66H280" /></g>
+          <g stroke="#94BCE3" stroke-width="3" fill="none"><path d="M124 0V150" /></g>
+          <rect x="128" y="46" width="42" height="30" fill="#D6EBFF" stroke="#5980A6" />
+          <path d="M149 61 149 34" stroke="#1D2D3D" />
+          <circle cx="149" cy="30" r="5" fill="#1D2D3D" />
+          <g font-family="IBM Plex Mono" font-size="9" fill="#5D5D60">
+            <text x="8" y="60">ул. Кенесары</text>
+            <text x="186" y="86">БЦ «Астана»</text>
+            <text x="128" y="92">офис 1701</text>
+          </g>
+        </svg>
+        <figcaption style="font-family:var(--font-mono);font-size:10px;color:var(--ink-56);padding:8px 12px;border-top:1px solid var(--color-divider)">Астана, Кенесары 8, офис 1701 · схема размещения</figcaption>
+      </figure>
+    </aside>
+  </div>
+
+  <footer style="display:grid;grid-template-columns:1.6fr repeat(4,1fr);border-top:1.5px solid var(--color-text);font-family:var(--font-mono);font-size:11px">
+    <div style="padding:14px 80px;border-right:1px solid var(--color-divider)"><div style="color:var(--ink-56);font-size:10px">ОБЪЕКТ</div><div>BESTECH · Bek Stroy Invest LLP</div></div>
+    <div style="padding:14px 16px;border-right:1px solid var(--color-divider)"><div style="color:var(--ink-56);font-size:10px">РАЗДЕЛ</div><div>Сайт · A8 Заявка</div></div>
+    <div style="padding:14px 16px;border-right:1px solid var(--color-divider)"><div style="color:var(--ink-56);font-size:10px">СТАДИЯ</div><div>Макет 1440</div></div>
+    <div style="padding:14px 16px;border-right:1px solid var(--color-divider)"><div style="color:var(--ink-56);font-size:10px">ДАТА</div><div>11.09.2026</div></div>
+    <div style="padding:14px 16px"><div style="color:var(--ink-56);font-size:10px">ЛИСТ</div><div>A8 / 17</div></div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440},&quot;startStep&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:1,&quot;min&quot;:1,&quot;max&quot;:5,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Шаг формы&quot;}}">
+const STAGES = [
+  { n: '01', title: 'Проектирование', note: 'Нужна модель и разделы ПД: задание есть, проект ещё не выпущен.' },
+  { n: '02', title: 'Строительство', note: 'Проект выпущен, нужен контроль факта и исполнительная документация.' },
+  { n: '03', title: 'Эксплуатация', note: 'Объект введён, нужен паспорт, регламенты ТО и мониторинг параметров.' }
+];
+const CHECK = [
+  { t: 'Задание на проектирование', code: 'ЗАД', on: true },
+  { t: 'Архитектурно-планировочное задание', code: 'АПЗ', on: false },
+  { t: 'Технические условия на подключение', code: 'ТУ', on: true },
+  { t: 'Инженерно-геологические изыскания', code: 'ИГИ', on: false },
+  { t: 'Топографическая съёмка', code: 'ТОПО', on: false },
+  { t: 'Технологическое задание', code: 'ТХ', on: true }
+];
+
+class Component extends DCLogic {
+  state = { step: this.props.startStep || 1, stage: 1 };
+  renderVals() {
+    const st = this.state.step;
+    const on = 'var(--color-accent)', off = 'var(--color-divider)';
+    const ink = 'var(--color-text)', mute = 'color-mix(in srgb, var(--color-text) 56%, transparent)';
+    const mark = n => (st > n ? '✓' : '');
+    return {
+      isStep1: st === 1, isStep2: st === 2, isStep3: st === 3, isStep4: st === 4, isDone: st === 5,
+      showNav: st < 5,
+      s1: st >= 1 ? on : off, s2: st >= 2 ? on : off, s3: st >= 3 ? on : off, s4: st >= 4 ? on : off,
+      t1: st >= 1 ? ink : mute, t2: st >= 2 ? ink : mute, t3: st >= 3 ? ink : mute, t4: st >= 4 ? ink : mute,
+      d1: mark(1), d2: mark(2), d3: mark(3), d4: mark(4),
+      progressLabel: 'ШАГ ' + st + ' ИЗ 4',
+      nextLabel: st === 4 ? 'Отправить заявку' : 'Далее →',
+      atFirst: st === 1,
+      chosenStage: STAGES[this.state.stage].title,
+      stages: STAGES.map((s, i) => ({
+        n: s.n, title: s.title, note: s.note,
+        mark: i === this.state.stage ? '● ВЫБРАНО' : '',
+        bg: i === this.state.stage ? 'var(--color-accent-100)' : 'transparent',
+        border: i === this.state.stage ? 'var(--color-accent)' : 'var(--color-divider)',
+        pick: () => this.setState({ stage: i })
+      })),
+      checklist: CHECK,
+      next: () => this.setState(s => ({ step: Math.min(5, s.step + 1) })),
+      prev: () => this.setState(s => ({ step: Math.max(1, s.step - 1) })),
+      restart: () => this.setState({ step: 1 })
+    };
+  }
+}
+</script>
+</body>
+</html>

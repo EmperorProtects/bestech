@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BESTECH · Пульт показаний датчиков</title>
+  <style>
+    :root {
+      --bg: #16202e;
+      --surface: #1c2939;
+      --raised: #223247;
+      --line: #2f4158;
+      --line-strong: #4a6384;
+      --text: #eef6ff;
+      --soft: #c3d3e6;
+      --mute: #8aa0bb;
+      --accent: #9cc7f2;
+      --ok: #7fc49a;
+      --warn: #e3b865;
+      --alarm: #e8837a;
+      --off: #b7b7ba;
+      --mono: ui-monospace, "IBM Plex Mono", "Cascadia Mono", Consolas, monospace;
+      --sans: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+      --head: "Fira Sans Condensed", "Arial Narrow", "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    /* Атрибут hidden должен побеждать display из классов (например, у диалога PIN). */
+    [hidden] { display: none !important; }
+    body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--sans); font-size: 15px; }
+    button, input { font: inherit; color: inherit; }
+
+    .top { display: flex; align-items: stretch; border-bottom: 1px solid var(--line); flex-wrap: wrap; position: sticky; top: 0; background: var(--bg); z-index: 5; }
+    .brand { padding: 12px 18px; border-right: 1px solid var(--line); }
+    .brand b { display: block; font-family: var(--head); font-size: 18px; letter-spacing: 0.2em; }
+    .brand small { font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; color: var(--mute); text-transform: uppercase; }
+    .cell { padding: 10px 16px; border-right: 1px solid var(--line); font-family: var(--mono); font-size: 12px; }
+    .cell span { display: block; font-size: 10px; color: var(--mute); }
+    .dot { font-size: 11px; }
+
+    main { padding: 18px; display: grid; gap: 18px; max-width: 1320px; margin: 0 auto; }
+    .eyebrow { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.14em; color: var(--accent); text-transform: uppercase; display: flex; align-items: center; gap: 10px; }
+    .eyebrow::after { content: ""; flex: 1; border-top: 1px solid var(--line); }
+
+    .frame { position: relative; border: 1px solid var(--line); padding: 14px 16px; }
+    .frame::before, .frame::after { content: "+"; position: absolute; font-family: var(--mono); font-size: 12px; color: var(--accent); line-height: 1; }
+    .frame::before { top: -7px; left: -4px; }
+    .frame::after { bottom: -7px; right: -4px; }
+
+    .intro { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 16px; align-items: center; }
+    .intro h1 { margin: 0 0 6px; font-family: var(--head); text-transform: uppercase; font-size: 26px; letter-spacing: 0.02em; }
+    .intro p { margin: 0; color: var(--soft); line-height: 1.5; font-size: 14px; }
+    .badge-demo { font-family: var(--mono); font-size: 10.5px; border: 1px dashed var(--accent); color: var(--accent); padding: 4px 8px; white-space: nowrap; }
+
+    .btn { border: 1px solid var(--line-strong); background: transparent; padding: 8px 12px; cursor: pointer; }
+    .btn:hover { background: color-mix(in srgb, var(--accent) 14%, transparent); }
+    .btn.primary { background: var(--accent); color: #0e1826; border-color: var(--accent); }
+    .btn.alarm { border-color: color-mix(in srgb, var(--alarm) 70%, transparent); }
+    .btn.alarm:hover { background: color-mix(in srgb, var(--alarm) 18%, transparent); }
+    .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+    .toggle { font-family: var(--mono); font-size: 12px; display: flex; gap: 6px; align-items: center; color: var(--soft); }
+
+    .groups { display: grid; gap: 18px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; margin-top: 10px; }
+    .card { border: 1px solid var(--line); border-left: 3px solid var(--ok); padding: 12px 14px; background: var(--surface); display: grid; gap: 8px; }
+    .card[data-state="warning"] { border-left-color: var(--warn); }
+    .card[data-state="alarm"] { border-left-color: var(--alarm); background: color-mix(in srgb, var(--alarm) 9%, var(--surface)); }
+    .card-head { display: flex; align-items: center; gap: 8px; }
+    .code { font-family: var(--mono); font-size: 12px; border: 1px solid var(--line-strong); padding: 1px 6px; }
+    .stamp { margin-left: auto; font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em; border: 1px solid currentColor; padding: 2px 6px; }
+    .name { font-size: 13.5px; color: var(--soft); min-height: 2.6em; }
+    .value { font-family: var(--mono); font-size: 30px; line-height: 1; }
+    .value small { font-size: 13px; color: var(--mute); margin-left: 4px; }
+    .slider { position: relative; padding-bottom: 14px; }
+    input[type="range"] { width: 100%; accent-color: var(--accent); margin: 0; }
+    .tick { position: absolute; bottom: 0; transform: translateX(-50%); font-family: var(--mono); font-size: 9px; white-space: nowrap; }
+    .tick::before { content: ""; position: absolute; left: 50%; bottom: 12px; height: 8px; border-left: 1px solid currentColor; }
+    .inline { display: flex; gap: 8px; align-items: center; }
+    .inline input[type="number"] { width: 110px; background: var(--raised); border: 1px solid var(--line-strong); padding: 6px 8px; font-family: var(--mono); }
+    .meta { font-family: var(--mono); font-size: 10.5px; color: var(--mute); margin-left: auto; text-align: right; }
+
+    .log ol { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 4px; max-height: 260px; overflow: auto; font-family: var(--mono); font-size: 12px; }
+    .log li { padding: 6px 8px; border-left: 2px solid var(--line-strong); background: var(--surface); }
+    .log li.ok { border-left-color: var(--ok); }
+    .log li.bad { border-left-color: var(--alarm); }
+    .log li.warn { border-left-color: var(--warn); }
+
+    .pin { position: fixed; inset: 0; background: color-mix(in srgb, var(--bg) 92%, transparent); display: grid; place-items: center; z-index: 10; }
+    .pin form { display: grid; gap: 10px; width: min(320px, 90vw); }
+    .pin input { background: var(--raised); border: 1px solid var(--line-strong); padding: 10px; font-family: var(--mono); font-size: 18px; letter-spacing: 0.3em; text-align: center; }
+
+    @media (max-width: 640px) {
+      .intro { grid-template-columns: 1fr; }
+      .cell { flex: 1 1 45%; }
+    }
+  </style>
+</head>
+<body>
+  <header class="top">
+    <div class="brand"><b>BESTECH</b><small>пульт показаний датчиков</small></div>
+    <div class="cell"><span>ОБЪЕКТ</span><b id="asset">—</b></div>
+    <div class="cell"><span>ПОРТАЛ</span><b id="portal" class="dot">○ проверяем…</b></div>
+    <div class="cell"><span>ОТПРАВЛЕНО ПОКАЗАНИЙ</span><b id="sent">0</b></div>
+    <div class="cell"><span>ПОСЛЕДНИЙ ОТВЕТ</span><b id="last">—</b></div>
+  </header>
+
+  <main>
+    <section class="frame intro">
+      <div>
+        <h1>Ввод показаний в цифровой двойник</h1>
+        <p>
+          Изменяйте значения датчиков — они уходят в портал тем же каналом, что и данные со стройплощадки,
+          и через 1–2 секунды отражаются на модели двойника, в телеметрии и в очереди аварий.
+          Ручной ввод 2 минуты имеет приоритет над автоматическим эмулятором.
+        </p>
+      </div>
+      <span class="badge-demo">ДЕМО-СТЕНД · РУЧНОЙ ВВОД</span>
+    </section>
+
+    <section>
+      <div class="eyebrow">Сценарии</div>
+      <div class="row" id="presets" style="margin-top:10px"></div>
+      <div class="row" style="margin-top:12px">
+        <label class="toggle"><input type="checkbox" id="live" checked /> отправлять сразу при изменении</label>
+        <label class="toggle"><input type="checkbox" id="keep" checked /> держать связь: повторять все значения каждые 5 с</label>
+        <button class="btn primary" id="sendAll" type="button" style="margin-left:auto">Отправить все значения</button>
+      </div>
+    </section>
+
+    <section class="groups" id="groups"></section>
+
+    <section class="log">
+      <div class="eyebrow">Ответы портала</div>
+      <ol id="log"></ol>
+    </section>
+  </main>
+
+  <div class="pin" id="pinDialog" hidden>
+    <form id="pinForm">
+      <div class="eyebrow">Доступ к пульту</div>
+      <input id="pinInput" inputmode="numeric" autocomplete="one-time-code" placeholder="PIN" />
+      <button class="btn primary" type="submit">Войти</button>
+    </form>
+  </div>
+
+  <script>
+    'use strict';
+
+    const RANGE = {
+      temperature: { min: -10, max: 45, step: 0.1 },
+      strength: { min: 0, max: 100, step: 1 },
+      settlement: { min: 0, max: 25, step: 0.1 },
+      load: { min: 0, max: 110, step: 1 },
+      crack: { min: 0, max: 0.6, step: 0.01 },
+      pressure: { min: 0, max: 0.9, step: 0.01 },
+      power: { min: 0, max: 120, step: 1 },
+    };
+    const DEFAULT = { temperature: 20, strength: 45, settlement: 6, load: 62, crack: 0.12, pressure: 0.45, power: 58 };
+    const DISCIPLINE = { КЖ: 'Железобетон · бетон, осадки, трещины', КМ: 'Металлоконструкции · нагрузки на фермы', ВК: 'Водоснабжение', ЭОМ: 'Электроснабжение' };
+
+    const PRESETS = [
+      { label: 'Всё в норме', values: { 'КЖ-1': 21.4, 'КЖ-3': 19.2, 'ПР-3': 55, 'ГМ-01': 3.9, 'ГМ-03': 7.2, 'ГМ-07': 11.1, 'Ф-1': 61, 'Ф-2': 68, 'Ф-3': 54, 'ТР-1': 0.12, 'ВК-У2': 0.45, 'ЭОМ-ТП': 58 } },
+      { label: 'Перегруз фермы Ф-2', values: { 'Ф-2': 88 }, alarm: true },
+      { label: 'Осадка ГМ-07 сверх допуска', values: { 'ГМ-07': 16.4 }, alarm: true },
+      { label: 'Перегрев бетона КЖ-3', values: { 'КЖ-3': 38.5 }, alarm: true },
+      { label: 'Мороз: бетон КЖ-1 ниже 5 °C', values: { 'КЖ-1': 3.2 }, alarm: true },
+      { label: 'Раскрытие трещины ТР-1', values: { 'ТР-1': 0.34 }, alarm: true },
+    ];
+
+    const state = { sensors: [], values: {}, cards: {}, pending: new Set(), timer: null, sent: 0, pin: sessionStorage.getItem('console-pin') || '' };
+    const $ = (id) => document.getElementById(id);
+    const fmt = (v, d) => Number(v).toFixed(d).replace('.', ',');
+    const time = () => new Date().toLocaleTimeString('ru-RU');
+
+    function levelOf(s, v) {
+      const t = s.thresholds || {};
+      const below = (lim) => lim !== null && lim !== undefined && v < lim;
+      const above = (lim) => lim !== null && lim !== undefined && v > lim;
+      if (below(t.alarm_low) || above(t.alarm_high)) return 'alarm';
+      if (below(t.warn_low) || above(t.warn_high)) return 'warning';
+      return 'ok';
+    }
+    const STAMP = { ok: ['● В ДОПУСКЕ', 'var(--ok)'], warning: ['▲ У ГРАНИЦЫ', 'var(--warn)'], alarm: ['▲ ВНЕ ДОПУСКА', 'var(--alarm)'] };
+
+    async function api(path, options = {}) {
+      const headers = { 'Content-Type': 'application/json', ...(state.pin ? { 'X-Console-Pin': state.pin } : {}) };
+      const res = await fetch(path, { ...options, headers });
+      const body = await res.json().catch(() => ({}));
+      if (res.status === 401 && body.pinRequired) {
+        $('pinDialog').hidden = false;
+        throw new Error('нужен PIN');
+      }
+      return { status: res.status, body };
+    }
+
+    function rangeFor(s) {
+      const base = RANGE[s.kind] || { min: 0, max: 100, step: 1 };
+      const limits = Object.values(s.thresholds || {}).filter((v) => v !== null && v !== undefined);
+      const max = Math.max(base.max, ...limits.map((v) => v * 1.25));
+      return { ...base, max };
+    }
+
+    function render() {
+      const groups = $('groups');
+      groups.textContent = '';
+      const byDiscipline = {};
+      for (const s of state.sensors) (byDiscipline[s.code.split('-')[0] === 'Ф' ? 'КМ' : s.discipline || s.code.split('-')[0]] ||= []).push(s);
+
+      for (const [disc, list] of Object.entries(byDiscipline)) {
+        const section = document.createElement('div');
+        section.innerHTML = `<div class="eyebrow"></div><div class="grid"></div>`;
+        section.querySelector('.eyebrow').textContent = `${disc} · ${DISCIPLINE[disc] || 'датчики'}`;
+        const grid = section.querySelector('.grid');
+
+        for (const s of list) {
+          const r = rangeFor(s);
+          const card = document.createElement('article');
+          card.className = 'card';
+          card.innerHTML = `
+            <div class="card-head"><span class="code"></span><span class="stamp"></span></div>
+            <div class="name"></div>
+            <div class="value"><span class="num"></span><small></small></div>
+            <div class="slider"><input type="range" /></div>
+            <div class="inline"><input type="number" /><span class="meta">не отправлено</span></div>`;
+          card.querySelector('.code').textContent = s.code;
+          card.querySelector('.name').textContent = s.name;
+          card.querySelector('.value small').textContent = s.unit;
+
+          const range = card.querySelector('input[type="range"]');
+          const number = card.querySelector('input[type="number"]');
+          for (const input of [range, number]) Object.assign(input, { min: r.min, max: r.max, step: r.step });
+          range.setAttribute('aria-label', `${s.code} ${s.name}`);
+          number.setAttribute('aria-label', `${s.code}, значение в ${s.unit}`);
+
+          // Метки порогов под ползунком
+          const slider = card.querySelector('.slider');
+          const t = s.thresholds || {};
+          for (const [key, color] of [['warn_low', 'var(--warn)'], ['warn_high', 'var(--warn)'], ['alarm_low', 'var(--alarm)'], ['alarm_high', 'var(--alarm)']]) {
+            if (t[key] === null || t[key] === undefined) continue;
+            const tick = document.createElement('span');
+            tick.className = 'tick';
+            tick.style.left = `${((t[key] - r.min) / (r.max - r.min)) * 100}%`;
+            tick.style.color = color;
+            // Число только у аварийного порога: предупредительный стоит рядом, и подписи слипались.
+            tick.textContent = key.startsWith('alarm') ? fmt(t[key], s.decimals) : '';
+            tick.title = `${key.startsWith('alarm') ? 'авария' : 'предупреждение'}: ${fmt(t[key], s.decimals)} ${s.unit}`;
+            slider.append(tick);
+          }
+
+          const onChange = (raw) => {
+            const v = Number(String(raw).replace(',', '.'));
+            if (!Number.isFinite(v)) return;
+            setValue(s.code, v, { from: raw === number.value ? 'number' : 'range' });
+            if ($('live').checked) queue([s.code]);
+          };
+          range.addEventListener('input', () => onChange(range.value));
+          number.addEventListener('change', () => onChange(number.value));
+
+          state.cards[s.code] = { card, range, number, meta: card.querySelector('.meta'), s };
+          grid.append(card);
+          setValue(s.code, state.values[s.code]);
+        }
+        groups.append(section);
+      }
+    }
+
+    function setValue(code, v, opts = {}) {
+      const c = state.cards[code];
+      if (!c) return;
+      const value = Number(v.toFixed(Math.max(0, c.s.decimals)));
+      state.values[code] = value;
+      if (opts.from !== 'range') c.range.value = value;
+      if (opts.from !== 'number') c.number.value = value;
+      c.card.querySelector('.num').textContent = fmt(value, c.s.decimals);
+      const level = levelOf(c.s, value);
+      c.card.dataset.state = level;
+      const [label, color] = STAMP[level];
+      const stamp = c.card.querySelector('.stamp');
+      stamp.textContent = label;
+      stamp.style.color = color;
+    }
+
+    function queue(codes) {
+      codes.forEach((c) => state.pending.add(c));
+      clearTimeout(state.timer);
+      state.timer = setTimeout(() => flush(), 250);
+    }
+
+    async function flush(quiet = false) {
+      const codes = [...state.pending];
+      state.pending.clear();
+      if (!codes.length) return;
+      await send(codes, quiet);
+    }
+
+    async function send(codes, quiet = false) {
+      const readings = codes.map((code) => ({ sensor: code, value: state.values[code] }));
+      try {
+        const { status, body } = await api('/api/send', { method: 'POST', body: JSON.stringify({ readings }) });
+        state.sent += body.accepted || 0;
+        $('sent').textContent = state.sent;
+        $('last').textContent = `${status} · ${time()}`;
+        const stamp = `отправлено ${time()}`;
+        codes.forEach((c) => state.cards[c] && (state.cards[c].meta.textContent = stamp));
+        const alarms = (body.open_alarms || []).filter((a) => !a.endsWith(':offline'));
+        const rejected = body.rejected || [];
+        if (!quiet || rejected.length || status >= 300) {
+          log(
+            status >= 300 ? 'bad' : alarms.some((a) => a.endsWith(':alarm')) ? 'warn' : 'ok',
+            `${time()} → ${status} · принято ${body.accepted ?? 0}` +
+              (rejected.length ? ` · отклонено: ${rejected.map((r) => `${r.sensor} (${r.reason})`).join(', ')}` : '') +
+              (alarms.length ? ` · в портале тревоги: ${alarms.map((a) => a.replace(':alarm', ' ▲ авария').replace(':warning', ' ▲ у границы')).join(', ')}` : '') +
+              (body.error ? ` · ${body.error}` : ''),
+          );
+        }
+      } catch (error) {
+        if (!quiet) log('bad', `${time()} ▲ не отправлено: ${error.message}`);
+      }
+    }
+
+    function log(kind, text) {
+      const li = document.createElement('li');
+      li.className = kind;
+      li.textContent = text;
+      $('log').prepend(li);
+      while ($('log').children.length > 60) $('log').lastChild.remove();
+    }
+
+    async function checkPortal() {
+      try {
+        const { body } = await api('/api/health');
+        $('portal').textContent = body.portal ? (body.authorized ? '● на связи' : '▲ ключ не принят') : `✕ недоступен (${body.error})`;
+        $('portal').style.color = body.portal && body.authorized ? 'var(--ok)' : 'var(--alarm)';
+        if (body.asset) $('asset').textContent = body.asset;
+      } catch {
+        $('portal').textContent = '✕ пульт недоступен';
+        $('portal').style.color = 'var(--alarm)';
+      }
+    }
+
+    async function load() {
+      try {
+        const { status, body } = await api('/api/config');
+        if (status !== 200) {
+          log('bad', `${time()} ▲ не удалось получить датчики: ${body.error || status}`);
+          return;
+        }
+        $('asset').textContent = body.asset;
+        state.sensors = body.sensors;
+        for (const s of state.sensors) {
+          state.values[s.code] = s.last_value ?? DEFAULT[s.kind] ?? 0;
+        }
+        render();
+        log('ok', `${time()} · загружено ${state.sensors.length} датчиков объекта ${body.asset}`);
+      } catch (error) {
+        log('bad', `${time()} ▲ ${error.message}`);
+      }
+    }
+
+    // Пресеты
+    for (const p of PRESETS) {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = `btn${p.alarm ? ' alarm' : ''}`;
+      btn.textContent = p.label;
+      btn.addEventListener('click', () => {
+        const codes = Object.keys(p.values).filter((c) => state.cards[c]);
+        codes.forEach((c) => setValue(c, p.values[c]));
+        log('ok', `${time()} ◆ сценарий «${p.label}»`);
+        send(codes);
+      });
+      $('presets').append(btn);
+    }
+
+    $('sendAll').addEventListener('click', () => send(Object.keys(state.values)));
+
+    // Держать связь: иначе без эмулятора датчики через 20 с перейдут в «нет связи»
+    setInterval(() => {
+      if ($('keep').checked && state.sensors.length) send(Object.keys(state.values), true);
+    }, 5000);
+    setInterval(checkPortal, 10000);
+
+    $('pinForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      state.pin = $('pinInput').value.trim();
+      sessionStorage.setItem('console-pin', state.pin);
+      $('pinDialog').hidden = true;
+      load();
+    });
+
+    checkPortal();
+    load();
+  </script>
+</body>
+</html>

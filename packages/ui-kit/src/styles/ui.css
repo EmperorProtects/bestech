@@ -1,0 +1,230 @@
+/* BESTECH ui-kit — «чертёжный лист». Все значения берутся из @bestech/tokens. */
+
+/* ── Рамка blueprint с угловыми засечками ─────────────── */
+.bst-frame {
+  position: relative;
+  border: 1px solid var(--bst-line);
+  border-radius: var(--bst-radius-1);
+  background: transparent;
+}
+.bst-frame--padded { padding: var(--bst-card-pad); }
+.bst-frame--tint { background: var(--bst-accent-tint); }
+.bst-frame--surface { background: var(--bst-surface); }
+.bst-corner {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  color: var(--bst-accent);
+  pointer-events: none;
+}
+.bst-corner::before,
+.bst-corner::after {
+  content: "";
+  position: absolute;
+  background: currentColor;
+}
+.bst-corner::before { left: 0; right: 0; top: 4px; height: 1px; }
+.bst-corner::after { top: 0; bottom: 0; left: 4px; width: 1px; }
+.bst-corner--tl { top: -5px; left: -5px; }
+.bst-corner--tr { top: -5px; right: -5px; }
+.bst-corner--bl { bottom: -5px; left: -5px; }
+.bst-corner--br { bottom: -5px; right: -5px; }
+
+/* ── Кнопки ───────────────────────────────────────────── */
+.bst-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--bst-space-2);
+  padding: 8px 14px;
+  border: 1px solid var(--bst-line-strong);
+  border-radius: var(--bst-radius-1);
+  background: transparent;
+  color: var(--bst-text);
+  font-family: var(--bst-font-body);
+  font-size: 14px;
+  line-height: 1.2;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 120ms ease, border-color 120ms ease, color 120ms ease;
+}
+.bst-btn:hover { background: var(--bst-accent-tint); border-color: var(--bst-accent); }
+.bst-btn:active { background: color-mix(in srgb, var(--bst-accent) 22%, transparent); }
+.bst-btn--primary {
+  background: var(--bst-accent);
+  border-color: var(--bst-accent);
+  color: var(--bst-on-accent);
+}
+.bst-btn--primary:hover { background: var(--bst-accent-700); border-color: var(--bst-accent-700); }
+[data-theme="cyanotype"] .bst-btn--primary:hover { background: var(--bst-accent-400); border-color: var(--bst-accent-400); }
+.bst-btn--ghost { border-color: transparent; color: var(--bst-accent-ink); }
+.bst-btn--ghost:hover { border-color: var(--bst-line); }
+.bst-btn--subtle { border-color: var(--bst-line); }
+.bst-btn--icon { padding: 0; width: 30px; height: 30px; }
+.bst-btn--block { width: 100%; }
+.bst-btn--sm { padding: 5px 10px; font-size: 12.5px; }
+.bst-btn[disabled] { opacity: 0.45; cursor: not-allowed; }
+
+/* ── Сегментированный переключатель ───────────────────── */
+/* В узком сайдбаре переключатель переносит опции на вторую строку, а не обрезает их. */
+.bst-seg { display: inline-flex; flex-wrap: wrap; max-width: 100%; border: 1px solid var(--bst-line); border-radius: var(--bst-radius-1); overflow: hidden; }
+.bst-seg__opt {
+  padding: 5px 11px;
+  border: 0;
+  border-left: 1px solid var(--bst-line);
+  background: transparent;
+  color: var(--bst-text);
+  font-family: var(--bst-font-mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.bst-seg__opt:first-child { border-left: 0; }
+.bst-seg__opt:hover { background: var(--bst-accent-tint); }
+.bst-seg__opt[aria-pressed="true"],
+.bst-seg__opt[data-active="true"] { background: var(--bst-accent); color: var(--bst-on-accent); }
+
+/* ── Поля ─────────────────────────────────────────────── */
+.bst-field { display: grid; grid-gap: 5px; gap: 5px; }
+.bst-field > label {
+  font-family: var(--bst-font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bst-text-mute);
+}
+.bst-input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--bst-line);
+  border-radius: var(--bst-radius-1);
+  background: var(--bst-raised);
+  color: var(--bst-text);
+  font-family: var(--bst-font-body);
+  font-size: 14px;
+}
+[data-theme="cyanotype"] .bst-input { background: transparent; }
+.bst-input::placeholder { color: var(--bst-text-mute); }
+.bst-input--mono { font-family: var(--bst-font-mono); }
+
+*:focus-visible { outline: 2px solid var(--bst-accent); outline-offset: 2px; }
+
+/* ── Надписи листа ────────────────────────────────────── */
+.bst-eyebrow {
+  font-family: var(--bst-font-mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--bst-accent-ink);
+}
+.bst-eyebrow-row { display: flex; align-items: baseline; gap: var(--bst-space-4); }
+.bst-eyebrow-row__rule { flex: 1 1; height: 1px; background: var(--bst-line); }
+.bst-eyebrow-row__aside { font-family: var(--bst-font-mono); font-size: 11px; color: var(--bst-text-mute); }
+
+.bst-mono { font-family: var(--bst-font-mono); font-feature-settings: "tnum"; font-variant-numeric: tabular-nums; }
+.bst-h { font-family: var(--bst-font-heading); text-transform: uppercase; letter-spacing: 0.015em; margin: 0; }
+
+/* ── Штампы и бейджи ──────────────────────────────────── */
+.bst-stamp {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 8px;
+  border: 1px solid currentColor;
+  border-radius: var(--bst-radius-1);
+  font-family: var(--bst-font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.bst-stamp--lg { padding: 4px 10px; font-size: 11px; border-width: 1.5px; transform: rotate(-1.5deg); }
+.bst-badge {
+  display: inline-flex;
+  padding: 2px 7px;
+  border: 1px solid var(--bst-accent-edge);
+  border-radius: var(--bst-radius-1);
+  background: var(--bst-accent-tint);
+  color: var(--bst-accent-ink);
+  font-family: var(--bst-font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+
+/* ── Штамп-таблица (title block) ──────────────────────── */
+.bst-titleblock { display: grid; grid-template-columns: auto 1fr; border: 1px solid var(--bst-line-strong); font-family: var(--bst-font-mono); font-size: 11px; }
+.bst-titleblock__k { padding: 7px 12px; border-right: 1px solid var(--bst-line); color: var(--bst-text-mute); }
+.bst-titleblock__v { padding: 7px 12px; }
+.bst-titleblock__k:not(:nth-last-child(2)), .bst-titleblock__v:not(:last-child) { border-bottom: 1px solid var(--bst-line); }
+
+/* ── Ведомость ────────────────────────────────────────── */
+.bst-table { width: 100%; border-collapse: collapse; font-family: var(--bst-font-body); }
+.bst-table th {
+  padding: 9px 10px;
+  border-bottom: 1px solid var(--bst-line-strong);
+  font-family: var(--bst-font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bst-text-mute);
+  text-align: left;
+  white-space: nowrap;
+}
+.bst-table td { padding: var(--bst-row-pad); border-bottom: 1px solid var(--bst-line); font-size: 14px; vertical-align: middle; }
+.bst-table tbody tr:hover { background: var(--bst-accent-tint); }
+.bst-table tr[data-selected="true"] { background: var(--bst-accent-tint); }
+.bst-table--sticky thead th { position: -webkit-sticky; position: sticky; top: 0; background: var(--bst-bg); z-index: 1; }
+.bst-num { font-family: var(--bst-font-mono); font-feature-settings: "tnum"; font-variant-numeric: tabular-nums; text-align: right; }
+
+/* ── KPI ──────────────────────────────────────────────── */
+.bst-kpi__label { font-family: var(--bst-font-mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--bst-text-mute); }
+.bst-kpi__value { display: flex; align-items: baseline; gap: 5px; margin: 4px 0 10px; font-family: var(--bst-font-mono); font-size: 34px; line-height: 1; }
+.bst-kpi__unit { font-size: 15px; color: var(--bst-text-mute); }
+.bst-kpi__foot { display: flex; justify-content: space-between; margin-top: 3px; font-family: var(--bst-font-mono); font-size: 10px; color: var(--bst-text-mute); }
+
+/* ── Алерт ────────────────────────────────────────────── */
+.bst-alert { display: flex; gap: var(--bst-space-3); padding: 11px 13px; border: 1px solid var(--bst-line); border-left-width: 3px; border-left-style: solid; }
+.bst-alert__title { font-family: var(--bst-font-heading); font-size: 15px; text-transform: uppercase; letter-spacing: 0.03em; }
+.bst-alert__note { font-size: 12.5px; color: var(--bst-text-soft); }
+
+/* ── Дропзона и пустое состояние ──────────────────────── */
+.bst-dropzone {
+  border: 1px dashed var(--bst-accent-500);
+  background: var(--bst-accent-tint);
+  padding: var(--bst-space-8) var(--bst-space-6);
+  text-align: center;
+  border-radius: var(--bst-radius-1);
+}
+.bst-dropzone[data-over="true"] { border-color: var(--bst-accent); background: color-mix(in srgb, var(--bst-accent) 14%, transparent); }
+.bst-empty { border: 1px dashed var(--bst-line); padding: var(--bst-space-10); text-align: center; }
+
+/* ── Степпер стадий ───────────────────────────────────── */
+.bst-stepper { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; border-top: 2px solid var(--bst-line); }
+.bst-stepper__step { margin-top: -2px; padding: 14px 20px 14px 0; border-top: 2px solid var(--bst-line); position: relative; }
+.bst-stepper__step + .bst-stepper__step { padding-left: 20px; border-left: 1px solid var(--bst-line); }
+.bst-stepper__step[data-state="done"], .bst-stepper__step[data-state="current"] { border-top-color: var(--bst-accent); }
+.bst-stepper__step[data-state="current"]::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background: var(--bst-accent);
+  transform: rotate(45deg);
+}
+.bst-stepper__k { font-family: var(--bst-font-mono); font-size: 10px; letter-spacing: 0.1em; color: var(--bst-accent-ink); }
+.bst-stepper__t { font-family: var(--bst-font-heading); font-size: 22px; text-transform: uppercase; letter-spacing: 0.02em; }
+.bst-stepper__n { font-family: var(--bst-font-mono); font-size: 11px; color: var(--bst-text-mute); margin-top: 2px; }
+.bst-stepper__step[data-state="todo"] .bst-stepper__t,
+.bst-stepper__step[data-state="todo"] .bst-stepper__k { color: var(--bst-text-mute); }
+
+/* ── Сетка осей как подложка ──────────────────────────── */
+.bst-axisgrid {
+  background-image:
+    linear-gradient(to right, var(--bst-grid) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--bst-grid) 1px, transparent 1px);
+  background-size: 20px 20px;
+}

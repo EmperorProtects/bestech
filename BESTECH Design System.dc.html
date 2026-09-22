@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/industry-a458f529-fc3f-4d39-8047-7968176c36b5/styles.css">
+<script src="_ds/industry-a458f529-fc3f-4d39-8047-7968176c36b5/_ds_bundle.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap&subset=cyrillic,cyrillic-ext,latin" rel="stylesheet">
+<style>
+  :root{
+    --font-heading:"Fira Sans Condensed","Barlow Condensed",system-ui,sans-serif;
+    --font-body:"IBM Plex Sans",system-ui,sans-serif;
+    --font-mono:"IBM Plex Mono",ui-monospace,monospace;
+    --sem-ok:#3E7A55; --sem-ok-bg:#E7EFE9;
+    --sem-warn:#8F6511; --sem-warn-bg:#F4EEE0;
+    --sem-alarm:#A03A2E; --sem-alarm-bg:#F5E7E4;
+    --ink-56:color-mix(in srgb, var(--color-text) 56%, transparent);
+    --ink-72:color-mix(in srgb, var(--color-text) 72%, transparent);
+  }
+  body{margin:0;font-variant-numeric:tabular-nums;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4,h5{text-transform:uppercase;letter-spacing:0.015em}
+  a{color:var(--color-accent-700);text-decoration:none}
+  a:hover{color:var(--color-accent);text-decoration:underline}
+</style>
+</helmet>
+
+<div style="width:1440px;max-width:1440px;margin:0 auto;background:var(--color-bg);color:var(--color-text);font-family:var(--font-body);font-size:15px">
+
+  <!-- SHEET FRAME -->
+  <div style="padding:14px">
+  <div style="border:1px solid var(--color-divider);padding:9px">
+  <div style="border:1.5px solid var(--color-text);padding:0">
+
+    <!-- top rail / sheet nav -->
+    <div style="display:flex;align-items:stretch;border-bottom:1.5px solid var(--color-text);font-family:var(--font-mono);font-size:11px;letter-spacing:0.1em;text-transform:uppercase">
+      <div style="padding:10px 18px;border-right:1px solid var(--color-divider);font-family:var(--font-heading);font-size:16px;font-weight:700;letter-spacing:0.16em">BESTECH</div>
+      <div style="padding:10px 18px;border-right:1px solid var(--color-divider);color:var(--ink-72)">Bek Stroy Invest LLP · Астана</div>
+      <div style="display:flex;margin-left:auto">
+        <a href="BESTECH Design System.dc.html" style="padding:10px 16px;border-left:1px solid var(--color-divider);background:var(--color-accent-900);color:var(--color-accent-200)">Дизайн-система</a>
+        <a href="A1 Home.dc.html" style="padding:10px 16px;border-left:1px solid var(--color-divider);color:var(--ink-72)">A1 · Сайт</a>
+        <a href="C1 Twin Overview.dc.html" style="padding:10px 16px;border-left:1px solid var(--color-divider);color:var(--ink-72)">C1 · Цифровой двойник</a>
+      </div>
+    </div>
+
+    <!-- sheet header -->
+    <div style="display:grid;grid-template-columns:1fr auto;gap:40px;padding:44px 56px 34px;border-bottom:1px solid var(--color-divider)">
+      <div>
+        <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.16em;color:var(--color-accent-700);margin-bottom:14px">◭ ЛИСТ 01 / ОСНОВА</div>
+        <h1 style="font-size:52px;line-height:1.02;margin:0 0 12px;max-width:15ch">Дизайн-система «Чертёжный лист»</h1>
+        <p style="margin:0;max-width:62ch;color:var(--ink-72);font-size:16px;text-wrap:pretty">Интерфейс платформы BESTECH построен как чертёжный лист по СПДС: рамка и штамп, оси, размерные линии, штампы статусов, спецификации. Две темы: светлая «Бумага» и тёмная «Цианотипия» для операторской.</p>
+      </div>
+      <div style="align-self:end;display:grid;grid-template-columns:auto auto;border:1px solid var(--color-text);font-family:var(--font-mono);font-size:11px;min-width:300px">
+        <div style="padding:7px 12px;border-right:1px solid var(--color-divider);border-bottom:1px solid var(--color-divider);color:var(--ink-56)">Шифр</div>
+        <div style="padding:7px 12px;border-bottom:1px solid var(--color-divider)">BST-DS-2026</div>
+        <div style="padding:7px 12px;border-right:1px solid var(--color-divider);border-bottom:1px solid var(--color-divider);color:var(--ink-56)">Версия</div>
+        <div style="padding:7px 12px;border-bottom:1px solid var(--color-divider)">1.0 / черновик</div>
+        <div style="padding:7px 12px;border-right:1px solid var(--color-divider);color:var(--ink-56)">Дата</div>
+        <div style="padding:7px 12px">11.09.2026</div>
+      </div>
+    </div>
+
+    <!-- 01 PALETTE -->
+    <section style="padding:40px 56px;border-bottom:1px solid var(--color-divider)">
+      <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:26px">
+        <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.16em;color:var(--color-accent-700)">◭ 01 / ПАЛИТРА</div>
+        <div style="flex:1;height:1px;background:var(--color-divider)"></div>
+        <div style="font-family:var(--font-mono);font-size:11px;color:var(--ink-56)">Синька + бумага, без декоративного цвета</div>
+      </div>
+
+      <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.1em;color:var(--ink-56);margin-bottom:8px">BLUEPRINT / АКЦЕНТ 100–900</div>
+      <div style="display:grid;grid-template-columns:repeat(9,1fr);border:1px solid var(--color-divider);margin-bottom:24px">
+        <div style="border-right:1px solid var(--color-divider)"><div style="height:62px;background:#EEF6FF"></div><div style="padding:6px 8px;font-family:var(--font-mono);font-size:10px"><div>100</div><div style="color:var(--ink-56)">EEF6FF</div></div></div>
+        <div style="border-right:1px solid var(--color-divider)"><div style="height:62px;background:#D6EBFF"></div><div style="padding:6px 8px;font-family:var(--font-mono);font-size:10px"><div>200</div><div style="color:var(--ink-56)">D6EBFF</div></div></div>
+        <div style="border-right:1px solid var(--color-divider)"><div style="height:62px;background:#B5D9FD"></div><div style="padding:6px 8px;font-family:var(--font-mono);font-size:10px"><div>300</div><div style="color:var(--ink-56)">B5D9FD</div></div></div>
+        <div style="border-right:1px solid var(--color-divider)"><div style="height:62px;background:#94BCE3"></div><div style="padding:6px 8px;font-family:var(--font-mono);font-size:10px"><div>400</div><div style="color:var(--ink-56)">94BCE3</div></div></div>
+        <div style="border-right:1px solid var(--color-divider)"><div style="height:62px;background:#749DC4"></div><div style="padding:6px 8px;font-family:var(--font-mono);font-size:10px"><div>500</div><div style="color:var(--ink-56)">749DC4</div></div></div>
+        <div style="border-right:1px solid var(--color-divider)"><div style="height:62px;background:#5980A6"></div><div style="padding:6px 8px;font-family:var(--font-mono);font-size:10px"><div>600 · база</div><div style="color:var(--ink-56)">5980A6</div></div></div>
+        <div style="border-right:1px solid var(--color-divider)"><div style="height:62px;background:#416180"></div><div style="padding:6px 8px;font-family:var(--font-mono);font-size:10px"><div>700 · текст</div><div style="color:var(--ink-56)">416180</div></div></div>
+        <div style="border-right:1px solid var(--color-divider)"><div style="height:62px;background:#2C455D"></div><div style="padding:6px 8px;font-family:var(--font-mono);font-size:10px"><div>800</div><div style="color:var(--ink-56)">2C455D</div></div></div>
+        <div><div style="height:62px;background:#1D2D3D"></div><div style="padding:6px 8px;font-family:var(--font-mono);font-size:10px"><div>900 · фон</div><div style="color:var(--ink-56)">1D2D3D</div></div></div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1.1fr 1fr;gap:40px">
+        <div>
+          <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.1em;color:var(--ink-56);margin-bottom:8px">НЕЙТРАЛЬНЫЕ 100–900</div>
+          <div style="display:grid;grid-template-columns:repeat(9,1fr);border:1px solid var(--color-divider)">
+            <div style="height:44px;background:#F5F5F8;border-right:1px solid var(--color-divider)"></div>
+            <div style="height:44px;background:#E7E7EA;border-right:1px solid var(--color-divider)"></div>
+            <div style="height:44px;background:#D4D4D7;border-right:1px solid var(--color-divider)"></div>
+            <div style="height:44px;background:#B7B7BA;border-right:1px solid var(--color-divider)"></div>
+            <div style="height:44px;background:#98989B;border-right:1px solid var(--color-divider)"></div>
+            <div style="height:44px;background:#7A7A7D;border-right:1px solid var(--color-divider)"></div>
+            <div style="height:44px;background:#5D5D60;border-right:1px solid var(--color-divider)"></div>
+            <div style="height:44px;background:#424244;border-right:1px solid var(--color-divider)"></div>
+            <div style="height:44px;background:#2B2B2D"></div>
+          </div>
+          <div style="display:flex;gap:24px;margin-top:12px;font-family:var(--font-mono);font-size:10px;color:var(--ink-56)">
+            <span>ПАПЕР F2F2F3</span><span>ПОВЕРХНОСТЬ E9E9EA</span><span>ТЕКСТ 1D1F20</span><span>ЛИНИЯ = ТЕКСТ 16%</span>
+          </div>
+        </div>
+        <div>
+          <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.1em;color:var(--ink-56);margin-bottom:8px">СЕМАНТИКА ДОПУСКОВ — ЦВЕТ ВСЕГДА С ИКОНКОЙ И ПОДПИСЬЮ</div>
+          <div style="display:grid;gap:6px">
+            <div style="display:flex;align-items:center;gap:10px;border:1px solid var(--color-divider);padding:7px 10px;background:var(--sem-ok-bg)">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--sem-ok)" stroke-width="1.5"><path d="M20 6 9 17l-5-5"/></svg>
+              <span style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;color:var(--sem-ok)">В ДОПУСКЕ</span>
+              <span style="margin-left:auto;font-family:var(--font-mono);font-size:10px;color:var(--ink-56)">3E7A55</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;border:1px solid var(--color-divider);padding:7px 10px;background:var(--sem-warn-bg)">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--sem-warn)" stroke-width="1.5"><path d="M12 9v4M12 17h.01M10.3 3.9 2.4 17.5A1.8 1.8 0 0 0 4 20.2h16a1.8 1.8 0 0 0 1.6-2.7L13.7 3.9a1.8 1.8 0 0 0-3.4 0Z"/></svg>
+              <span style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;color:var(--sem-warn)">У ГРАНИЦЫ ДОПУСКА</span>
+              <span style="margin-left:auto;font-family:var(--font-mono);font-size:10px;color:var(--ink-56)">8F6511</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;border:1px solid var(--color-divider);padding:7px 10px;background:var(--sem-alarm-bg)">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--sem-alarm)" stroke-width="1.5"><path d="M12 2 2 20h20L12 2ZM12 9v5M12 17.5h.01"/></svg>
+              <span style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;color:var(--sem-alarm)">ВНЕ ДОПУСКА / АВАРИЯ</span>
+              <span style="margin-left:auto;font-family:var(--font-mono);font-size:10px;color:var(--ink-56)">A03A2E</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;border:1px solid var(--color-divider);padding:7px 10px;background:var(--color-accent-100)">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-700)" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>
+              <span style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;color:var(--color-accent-700)">ИНФОРМАЦИЯ</span>
+              <span style="margin-left:auto;font-family:var(--font-mono);font-size:10px;color:var(--ink-56)">5980A6</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 TYPE -->
+    <section style="padding:40px 56px;border-bottom:1px solid var(--color-divider)">
+      <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:26px">
+        <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.16em;color:var(--color-accent-700)">◭ 02 / ТИПОГРАФИКА</div>
+        <div style="flex:1;height:1px;background:var(--color-divider)"></div>
+        <div style="font-family:var(--font-mono);font-size:11px;color:var(--ink-56)">Кириллица + қазақша: ә ғ қ ң ө ұ ү һ і</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1.4fr 1fr;gap:48px">
+        <div style="display:grid;gap:0">
+          <div style="display:grid;grid-template-columns:96px 1fr;border-top:1px solid var(--color-divider);padding:12px 0;align-items:baseline">
+            <div style="font-family:var(--font-mono);font-size:10px;color:var(--ink-56)">H1 / 52·1.02</div>
+            <div style="font-family:var(--font-heading);font-weight:700;font-size:52px;line-height:1.02;text-transform:uppercase;letter-spacing:0.015em">Интеллектуальная модель</div>
+          </div>
+          <div style="display:grid;grid-template-columns:96px 1fr;border-top:1px solid var(--color-divider);padding:12px 0;align-items:baseline">
+            <div style="font-family:var(--font-mono);font-size:10px;color:var(--ink-56)">H2 / 34</div>
+            <div style="font-family:var(--font-heading);font-weight:600;font-size:34px;text-transform:uppercase;letter-spacing:0.015em">Три стадии жизни объекта</div>
+          </div>
+          <div style="display:grid;grid-template-columns:96px 1fr;border-top:1px solid var(--color-divider);padding:12px 0;align-items:baseline">
+            <div style="font-family:var(--font-mono);font-size:10px;color:var(--ink-56)">H3 / 22</div>
+            <div style="font-family:var(--font-heading);font-weight:600;font-size:22px;text-transform:uppercase;letter-spacing:0.02em">Ведомость разделов ПД</div>
+          </div>
+          <div style="display:grid;grid-template-columns:96px 1fr;border-top:1px solid var(--color-divider);padding:12px 0;align-items:baseline">
+            <div style="font-family:var(--font-mono);font-size:10px;color:var(--ink-56)">BODY / 15·1.55</div>
+            <div style="font-size:15px;max-width:52ch;text-wrap:pretty">Отклонение видно сразу, а не в отчёте через месяц. Приборы на площадке измеряют фактические параметры и сопоставляют их с проектными.</div>
+          </div>
+          <div style="display:grid;grid-template-columns:96px 1fr;border-top:1px solid var(--color-divider);padding:12px 0;align-items:baseline">
+            <div style="font-family:var(--font-mono);font-size:10px;color:var(--ink-56)">MONO / 13</div>
+            <div style="font-family:var(--font-mono);font-size:13px">2026-014 · ось Б/4 · 18,4 °C · +12 мм · 1 240 000 ₸</div>
+          </div>
+          <div style="display:grid;grid-template-columns:96px 1fr;border-top:1px solid var(--color-divider);border-bottom:1px solid var(--color-divider);padding:12px 0;align-items:baseline">
+            <div style="font-family:var(--font-mono);font-size:10px;color:var(--ink-56)">KZ / +30 %</div>
+            <div style="font-size:15px;max-width:52ch">Нысанның өмірлік циклінің үш кезеңі: жобалық сандық модель, сандық егіз, басқару жүйесі.</div>
+          </div>
+        </div>
+        <div style="display:grid;gap:14px;align-content:start;font-family:var(--font-mono);font-size:12px">
+          <div style="border:1px solid var(--color-divider);padding:14px">
+            <div style="color:var(--ink-56);font-size:10px;letter-spacing:0.1em;margin-bottom:8px">ЗАГОЛОВКИ</div>
+            <div style="font-family:var(--font-heading);font-size:24px;font-weight:600">Fira Sans Condensed</div>
+            <div style="color:var(--ink-56);margin-top:6px">600/700 · uppercase · tracking +0.015em</div>
+          </div>
+          <div style="border:1px solid var(--color-divider);padding:14px">
+            <div style="color:var(--ink-56);font-size:10px;letter-spacing:0.1em;margin-bottom:8px">ТЕКСТ</div>
+            <div style="font-family:var(--font-body);font-size:22px">IBM Plex Sans</div>
+            <div style="color:var(--ink-56);margin-top:6px">400/500/600 · 15 px базовый</div>
+          </div>
+          <div style="border:1px solid var(--color-divider);padding:14px">
+            <div style="color:var(--ink-56);font-size:10px;letter-spacing:0.1em;margin-bottom:8px">ШИФРЫ · КООРДИНАТЫ · ЦИФРЫ</div>
+            <div style="font-size:22px">IBM Plex Mono</div>
+            <div style="color:var(--ink-56);margin-top:6px">tabular-nums · 0123456789</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 GRID + MOTIFS -->
+    <section style="padding:40px 56px;border-bottom:1px solid var(--color-divider)">
+      <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:26px">
+        <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.16em;color:var(--color-accent-700)">◭ 03 / СЕТКА И МОТИВЫ ЧЕРТЕЖА</div>
+        <div style="flex:1;height:1px;background:var(--color-divider)"></div>
+        <div style="font-family:var(--font-mono);font-size:11px;color:var(--ink-56)">12 колонок · 1440 · поля 80 · шаг 4 px</div>
+      </div>
+
+      <div style="position:relative;border:1px solid var(--color-divider);height:132px;margin-bottom:8px;background:var(--color-bg)">
+        <div style="position:absolute;inset:0 0 0 0;display:grid;grid-template-columns:repeat(12,1fr);gap:20px;padding:0 78px">
+          <div style="background:var(--color-accent-200);border-left:1px solid var(--color-accent-400);border-right:1px solid var(--color-accent-400)"></div>
+          <div style="background:var(--color-accent-200);border-left:1px solid var(--color-accent-400);border-right:1px solid var(--color-accent-400)"></div>
+          <div style="background:var(--color-accent-200);border-left:1px solid var(--color-accent-400);border-right:1px solid var(--color-accent-400)"></div>
+          <div style="background:var(--color-accent-200);border-left:1px solid var(--color-accent-400);border-right:1px solid var(--color-accent-400)"></div>
+          <div style="background:var(--color-accent-200);border-left:1px solid var(--color-accent-400);border-right:1px solid var(--color-accent-400)"></div>
+          <div style="background:var(--color-accent-200);border-left:1px solid var(--color-accent-400);border-right:1px solid var(--color-accent-400)"></div>
+          <div style="background:var(--color-accent-200);border-left:1px solid var(--color-accent-400);border-right:1px solid var(--color-accent-400)"></div>
+          <div style="background:var(--color-accent-200);border-left:1px solid var(--color-accent-400);border-right:1px solid var(--color-accent-400)"></div>
+          <div style="background:var(--color-accent-200);border-left:1px solid var(--color-accent-400);border-right:1px solid var(--color-accent-400)"></div>
+          <div style="background:var(--color-accent-200);border-left:1px solid var(--color-accent-400);border-right:1px solid var(--color-accent-400)"></div>
+          <div style="background:var(--color-accent-200);border-left:1px solid var(--color-accent-400);border-right:1px solid var(--color-accent-400)"></div>
+          <div style="background:var(--color-accent-200);border-left:1px solid var(--color-accent-400);border-right:1px solid var(--color-accent-400)"></div>
+        </div>
+        <div style="position:absolute;left:0;top:0;bottom:0;width:78px;border-right:1px dashed var(--color-accent-400)"></div>
+        <div style="position:absolute;right:0;top:0;bottom:0;width:78px;border-left:1px dashed var(--color-accent-400)"></div>
+        <div style="position:absolute;left:8px;bottom:8px;font-family:var(--font-mono);font-size:10px;color:var(--color-accent-700)">80</div>
+        <div style="position:absolute;right:8px;bottom:8px;font-family:var(--font-mono);font-size:10px;color:var(--color-accent-700)">80</div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:28px">
+        <div>
+          <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em;color:var(--ink-56);margin-bottom:10px">УГЛОВЫЕ ЗАСЕЧКИ</div>
+          <div class="blueprint" style="height:92px;display:grid;place-items:center;font-family:var(--font-mono);font-size:11px;color:var(--ink-56)">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            .blueprint + corner
+          </div>
+        </div>
+        <div>
+          <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em;color:var(--ink-56);margin-bottom:10px">РАЗМЕРНАЯ ЛИНИЯ</div>
+          <div style="height:92px;border:1px solid var(--color-divider);display:grid;align-content:center;gap:10px;padding:0 18px;color:var(--color-accent-700)">
+            <svg viewBox="0 0 240 12" width="100%" height="12" preserveAspectRatio="none" style="display:block">
+              <path d="M2 0V12M238 0V12" stroke="currentColor" stroke-width="1"/>
+              <path d="M2 6H238" stroke="currentColor" stroke-width="1"/>
+              <path d="M2 6 12 3v6zM238 6 228 3v6z" fill="currentColor"/>
+            </svg>
+            <div style="font-family:var(--font-mono);font-size:10px;text-align:center;color:var(--ink-56)">24 000</div>
+          </div>
+        </div>
+        <div>
+          <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em;color:var(--ink-56);margin-bottom:10px">ОСИ КОНСТРУКЦИЙ</div>
+          <div style="height:92px;border:1px solid var(--color-divider);position:relative;background-image:linear-gradient(to right,var(--color-accent-300) 1px,transparent 1px),linear-gradient(to bottom,var(--color-accent-300) 1px,transparent 1px);background-size:36px 30px;background-position:18px 14px">
+            <span style="position:absolute;left:14px;top:2px;font-family:var(--font-mono);font-size:9px;color:var(--color-accent-700)">1</span>
+            <span style="position:absolute;left:50px;top:2px;font-family:var(--font-mono);font-size:9px;color:var(--color-accent-700)">2</span>
+            <span style="position:absolute;left:86px;top:2px;font-family:var(--font-mono);font-size:9px;color:var(--color-accent-700)">3</span>
+            <span style="position:absolute;left:2px;top:38px;font-family:var(--font-mono);font-size:9px;color:var(--color-accent-700)">А</span>
+            <span style="position:absolute;left:2px;top:68px;font-family:var(--font-mono);font-size:9px;color:var(--color-accent-700)">Б</span>
+          </div>
+        </div>
+        <div>
+          <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em;color:var(--ink-56);margin-bottom:10px">РАДИУСЫ 2 / 4 / 7</div>
+          <div style="height:92px;border:1px solid var(--color-divider);display:flex;align-items:center;justify-content:center;gap:14px">
+            <div style="width:44px;height:44px;border:1px solid var(--color-text);border-radius:2px"></div>
+            <div style="width:44px;height:44px;border:1px solid var(--color-text);border-radius:4px"></div>
+            <div style="width:44px;height:44px;border:1px solid var(--color-text);border-radius:7px"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 COMPONENTS -->
+    <section style="padding:40px 56px;border-bottom:1px solid var(--color-divider)">
+      <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:26px">
+        <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.16em;color:var(--color-accent-700)">◭ 04 / КОМПОНЕНТЫ</div>
+        <div style="flex:1;height:1px;background:var(--color-divider)"></div>
+        <div style="font-family:var(--font-mono);font-size:11px;color:var(--ink-56)">плотность: {{ densityLabel }}</div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px">
+
+        <!-- buttons -->
+        <div style="border:1px solid var(--color-divider);padding:18px">
+          <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em;color:var(--ink-56);margin-bottom:14px">КНОПКИ · СОСТОЯНИЯ</div>
+          <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center">
+            <button class="btn btn-primary blueprint" type="button" style="position:relative"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>Запросить пилот</button>
+            <button class="btn btn-secondary" type="button">Смотреть модуль</button>
+            <button class="btn btn-ghost" type="button">Скачать комплект</button>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:14px">
+            <button class="btn btn-primary" type="button" style="background:var(--color-accent-700);border-color:var(--color-accent-700)">hover</button>
+            <button class="btn btn-secondary" type="button" style="background:color-mix(in srgb,var(--color-text) 14%,transparent)">active</button>
+            <button class="btn btn-secondary" type="button" style="outline:2px solid var(--color-accent);outline-offset:2px">focus</button>
+            <button class="btn btn-primary" type="button" disabled="disabled">disabled</button>
+          </div>
+          <div style="display:flex;gap:10px;margin-top:14px">
+            <button class="btn btn-secondary btn-icon" type="button" aria-label="Скачать"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v12M7 11l5 5 5-5M4 21h16"/></svg></button>
+            <button class="btn btn-secondary btn-icon" type="button" aria-label="Фильтр"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5h18l-7 8v6l-4-2v-4z"/></svg></button>
+            <button class="btn btn-secondary btn-icon" type="button" aria-label="Разрез"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16v16H4zM4 12h16M12 4v16"/></svg></button>
+          </div>
+        </div>
+
+        <!-- stamps -->
+        <div style="border:1px solid var(--color-divider);padding:18px">
+          <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em;color:var(--ink-56);margin-bottom:14px">ШТАМПЫ СТАТУСОВ</div>
+          <div style="display:flex;flex-wrap:wrap;gap:12px">
+            <span style="display:inline-flex;align-items:center;gap:6px;border:1.5px solid var(--sem-ok);color:var(--sem-ok);padding:5px 10px;border-radius:2px;font-family:var(--font-mono);font-size:11px;letter-spacing:0.12em;transform:rotate(-1.5deg)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>ВЫДАНО</span>
+            <span style="display:inline-flex;align-items:center;gap:6px;border:1.5px solid var(--color-accent-700);color:var(--color-accent-700);padding:5px 10px;border-radius:2px;font-family:var(--font-mono);font-size:11px;letter-spacing:0.12em;transform:rotate(1deg)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4.3-4.3"/></svg>НА ПРОВЕРКЕ</span>
+            <span style="display:inline-flex;align-items:center;gap:6px;border:1.5px solid var(--sem-warn);color:var(--sem-warn);padding:5px 10px;border-radius:2px;font-family:var(--font-mono);font-size:11px;letter-spacing:0.12em;transform:rotate(-1deg)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 8v5M12 17h.01M10.3 3.9 2.4 17.5A1.8 1.8 0 0 0 4 20.2h16a1.8 1.8 0 0 0 1.6-2.7L13.7 3.9a1.8 1.8 0 0 0-3.4 0Z"/></svg>ЗАМЕЧАНИЯ</span>
+            <span style="display:inline-flex;align-items:center;gap:6px;border:1.5px solid var(--color-neutral-700);color:var(--color-neutral-800);padding:5px 10px;border-radius:2px;font-family:var(--font-mono);font-size:11px;letter-spacing:0.12em;transform:rotate(1.5deg)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg>В РАБОТЕ</span>
+            <span style="display:inline-flex;align-items:center;gap:6px;border:1.5px solid var(--color-neutral-500);color:var(--color-neutral-600);padding:5px 10px;border-radius:2px;font-family:var(--font-mono);font-size:11px;letter-spacing:0.12em;transform:rotate(-2deg);text-decoration:line-through"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8"/><path d="M7 17 17 7"/></svg>АННУЛИРОВАНО</span>
+          </div>
+          <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em;color:var(--ink-56);margin:20px 0 12px">КОДЫ РАЗДЕЛОВ</div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px">
+            <span style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;padding:3px 8px;border:1px solid var(--color-accent-400);background:var(--color-accent-100);color:var(--color-accent-800);border-radius:2px">ГП</span>
+            <span style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;padding:3px 8px;border:1px solid var(--color-accent-400);background:var(--color-accent-100);color:var(--color-accent-800);border-radius:2px">ТХ</span>
+            <span style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;padding:3px 8px;border:1px solid var(--color-accent-400);background:var(--color-accent-100);color:var(--color-accent-800);border-radius:2px">АР</span>
+            <span style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;padding:3px 8px;border:1px solid var(--color-accent-400);background:var(--color-accent-100);color:var(--color-accent-800);border-radius:2px">КМ</span>
+            <span style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;padding:3px 8px;border:1px solid var(--color-accent-400);background:var(--color-accent-100);color:var(--color-accent-800);border-radius:2px">КЖ</span>
+            <span style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;padding:3px 8px;border:1px solid var(--color-accent-400);background:var(--color-accent-100);color:var(--color-accent-800);border-radius:2px">ОВ</span>
+            <span style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;padding:3px 8px;border:1px solid var(--color-accent-400);background:var(--color-accent-100);color:var(--color-accent-800);border-radius:2px">ВК</span>
+            <span style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;padding:3px 8px;border:1px solid var(--color-accent-400);background:var(--color-accent-100);color:var(--color-accent-800);border-radius:2px">ЭОМ</span>
+            <span style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;padding:3px 8px;border:1px solid var(--color-accent-400);background:var(--color-accent-100);color:var(--color-accent-800);border-radius:2px">СС</span>
+          </div>
+        </div>
+
+        <!-- inputs -->
+        <div style="border:1px solid var(--color-divider);padding:18px">
+          <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em;color:var(--ink-56);margin-bottom:14px">ПОЛЯ · СЕЛЕКТЫ · ЧИПЫ</div>
+          <div class="field" style="margin-bottom:12px">
+            <label for="ds-f1">Наименование объекта</label>
+            <input class="input" id="ds-f1" type="text" value="Молочный комплекс, 1 200 голов" />
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px">
+            <div class="field">
+              <label for="ds-f2">Стадия</label>
+              <select class="input" id="ds-f2"><option>Строительство</option><option>Проектирование</option><option>Эксплуатация</option></select>
+            </div>
+            <div class="field">
+              <label for="ds-f3">Площадь, м²</label>
+              <input class="input" id="ds-f3" type="text" value="4 820" style="font-family:var(--font-mono)" />
+            </div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px">
+            <span style="display:inline-flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:11px;padding:4px 8px;border:1px dashed var(--color-accent-500);color:var(--color-accent-800);border-radius:2px">тип: животноводство<button type="button" aria-label="Убрать" style="border:0;background:none;padding:0;cursor:pointer;color:inherit;line-height:1">×</button></span>
+            <span style="display:inline-flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:11px;padding:4px 8px;border:1px dashed var(--color-accent-500);color:var(--color-accent-800);border-radius:2px">регион: Акмолинская<button type="button" aria-label="Убрать" style="border:0;background:none;padding:0;cursor:pointer;color:inherit;line-height:1">×</button></span>
+            <span style="display:inline-flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:11px;padding:4px 8px;border:1px dashed var(--color-accent-500);color:var(--color-accent-800);border-radius:2px">этажей: 1<button type="button" aria-label="Убрать" style="border:0;background:none;padding:0;cursor:pointer;color:inherit;line-height:1">×</button></span>
+          </div>
+          <div style="border:1px dashed var(--color-accent-500);padding:16px;text-align:center;background:var(--color-accent-100)">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-700)" stroke-width="1.5" style="margin:0 auto 6px"><path d="M4 16v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3M12 3v12M8 7l4-4 4 4"/></svg>
+            <div style="font-family:var(--font-heading);font-size:15px;text-transform:uppercase;letter-spacing:0.04em">Перетащите ЗАДАНИЕ, АПЗ, ТУ на лист</div>
+            <div style="font-family:var(--font-mono);font-size:10px;color:var(--ink-56);margin-top:4px">PDF · DWG · IFC · XLSX — до 200 МБ</div>
+          </div>
+        </div>
+
+        <!-- schedule table -->
+        <div style="border:1px solid var(--color-divider);padding:18px;grid-column:span 2;min-width:0;overflow-x:auto">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+            <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em;color:var(--ink-56)">ВЕДОМОСТЬ (СПЕЦИФИКАЦИЯ) · сортировка, выбор строк, липкая шапка</div>
+            <button class="btn btn-secondary" type="button" style="margin-left:auto;font-size:12px;padding:4px 10px" onClick="{{ toggleDensity }}">Плотность: {{ densityLabel }}</button>
+          </div>
+          <table class="table" style="font-family:var(--font-body)">
+            <thead>
+              <tr>
+                <th style="width:34px">№</th><th style="width:56px">Разд.</th><th>Наименование</th><th style="width:64px">Вер.</th><th style="width:150px">Автор</th><th style="width:130px">Статус</th><th style="width:88px">Замеч.</th><th style="width:94px">Выдан</th>
+              </tr>
+            </thead>
+            <tbody style="font-family:var(--font-mono);font-size:12px">
+              <tr>
+                <td style="padding:{{ rowPad }}">01</td><td style="padding:{{ rowPad }}">ГП</td><td style="padding:{{ rowPad }};font-family:var(--font-body);font-size:14px">Генеральный план</td><td style="padding:{{ rowPad }}">3</td><td style="padding:{{ rowPad }};font-family:var(--font-body);font-size:13px">Сагинтаев Е.</td>
+                <td style="padding:{{ rowPad }}"><span style="display:inline-flex;align-items:center;gap:5px;border:1px solid var(--sem-ok);color:var(--sem-ok);padding:2px 7px;font-size:10px;letter-spacing:0.1em;border-radius:2px"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg>ВЫДАНО</span></td>
+                <td style="padding:{{ rowPad }}">0</td><td style="padding:{{ rowPad }}">04.08.2026</td>
+              </tr>
+              <tr>
+                <td style="padding:{{ rowPad }}">02</td><td style="padding:{{ rowPad }}">АР</td><td style="padding:{{ rowPad }};font-family:var(--font-body);font-size:14px">Архитектурные решения</td><td style="padding:{{ rowPad }}">5</td><td style="padding:{{ rowPad }};font-family:var(--font-body);font-size:13px">Ким А.</td>
+                <td style="padding:{{ rowPad }}"><span style="display:inline-flex;align-items:center;gap:5px;border:1px solid var(--sem-warn);color:var(--sem-warn);padding:2px 7px;font-size:10px;letter-spacing:0.1em;border-radius:2px"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v5M12 17h.01M10.3 3.9 2.4 17.5A1.8 1.8 0 0 0 4 20.2h16a1.8 1.8 0 0 0 1.6-2.7L13.7 3.9a1.8 1.8 0 0 0-3.4 0Z"/></svg>ЗАМЕЧАНИЯ</span></td>
+                <td style="padding:{{ rowPad }};color:var(--sem-warn)">2</td><td style="padding:{{ rowPad }}">—</td>
+              </tr>
+              <tr style="background:var(--color-accent-100)">
+                <td style="padding:{{ rowPad }}">03</td><td style="padding:{{ rowPad }}">ВК</td><td style="padding:{{ rowPad }};font-family:var(--font-body);font-size:14px">Водоснабжение и канализация</td><td style="padding:{{ rowPad }}">2</td><td style="padding:{{ rowPad }};font-family:var(--font-body);font-size:13px">Оспанова Д.</td>
+                <td style="padding:{{ rowPad }}"><span style="display:inline-flex;align-items:center;gap:5px;border:1px solid var(--color-accent-700);color:var(--color-accent-700);padding:2px 7px;font-size:10px;letter-spacing:0.1em;border-radius:2px"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4.3-4.3"/></svg>НА ПРОВЕРКЕ</span></td>
+                <td style="padding:{{ rowPad }}">0</td><td style="padding:{{ rowPad }}">—</td>
+              </tr>
+              <tr>
+                <td style="padding:{{ rowPad }}">04</td><td style="padding:{{ rowPad }}">КЖ</td><td style="padding:{{ rowPad }};font-family:var(--font-body);font-size:14px">Конструкции железобетонные</td><td style="padding:{{ rowPad }}">4</td><td style="padding:{{ rowPad }};font-family:var(--font-body);font-size:13px">Бекжанов Т.</td>
+                <td style="padding:{{ rowPad }}"><span style="display:inline-flex;align-items:center;gap:5px;border:1px solid var(--color-neutral-700);color:var(--color-neutral-800);padding:2px 7px;font-size:10px;letter-spacing:0.1em;border-radius:2px"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg>В РАБОТЕ</span></td>
+                <td style="padding:{{ rowPad }}">1</td><td style="padding:{{ rowPad }}">—</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- KPI -->
+        <div style="border:1px solid var(--color-divider);padding:18px">
+          <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em;color:var(--ink-56);margin-bottom:14px">KPI-ПЛИТКА С РАЗМЕРНОЙ ЛИНИЕЙ</div>
+          <div class="blueprint" style="padding:16px">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em;color:var(--ink-56)">ГОТОВНОСТЬ СМР</div>
+            <div style="display:flex;align-items:baseline;gap:6px;margin:6px 0 14px">
+              <span style="font-family:var(--font-mono);font-size:38px;line-height:1;font-weight:500">62</span>
+              <span style="font-family:var(--font-mono);font-size:16px;color:var(--ink-56)">%</span>
+            </div>
+            <div style="color:var(--color-accent-700)">
+              <svg viewBox="0 0 240 14" width="100%" height="14" preserveAspectRatio="none" style="display:block">
+                <path d="M2 0V14M238 0V14M150 0V14" stroke="currentColor" stroke-width="1"/>
+                <path d="M2 7H238" stroke="var(--color-divider)" stroke-width="1"/>
+                <path d="M2 7H150" stroke="currentColor" stroke-width="2"/>
+                <path d="M150 7 140 4v6z" fill="currentColor"/>
+              </svg>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-family:var(--font-mono);font-size:10px;color:var(--ink-56);margin-top:4px"><span>план 58 %</span><span>факт 62 %</span></div>
+          </div>
+        </div>
+
+        <!-- stepper + timeline -->
+        <div style="border:1px solid var(--color-divider);padding:18px;grid-column:span 2">
+          <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em;color:var(--ink-56);margin-bottom:18px">СТЕППЕР СТАДИЙ · ТАЙМЛАЙН</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;align-items:start">
+            <div style="border-top:2px solid var(--color-accent);padding-top:10px;padding-right:16px">
+              <div style="font-family:var(--font-mono);font-size:10px;color:var(--color-accent-700)">01 · ЗАВЕРШЕНО</div>
+              <div style="font-family:var(--font-heading);font-size:18px;text-transform:uppercase;letter-spacing:0.02em">Проектирование</div>
+              <div style="font-family:var(--font-mono);font-size:11px;color:var(--ink-56)">9 разделов выдано · 12.03.2026</div>
+            </div>
+            <div style="border-top:2px solid var(--color-accent);padding-top:10px;padding-right:16px;position:relative">
+              <div style="position:absolute;top:-5px;left:0;width:8px;height:8px;background:var(--color-accent);transform:rotate(45deg)"></div>
+              <div style="font-family:var(--font-mono);font-size:10px;color:var(--color-accent-700)">02 · ТЕКУЩАЯ</div>
+              <div style="font-family:var(--font-heading);font-size:18px;text-transform:uppercase;letter-spacing:0.02em">Строительство</div>
+              <div style="font-family:var(--font-mono);font-size:11px;color:var(--ink-56)">62 % · двойник активен</div>
+            </div>
+            <div style="border-top:2px solid var(--color-divider);padding-top:10px">
+              <div style="font-family:var(--font-mono);font-size:10px;color:var(--ink-56)">03 · ОЖИДАЕТ</div>
+              <div style="font-family:var(--font-heading);font-size:18px;text-transform:uppercase;letter-spacing:0.02em;color:var(--ink-56)">Эксплуатация</div>
+              <div style="font-family:var(--font-mono);font-size:11px;color:var(--ink-56)">с 01.07.2027</div>
+            </div>
+          </div>
+          <div style="margin-top:22px;display:grid;gap:0;border-top:1px solid var(--color-divider)">
+            <div style="display:grid;grid-template-columns:104px 22px 1fr;align-items:start;border-bottom:1px solid var(--color-divider);padding:9px 0">
+              <div style="font-family:var(--font-mono);font-size:11px;color:var(--ink-56)">09.09.2026</div>
+              <div style="display:grid;place-items:center;padding-top:4px"><span style="width:7px;height:7px;background:var(--sem-alarm)"></span></div>
+              <div style="font-size:13px">Авария: осадка марки ГМ-07 — 12 мм (допуск 15 мм), тренд растёт</div>
+            </div>
+            <div style="display:grid;grid-template-columns:104px 22px 1fr;align-items:start;border-bottom:1px solid var(--color-divider);padding:9px 0">
+              <div style="font-family:var(--font-mono);font-size:11px;color:var(--ink-56)">05.09.2026</div>
+              <div style="display:grid;place-items:center;padding-top:4px"><span style="width:7px;height:7px;background:var(--sem-warn)"></span></div>
+              <div style="font-size:13px">Замечание по листу АР-05: не указана отметка чистого пола, ГОСТ 21.501, п. 5.3</div>
+            </div>
+            <div style="display:grid;grid-template-columns:104px 22px 1fr;align-items:start;padding:9px 0">
+              <div style="font-family:var(--font-mono);font-size:11px;color:var(--ink-56)">01.09.2026</div>
+              <div style="display:grid;place-items:center;padding-top:4px"><span style="width:7px;height:7px;background:var(--sem-ok)"></span></div>
+              <div style="font-size:13px">Раздел ГП выдан, версия 3 — подписан ГИП</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- asset card -->
+        <div style="border:1px solid var(--color-divider);padding:18px">
+          <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em;color:var(--ink-56);margin-bottom:14px">КАРТОЧКА ОБЪЕКТА</div>
+          <div class="blueprint" style="padding:14px">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <div style="display:flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:10px;color:var(--ink-56)">
+              <span>2026-014</span><span style="flex:1;height:1px;background:var(--color-divider)"></span><span>АКМОЛИНСКАЯ ОБЛ.</span>
+            </div>
+            <div style="font-family:var(--font-heading);font-size:20px;text-transform:uppercase;letter-spacing:0.02em;margin:8px 0 2px;line-height:1.1">Молочный комплекс, 1 200 голов</div>
+            <div style="font-family:var(--font-mono);font-size:11px;color:var(--ink-56);margin-bottom:12px">Стадия: СТРОИТЕЛЬСТВО · ГИП Бекжанов Т.</div>
+            <div style="color:var(--color-accent-700);margin-bottom:10px">
+              <svg viewBox="0 0 240 10" width="100%" height="10" preserveAspectRatio="none" style="display:block">
+                <path d="M2 5H238" stroke="var(--color-divider)" stroke-width="1"/><path d="M2 5H150" stroke="currentColor" stroke-width="2"/><path d="M2 0V10M150 0V10" stroke="currentColor" stroke-width="1"/>
+              </svg>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;font-family:var(--font-mono);font-size:11px">
+              <div><div style="color:var(--ink-56);font-size:10px">ГОТОВНОСТЬ</div><div>62 %</div></div>
+              <div><div style="color:var(--ink-56);font-size:10px">ЗАМЕЧАНИЯ</div><div style="color:var(--sem-warn)">▲ 3</div></div>
+              <div><div style="color:var(--ink-56);font-size:10px">ДАТЧИКИ</div><div style="color:var(--sem-ok)">● 47/48</div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- charts -->
+        <div style="border:1px solid var(--color-divider);padding:18px;grid-column:span 2">
+          <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em;color:var(--ink-56);margin-bottom:14px">ГРАФИКИ: ПОРОГОВАЯ ЛИНИЯ · СТОЛБЦЫ · ТЕПЛОКАРТА</div>
+          <div style="display:grid;grid-template-columns:1.3fr 1fr 0.8fr;gap:18px">
+            <div>
+              <svg viewBox="0 0 300 130" width="100%" height="130" style="display:block;border:1px solid var(--color-divider)">
+                <path d="M30 10V110M30 110H295" stroke="var(--color-divider)"/>
+                <path d="M30 30H295M30 50H295M30 70H295M30 90H295" stroke="var(--color-divider)" stroke-dasharray="2 4"/>
+                <path d="M30 38H295" stroke="#A03A2E" stroke-width="1" stroke-dasharray="6 3"/>
+                <text x="34" y="34" font-family="IBM Plex Mono" font-size="8" fill="#A03A2E">ПОРОГ 15 мм</text>
+                <polyline points="30,100 66,96 102,88 138,80 174,70 210,60 246,52 282,46" fill="none" stroke="#416180" stroke-width="1.6"/>
+                <polyline points="30,104 66,101 102,97 138,92 174,88 210,84 246,80 282,77" fill="none" stroke="#94BCE3" stroke-width="1.2" stroke-dasharray="4 3"/>
+                <g font-family="IBM Plex Mono" font-size="8" fill="#7A7A7D">
+                  <text x="6" y="42">15</text><text x="6" y="62">10</text><text x="8" y="82">5</text><text x="10" y="112">0</text>
+                  <text x="20" y="122">01.08</text><text x="128" y="122">20.08</text><text x="255" y="122">09.09</text>
+                </g>
+              </svg>
+              <div style="font-family:var(--font-mono);font-size:10px;color:var(--ink-56);margin-top:6px">Осадка марки ГМ-07, мм — факт / прогноз</div>
+            </div>
+            <div>
+              <svg viewBox="0 0 200 130" width="100%" height="130" style="display:block;border:1px solid var(--color-divider)">
+                <path d="M24 10V110M24 110H195" stroke="var(--color-divider)"/>
+                <g fill="#B5D9FD" stroke="#416180" stroke-width="1">
+                  <rect x="36" y="66" width="22" height="44"/><rect x="70" y="48" width="22" height="62"/><rect x="104" y="34" width="22" height="76"/><rect x="138" y="56" width="22" height="54"/>
+                </g>
+                <path d="M24 44H195" stroke="#8F6511" stroke-width="1" stroke-dasharray="6 3"/>
+                <g font-family="IBM Plex Mono" font-size="8" fill="#7A7A7D">
+                  <text x="38" y="122">КЖ</text><text x="73" y="122">КМ</text><text x="106" y="122">АР</text><text x="140" y="122">ОВ</text><text x="4" y="48">80</text><text x="4" y="112">0</text>
+                </g>
+              </svg>
+              <div style="font-family:var(--font-mono);font-size:10px;color:var(--ink-56);margin-top:6px">Отклонения по разделам, шт.</div>
+            </div>
+            <div>
+              <svg viewBox="0 0 140 130" width="100%" height="130" style="display:block;border:1px solid var(--color-divider)">
+                <g stroke="#F2F2F3" stroke-width="1">
+                  <rect x="20" y="16" width="22" height="22" fill="#EEF6FF"/><rect x="42" y="16" width="22" height="22" fill="#D6EBFF"/><rect x="64" y="16" width="22" height="22" fill="#B5D9FD"/><rect x="86" y="16" width="22" height="22" fill="#94BCE3"/><rect x="108" y="16" width="22" height="22" fill="#D6EBFF"/>
+                  <rect x="20" y="38" width="22" height="22" fill="#D6EBFF"/><rect x="42" y="38" width="22" height="22" fill="#94BCE3"/><rect x="64" y="38" width="22" height="22" fill="#5980A6"/><rect x="86" y="38" width="22" height="22" fill="#A03A2E"/><rect x="108" y="38" width="22" height="22" fill="#94BCE3"/>
+                  <rect x="20" y="60" width="22" height="22" fill="#EEF6FF"/><rect x="42" y="60" width="22" height="22" fill="#B5D9FD"/><rect x="64" y="60" width="22" height="22" fill="#94BCE3"/><rect x="86" y="60" width="22" height="22" fill="#5980A6"/><rect x="108" y="60" width="22" height="22" fill="#D6EBFF"/>
+                  <rect x="20" y="82" width="22" height="22" fill="#EEF6FF"/><rect x="42" y="82" width="22" height="22" fill="#EEF6FF"/><rect x="64" y="82" width="22" height="22" fill="#D6EBFF"/><rect x="86" y="82" width="22" height="22" fill="#B5D9FD"/><rect x="108" y="82" width="22" height="22" fill="#EEF6FF"/>
+                </g>
+                <g font-family="IBM Plex Mono" font-size="8" fill="#7A7A7D">
+                  <text x="28" y="12">1</text><text x="50" y="12">2</text><text x="72" y="12">3</text><text x="94" y="12">4</text><text x="116" y="12">5</text>
+                  <text x="8" y="31">А</text><text x="8" y="53">Б</text><text x="8" y="75">В</text><text x="8" y="97">Г</text>
+                  <text x="20" y="118">Отклонения по осям, мм</text>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- alerts -->
+        <div style="border:1px solid var(--color-divider);padding:18px">
+          <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em;color:var(--ink-56);margin-bottom:14px">АЛЕРТ · ТОСТ</div>
+          <div style="display:flex;gap:10px;border-left:3px solid var(--sem-alarm);background:var(--sem-alarm-bg);border-top:1px solid var(--color-divider);border-right:1px solid var(--color-divider);border-bottom:1px solid var(--color-divider);padding:11px 13px;margin-bottom:12px">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--sem-alarm)" stroke-width="1.5" style="flex:none;margin-top:1px"><path d="M12 2 2 20h20L12 2ZM12 9v5M12 17.5h.01"/></svg>
+            <div>
+              <div style="font-family:var(--font-heading);font-size:15px;text-transform:uppercase;letter-spacing:0.03em;color:var(--sem-alarm)">Вне допуска · нагрузка на ферму Ф-2</div>
+              <div style="font-size:13px;color:var(--ink-72)">86 % от проектной, порог 80 %. Ответственный: технадзор Ким А.</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;border:1px solid var(--color-text);background:var(--color-text);color:var(--color-bg);padding:10px 13px">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6 9 17l-5-5"/></svg>
+            <div style="font-size:13px">Комплект ПД (9 разделов) собран в архив</div>
+            <button class="btn btn-ghost" type="button" style="margin-left:auto;color:var(--color-accent-300);font-size:12px">Скачать</button>
+          </div>
+        </div>
+
+        <!-- chat -->
+        <div style="border:1px solid var(--color-divider);padding:18px">
+          <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em;color:var(--ink-56);margin-bottom:14px">СООБЩЕНИЕ ИИ · ССЫЛКИ НА ДОКУМЕНТЫ</div>
+          <div style="border:1px solid var(--color-divider);padding:12px;background:var(--color-surface)">
+            <div style="display:flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:10px;letter-spacing:0.08em;color:var(--color-accent-700);margin-bottom:8px">
+              <span style="border:1px solid var(--color-accent-500);padding:1px 5px">ИИ</span>
+              <span style="color:var(--ink-56)">СГЕНЕРИРОВАНО ИИ — ТРЕБУЕТ ПРОВЕРКИ ИНЖЕНЕРОМ</span>
+            </div>
+            <div style="font-size:13px;margin-bottom:10px">В разделе АР отсутствует отметка чистого пола на листе АР-05. По ГОСТ 21.501 отметки уровней указывают на плане и разрезе.</div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px">
+              <span style="font-family:var(--font-mono);font-size:10px;border:1px solid var(--color-divider);padding:3px 7px;background:var(--color-bg)">ГОСТ 21.501, п. 5.3</span>
+              <span style="font-family:var(--font-mono);font-size:10px;border:1px solid var(--color-divider);padding:3px 7px;background:var(--color-bg)">АР-05.pdf · стр. 2</span>
+            </div>
+          </div>
+          <div style="display:flex;gap:8px;margin-top:10px">
+            <input class="input" type="text" placeholder="Вопрос по объекту 2026-014…" aria-label="Вопрос" />
+            <button class="btn btn-primary" type="button">Спросить</button>
+          </div>
+        </div>
+
+        <!-- empty state -->
+        <div style="border:1px solid var(--color-divider);padding:18px">
+          <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em;color:var(--ink-56);margin-bottom:14px">ПУСТОЕ СОСТОЯНИЕ</div>
+          <div style="border:1px dashed var(--color-divider);padding:20px;text-align:center">
+            <svg width="120" height="72" viewBox="0 0 120 72" fill="none" stroke="var(--color-accent-400)" stroke-width="1" style="margin:0 auto 10px">
+              <path d="M20 46 60 24l40 22-40 22z"/><path d="M20 46V30l40-22 40 22v16"/><path d="M60 8v16M20 30l40 22 40-22" stroke-dasharray="3 3"/>
+            </svg>
+            <div style="font-family:var(--font-heading);font-size:16px;text-transform:uppercase;letter-spacing:0.03em">Датчики не подключены</div>
+            <div style="font-size:13px;color:var(--ink-72);margin:4px 0 12px">Двойник появится после первой передачи данных с площадки.</div>
+            <button class="btn btn-secondary" type="button">Подключить прибор</button>
+          </div>
+        </div>
+
+        <!-- navigation -->
+        <div style="border:1px solid var(--color-divider);padding:18px;grid-column:span 3">
+          <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em;color:var(--ink-56);margin-bottom:14px">НАВИГАЦИЯ: ТОП-БАР САЙТА · САЙДБАР КАБИНЕТА · ПЕРЕКЛЮЧАТЕЛЬ ОБЪЕКТА · RU/KZ/EN · ПРОФИЛЬ</div>
+          <div style="display:flex;align-items:center;gap:22px;border:1px solid var(--color-divider);padding:12px 16px;margin-bottom:14px">
+            <div style="font-family:var(--font-heading);font-size:19px;font-weight:700;letter-spacing:0.18em">BESTECH</div>
+            <nav style="display:flex;gap:18px;font-size:14px">
+              <a href="#0" aria-current="page" style="color:var(--color-accent-700)">Продукт</a><a href="#0" style="color:var(--color-text)">Отрасли</a><a href="#0" style="color:var(--color-text)">Услуги</a><a href="#0" style="color:var(--color-text)">Тарифы</a><a href="#0" style="color:var(--color-text)">Кейсы</a><a href="#0" style="color:var(--color-text)">Компания</a>
+            </nav>
+            <div style="margin-left:auto;display:flex;align-items:center;gap:10px">
+              <div style="display:flex;border:1px solid var(--color-divider);font-family:var(--font-mono);font-size:11px">
+                <span style="padding:4px 8px;background:var(--color-accent);color:var(--color-bg)">RU</span>
+                <span style="padding:4px 8px;border-left:1px solid var(--color-divider)">KZ</span>
+                <span style="padding:4px 8px;border-left:1px solid var(--color-divider)">EN</span>
+              </div>
+              <button class="btn btn-secondary" type="button">Войти</button>
+              <button class="btn btn-primary" type="button">Запросить пилот</button>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:236px 1fr;gap:14px">
+            <div style="border:1px solid var(--color-divider);padding:12px">
+              <div style="border:1px solid var(--color-divider);padding:8px 10px;margin-bottom:12px">
+                <div style="font-family:var(--font-mono);font-size:10px;color:var(--ink-56)">ОБЪЕКТ · 2026-014</div>
+                <div style="display:flex;align-items:center;gap:8px">
+                  <span style="font-family:var(--font-heading);font-size:15px;text-transform:uppercase">Молочный комплекс</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin-left:auto;flex:none"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
+              </div>
+              <div style="display:grid;gap:2px;font-size:14px">
+                <a href="#0" style="display:flex;gap:9px;padding:7px 9px;background:var(--color-accent-100);color:var(--color-accent-800);border-left:2px solid var(--color-accent)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16v16H4zM4 10h16M10 10v10"/></svg>Обзор</a>
+                <a href="#0" style="display:flex;gap:9px;padding:7px 9px;color:var(--color-text)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 3h9l5 5v13H5zM14 3v5h5"/></svg>Исходные данные</a>
+                <a href="#0" style="display:flex;gap:9px;padding:7px 9px;color:var(--color-text)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 5h16M4 12h16M4 19h16"/></svg>Документация <span style="margin-left:auto;font-family:var(--font-mono);font-size:11px;color:var(--sem-warn)">3</span></a>
+                <a href="#0" style="display:flex;gap:9px;padding:7px 9px;color:var(--color-text)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3 3 8v8l9 5 9-5V8z"/><path d="M3 8l9 5 9-5M12 21v-8"/></svg>Модель и двойник</a>
+                <a href="#0" style="display:flex;gap:9px;padding:7px 9px;color:var(--color-text)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 17 9 11l4 4 8-8"/></svg>Телеметрия</a>
+                <a href="#0" style="display:flex;gap:9px;padding:7px 9px;color:var(--color-text)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 2 20h20L12 2ZM12 9v5M12 17.5h.01"/></svg>Аварии <span style="margin-left:auto;font-family:var(--font-mono);font-size:11px;color:var(--sem-alarm)">1</span></a>
+                <a href="#0" style="display:flex;gap:9px;padding:7px 9px;color:var(--color-text)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6h16v12H4zM4 10h16"/></svg>Финансы</a>
+              </div>
+              <div style="border-top:1px solid var(--color-divider);margin-top:12px;padding-top:10px;display:flex;align-items:center;gap:9px">
+                <span style="width:28px;height:28px;border:1px solid var(--color-divider);display:grid;place-items:center;font-family:var(--font-mono);font-size:11px">ТБ</span>
+                <div style="line-height:1.2"><div style="font-size:13px">Бекжанов Т.</div><div style="font-family:var(--font-mono);font-size:10px;color:var(--ink-56)">ГИП · Заказчик</div></div>
+              </div>
+            </div>
+            <div style="border:1px solid var(--color-divider);display:grid;place-items:center;font-family:var(--font-mono);font-size:11px;color:var(--ink-56);background-image:linear-gradient(to right,var(--color-neutral-200) 1px,transparent 1px),linear-gradient(to bottom,var(--color-neutral-200) 1px,transparent 1px);background-size:24px 24px">
+              область содержимого кабинета
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 CYANOTYPE -->
+    <section style="padding:40px 56px;border-bottom:1px solid var(--color-divider)">
+      <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:26px">
+        <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.16em;color:var(--color-accent-700)">◭ 05 / ТЁМНАЯ ТЕМА «ЦИАНОТИПИЯ»</div>
+        <div style="flex:1;height:1px;background:var(--color-divider)"></div>
+        <div style="font-family:var(--font-mono);font-size:11px;color:var(--ink-56)">обязательна для дашборда двойника</div>
+      </div>
+      <div style="background:#1D2D3D;border:1px solid #2C455D;padding:28px;color:#D6EBFF">
+        <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1px solid rgba(181,217,253,0.28);margin-bottom:26px">
+          <div><div style="height:52px;background:#1D2D3D"></div><div style="padding:5px 8px;font-family:var(--font-mono);font-size:10px;border-top:1px solid rgba(181,217,253,0.28)">ФОН 1D2D3D</div></div>
+          <div style="border-left:1px solid rgba(181,217,253,0.28)"><div style="height:52px;background:#2C455D"></div><div style="padding:5px 8px;font-family:var(--font-mono);font-size:10px;border-top:1px solid rgba(181,217,253,0.28)">ПОВЕРХН. 2C455D</div></div>
+          <div style="border-left:1px solid rgba(181,217,253,0.28)"><div style="height:52px;background:#416180"></div><div style="padding:5px 8px;font-family:var(--font-mono);font-size:10px;border-top:1px solid rgba(181,217,253,0.28)">ЛИНИЯ 416180</div></div>
+          <div style="border-left:1px solid rgba(181,217,253,0.28)"><div style="height:52px;background:#B5D9FD"></div><div style="padding:5px 8px;font-family:var(--font-mono);font-size:10px;border-top:1px solid rgba(181,217,253,0.28)">ЧЕРТЁЖ B5D9FD</div></div>
+          <div style="border-left:1px solid rgba(181,217,253,0.28)"><div style="height:52px;background:#EEF6FF"></div><div style="padding:5px 8px;font-family:var(--font-mono);font-size:10px;border-top:1px solid rgba(181,217,253,0.28)">ТЕКСТ EEF6FF</div></div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px">
+          <div>
+            <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em;color:#94BCE3;margin-bottom:10px">КНОПКИ И ШТАМПЫ</div>
+            <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center">
+              <button class="btn" type="button" style="background:#B5D9FD;color:#1D2D3D;border-color:#B5D9FD">Открыть аварию</button>
+              <button class="btn" type="button" style="border-color:rgba(181,217,253,0.4);color:#D6EBFF">Разрез</button>
+              <span style="display:inline-flex;align-items:center;gap:6px;border:1.5px solid #E8A099;color:#E8A099;padding:4px 9px;font-family:var(--font-mono);font-size:11px;letter-spacing:0.12em;transform:rotate(-1.5deg)"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 2 20h20L12 2Z"/></svg>АВАРИЯ</span>
+            </div>
+          </div>
+          <div>
+            <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em;color:#94BCE3;margin-bottom:10px">KPI</div>
+            <div style="border:1px solid rgba(181,217,253,0.28);padding:12px">
+              <div style="font-family:var(--font-mono);font-size:10px;color:#94BCE3">ДАТЧИКИ НА СВЯЗИ</div>
+              <div style="font-family:var(--font-mono);font-size:30px;line-height:1.1">47<span style="font-size:15px;color:#94BCE3">/48</span></div>
+              <svg viewBox="0 0 200 10" width="100%" height="10" preserveAspectRatio="none" style="display:block;margin-top:6px">
+                <path d="M2 5H198" stroke="#416180"/><path d="M2 5H194" stroke="#B5D9FD" stroke-width="2"/><path d="M2 0V10M194 0V10" stroke="#B5D9FD"/>
+              </svg>
+            </div>
+          </div>
+          <div>
+            <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em;color:#94BCE3;margin-bottom:10px">ТЕЛЕМЕТРИЯ</div>
+            <svg viewBox="0 0 260 92" width="100%" height="92" style="display:block;border:1px solid rgba(181,217,253,0.28)">
+              <path d="M10 24H250M10 44H250M10 64H250" stroke="#416180" stroke-dasharray="2 4"/>
+              <path d="M10 30H250" stroke="#E8A099" stroke-dasharray="6 3"/>
+              <polyline points="10,78 45,72 80,64 115,52 150,44 185,38 220,32 248,28" fill="none" stroke="#B5D9FD" stroke-width="1.6"/>
+              <text x="14" y="20" font-family="IBM Plex Mono" font-size="8" fill="#E8A099">ПОРОГ</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer title block -->
+    <div style="display:grid;grid-template-columns:1.4fr repeat(4,1fr);border-top:1.5px solid var(--color-text);font-family:var(--font-mono);font-size:11px">
+      <div style="padding:12px 16px;border-right:1px solid var(--color-divider)">
+        <div style="color:var(--ink-56);font-size:10px">ОБЪЕКТ</div>
+        <div>Коммерческий портал BESTECH · engpro.kz</div>
+      </div>
+      <div style="padding:12px 16px;border-right:1px solid var(--color-divider)">
+        <div style="color:var(--ink-56);font-size:10px">РАЗРАБОТАЛ</div>
+        <div>Дизайн-бюро</div>
+      </div>
+      <div style="padding:12px 16px;border-right:1px solid var(--color-divider)">
+        <div style="color:var(--ink-56);font-size:10px">ЛИЦЕНЗИЯ</div>
+        <div>ГСЛ №0788280</div>
+      </div>
+      <div style="padding:12px 16px;border-right:1px solid var(--color-divider)">
+        <div style="color:var(--ink-56);font-size:10px">СТАДИЯ</div>
+        <div>Дизайн-система</div>
+      </div>
+      <div style="padding:12px 16px">
+        <div style="color:var(--ink-56);font-size:10px">ЛИСТ</div>
+        <div>01 / 03</div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;density&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;comfortable&quot;,&quot;compact&quot;],&quot;default&quot;:&quot;comfortable&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Плотность&quot;}}">
+class Component extends DCLogic {
+  state = { compact: this.props.density === 'compact' };
+  renderVals() {
+    const compact = this.state.compact;
+    return {
+      densityLabel: compact ? 'компактная' : 'обычная',
+      rowPad: compact ? '4px 7px' : '9px 7px',
+      toggleDensity: () => this.setState(s => ({ compact: !s.compact }))
+    };
+  }
+}
+</script>
+</body>
+</html>
